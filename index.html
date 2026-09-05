@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Steampunk Punch</title>
+<meta name="ext-resource-dependency" content="./PunchApp.dc.html" data-resource-id="./PunchApp.dc.html">
+<meta name="ext-resource-dependency" content="./punch-data.js" data-resource-id="./punch-data.js">
+<meta name="ext-resource-dependency" content="./data/mc_assets.csv" data-resource-id="./data/mc_assets.csv">
+<meta name="ext-resource-dependency" content="./ios-frame.jsx" data-resource-id="./ios-frame.jsx">
+<template id="__bundler_thumbnail" data-bg-color="#0A0B0D">
+  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+    <rect width="400" height="400" fill="#0A0B0D"></rect>
+    <circle cx="200" cy="150" r="78" fill="none" stroke="#AEB6BD" stroke-width="18"></circle>
+    <circle cx="200" cy="150" r="36" fill="none" stroke="#AEB6BD" stroke-width="12"></circle>
+    <polygon points="0,300 400,272 400,330 0,358" fill="#A6CE39"></polygon>
+    <text x="200" y="332" text-anchor="middle" font-family="Saira Condensed, Arial Narrow, Impact, sans-serif" font-style="italic" font-weight="900" font-size="56" fill="#0A0B0D" transform="rotate(-4 200 315)">PUNCH</text>
+  </svg>
+</template>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/steampunk-fabrication-design-system-7b778886-39ba-4c85-ac7e-378482ec9c37/colors_and_type.css">
+  <script src="_ds/steampunk-fabrication-design-system-7b778886-39ba-4c85-ac7e-378482ec9c37/_ds_bundle.js"></script>
+  <title>Steampunk Punch</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="Punch">
+  <meta name="theme-color" content="#0A0B0D">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="format-detection" content="telephone=no">
+  <style>html,body{margin:0;background:#0A0B0D;height:100%} a{color:#A6CE39} a:hover{color:#C6E06F}</style>
+</helmet>
+<sc-if value="{{ framed }}" hint-placeholder-val="{{ true }}">
+<div style="min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:24px 12px;box-sizing:border-box;background:#0A0B0D">
+  <x-import component-from-global-scope="IOSDevice" from="./ios-frame.jsx" dark="{{ true }}" hint-size="402px,874px">
+    <dc-import name="PunchApp" framed="{{ true }}" demo="{{ demo }}" style="height:100%;width:100%" hint-size="100%,100%"></dc-import>
+  </x-import>
+</div>
+</sc-if>
+<sc-if value="{{ bare }}" hint-placeholder-val="{{ false }}">
+<div style="height:100vh;height:100dvh;width:100%;background:#0A0B0D">
+  <dc-import name="PunchApp" framed="{{ false }}" demo="{{ demo }}" style="height:100%;width:100%" hint-size="100%,100%"></dc-import>
+</div>
+</sc-if>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;frame&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Preview&quot;},&quot;demo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Data&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const framed = this.props.frame ?? (typeof window !== 'undefined' ? window.innerWidth >= 640 : true);
+    return { framed, bare: !framed, demo: this.props.demo ?? true };
+  }
+}
+</script>
+</body>
+</html>

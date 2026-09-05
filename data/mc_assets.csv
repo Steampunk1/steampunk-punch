@@ -1,0 +1,1023 @@
+assetPk,assetId,assetName,isLocation,type,classificationName,manufacturerName,model,serial,priority,riskLevel,lastMaintainedWopk,parentPk,parentName
+7294,100-AERATOR-8,AERATOR 6-1 (10 Million Gallon Pond),false,A,AERATOR,,,,,,1680577,22222,"POND #6, 10MM Gallon"
+7295,100-200U-COOK-LINE,*Trash* 200U Cook Line,true,L,Area,,,,,,255994,7852,Obsolete Assets - Do not use
+7296,100-1800 Cookline,*Trash* 1800 Cook Line,true,L,Area,,,,,,291317,7852,Obsolete Assets - Do not use
+7298,100-JACKSON-RNDRNG-1,*Trash* Boiler Room 1-6,true,L,Area,,,,,,300815,7852,Obsolete Assets - Do not use
+7301,100-CLNG-TWR,*Trash* Cooling Tower Area,true,L,Area,,,,,,489500,7852,Obsolete Assets - Do not use
+7302,100-DAF-AREA,*Trash* DAF Area,true,L,Area,,,,,,480290,7852,Obsolete Assets - Do not use
+7303,100-JACKSON-RNDRNG,Jackson Rendering,true,L,PLANT,,,,,,1682328,,
+7304,100-EVAPAREA,*Trash* Evaporator Area,true,L,Area,,,,,,159898,7852,Obsolete Assets - Do not use
+7305,100-FAN-15,"FAN, Feather Air-Cooled condenser, fan 1",false,A,Fan,,,,,,1679471,16286,Feather Plant
+7306,100-FAN-16,"FAN, Feather Air-Cooled condenser, fan 2",false,A,Fan,,,,,,1679471,16286,Feather Plant
+7307,100-FAN-71,"Fan, EVAPORATOR VENTURI",false,A,Fan,,,,,,291671,7852,Obsolete Assets - Do not use
+7308,100-FAN-8,"FAN, Plant Packed Tower",false,A,Fan,,,,,,1679471,8680,"SCRUBBER, Main Packed Tower"
+7309,100-PROCESS LINE-05,FEATHER PROCESSING,true,L,Process Line,,,,,,1678609,14953,PRODUCTION
+7310,100-FEATHER-PLANT-001-,*Trash* Feather Scrubber Area,true,L,Area,,,,,,,10437,"*Trash* Feather Dryer, Hydrolizer & Scrubber"
+7314,100-HAMMER MILL-00513,"HAMMER MILL, Poultry Grinding A-side",false,A,HAMMER MILL,,,,,,1679379,14937,PP A-Side Grinding
+7315,100-HOPPER-3,del Raw Material Incline Screw N4300,false,A,HOPPER,,,,,,1676942,7852,Obsolete Assets - Do not use
+7317,100-HOPPER-00522,Hopper Bin#3,false,A,HOPPER,,,,,,47197,7852,Obsolete Assets - Do not use
+7318,100-IRRIGTN,*Trash* Land Application System,true,L,Area,,,,,,,7852,Obsolete Assets - Do not use
+7319,100-LAGOON,*Trash* Waste Water Treatment System,true,L,Area,,,,,,151371,7852,Obsolete Assets - Do not use
+7320,100-LOADOUT-AREA,*Trash* Load Out,true,L,Area,,,,,,292593,7852,Obsolete Assets - Do not use
+7321,100-MIXER-1,"MIXER, Irrigation",false,A,MIXER,,,,,,,22222,"POND #6, 10MM Gallon"
+7322,100-HYDRAULIC UNIT-3,"HYDRAULIC UNIT, Press Choke 1800",false,A,HYDRAULIC UNIT,,Dupro Hydraulic,,,,1679379,14951,1800 Cook Line Pressing
+7328,100-PUMP-79,"PUMP, Skimmer Discharge",false,A,PUMP,,,,,,1680602,14977,SKIMMER
+7329,100-ROTOLIFT-3,"ROTOLIFT, Feather Mill Discharge",false,A,ROTOLIFT,,,,,,1678609,14959,Fthr Grinding
+7331,100-ROTOLOCK-00507,"Rotolock, Rotary Valve A",false,A,ROTOLOCK,,73055-3,,,,1679379,14937,PP A-Side Grinding
+7332,100-RTO-AREA,*Trash* RTO Area,true,L,Area,,,,,,52095,7852,Obsolete Assets - Do not use
+7334,100-SCREW CONVEYOR-52,"SCREW CONVEYOR, Direct Loadout (A System)",false,A,SCREW CONVEYOR,,,,,,1679379,14937,PP A-Side Grinding
+7337,100-SCREW CONVEYOR-00509,SCREW CONVEYOR. Screen Finished A-side,false,A,SCREW CONVEYOR,,,,,,1679379,14937,PP A-Side Grinding
+7338,100-SCREW CONVEYOR-00023,"SCREW CONVEYOR, Cooker Discharge #1 200U",false,A,SCREW CONVEYOR,,9,,,,1677943,14942,200U Cooking
+7340,100-AERATOR-9,Aerator Tornado #1 Pond 6,false,A,AERATOR,"Aeromix Systems, Inc.",CLASS I TORNADO ASPIRATING AERATOR,,,,,7852,Obsolete Assets - Do not use
+7341,100-AERATOR-10,Aerator Tornado #2 Pond 6,false,A,AERATOR,"Aeromix Systems, Inc.",CLASS I TORNADO ASPIRATING AERATOR,,,,,7852,Obsolete Assets - Do not use
+7344,100-PUMP-28,Pump 200U Stick Water,false,A,PUMP,Crane-Demming,"CRANE DEMING 4011, 2-5",,,,390274,7295,*Trash* 200U Cook Line
+7346,100-PUMP-00011,"Pump, Centrifuge Tallow 200U",false,A,PUMP,Crane-Demming,Crane Deming 402100010700,,,,1682314,14942,200U Cooking
+7347,100-PUMP-80,"PUMP, Spray Chamber",false,A,PUMP,Crane-Demming,CRANE DEMMING 4011/1 1/2 S,,,,1676996,16286,Feather Plant
+7348,100-PUMP-81,"PUMP, Parts Venturi",false,A,PUMP,Crane-Demming,CRANE DEMING 4001/SIZ 1 LIQUID END,,,,1676996,22111,"SCRUBBER, Parts Venturi"
+7351,100-PUMP-93,"PUMP, DAF Float",false,A,PUMP,Crane-Demming,4021-2M,,,,1674970,14976,DAF - PRODUCTION
+7354,100-PUMP-61,Pump Feather Air Condenser Stick Water,false,A,PUMP,Crane-Demming,4021 2M LIQUID END,,,,1676995,7852,Obsolete Assets - Do not use
+7355,100-PUMP-65,"PUMP, Press A Water pump",false,A,PUMP,Crane-Demming,CRANE DEMMING 4021,,,,1678609,14956,Fthr Hydrolizing
+7356,100-PUMP-796,"PUMP, LYCO DISCHARGE",false,A,PUMP,Crane-Demming,CRANE DEMING 4021/2M S.S. FLANGED,,,,151368,7852,Obsolete Assets - Do not use
+7357,100-PUMP-797,"PUMP, LYCO SPRAY",false,A,PUMP,Crane-Demming,CRANE DEMING 4021 / 1 1/2 M,,,,151158,7304,*Trash* Evaporator Area
+7359,100-SCRUBBER-24,"TANK, Feather Cross Flow  Scrubber, tank 1",false,A,SCRUBBER,AC Corporation,MODEL RDS-100,,,,1317074,8679,"SCRUBBER, Room Air Feather"
+7360,100-PUMP-01027,"Pump, Centrifuge Feed 1800U",false,A,PUMP,The Dupps Company,"DUPPS, DUKE 45 CRUDE FAT PUMP",,,,1676933,14950,1800 Cook Line Cooking
+7361,100-SCREW CONVEYOR-00018,"SCREW CONVEYOR, Sight Glass 200U",false,A,SCREW CONVEYOR,The Dupps Company,6,,,,1677943,14942,200U Cooking
+7362,100-GRINDER-2,"GRINDER, Raw Hogger 200U/n4300",false,A,GRINDER,The Dupps Company,180A,,,,1679379,14941,200U Raw
+7364,100-PUMP-35,"Pump, Condensate 200U",false,A,PUMP,Goulds Pump,Goulds ST,,,,1677943,14942,200U Cooking
+7365,100-PUMP-44,Old Evap Recirculation P1 Pump,false,A,PUMP,,,,,,1676995,15479,Old Evaporator
+7366,100-PUMP-47,Old Evap Recirculation P2 Pump,false,A,PUMP,Goulds Pump,GOULDS MODEL 3180 XL,,,,1676995,15479,Old Evaporator
+7368,100-PUMP-00006,"PUMP, Boiler #4 Feedwater",false,A,PUMP,Goulds Pump,GOULDS MTX 3196,,,,1671638,14971,BOILER ROOM
+7370,100-PUMP-69,Old Evap Cooker Condensate Pump,false,A,PUMP,Goulds Pump,,,,,1676995,15479,Old Evaporator
+7371,100-PUMP-51,"PUMP, Spare/Misc",false,A,PUMP,Goulds Pump,GOULDS 3196 MT,,,,1674970,22221,"POND #5, 2nd Stage Aeration"
+7377,100-PUMP-27,"del Pump, Bearing 200U",false,A,PUMP,Viking,VIKING F432,,,,1677943,7852,Obsolete Assets - Do not use
+7378,100-BOILER-1,BOILER #1,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1679435,14971,BOILER ROOM
+7379,100-SCREW CONVEYOR-01019,"SCREW CONVEYOR, Press Discharge 1800",false,A,SCREW CONVEYOR,DUPPS COMPANY 720,"DUPPS, 12/10-4 PRESSOR",,,,1676933,14951,1800 Cook Line Pressing
+7380,100-SCREW PRESS-00103,Screw Press 200U (DUPPS),false,A,SCREW PRESS,DUPPS COMPANY 720,DUPPS 12-10-4,,,,1681351,14943,200U Pressing
+7382,100-PUMP-00427,"PUMP, N4300 Centrifuge Feed",false,A,PUMP,DUPPS COMPANY 720,DUPPS Duke 45,,,,1676942,14946,N4300 Cooking
+7383,100-PUMP-00012,"Pump, Centrifuge Feed 200U",false,A,PUMP,DUPPS COMPANY 720,DUKE 45,,,,1677943,14942,200U Cooking
+7385,100-PUMP-1200,"Pump, Drainor 1800U",false,A,PUMP,DUPPS COMPANY 720,"DUPPS, CRUDE TALLOW PUMP",,,,1676933,7852,Obsolete Assets - Do not use
+7387,100-COOKER-00100,"COOKER, 200U",false,A,COOKER,DUPPS COMPANY 720,DUPPS 200U,,,,1679402,14942,200U Cooking
+7388,100-COOKER-00430,"COOKER, N4300",false,A,COOKER,DUPPS COMPANY 720,0912016,,,,1672183,14946,N4300 Cooking
+7389,100-SCREW CONVEYOR-01033,"SCREW CONVEYOR, SightGlass 1800U",false,A,SCREW CONVEYOR,DUPPS COMPANY 720,"DUPPS, 6",,,,1676933,14950,1800 Cook Line Cooking
+7390,100-SCREW CONVEYOR-00443,"SCREW CONVEYOR, Cooker Sight Glass n4300",false,A,SCREW CONVEYOR,DUPPS COMPANY 720,6,,,,1676942,14946,N4300 Cooking
+7393,100-SKIMMER-1,Skimmer DAF,false,A,SKIMMER,ALLOY HARDFACING & ENGINEERING,01714,,,,52853,7302,*Trash* DAF Area
+7394,100-PUMP-94,Pump Vat,false,A,PUMP,SCHAERGES & VOSSLER PUMP CO,SPL3,,,,,7302,*Trash* DAF Area
+7395,100-HAMMER MILL-3,"HAMMER MILL, Feathers",false,A,HAMMER MILL,Sprout-Andritz,Andritz - #38125,,,,1678609,14959,Fthr Grinding
+7397,100-HOPPER-2,"HOPPER, Raw material  (n4300)",false,A,HOPPER,Jay Gee Manufacturing,2 SCREW HOPPER,,,,983022,14941,200U Raw
+7401,100-HOPPER-6,"HOPPER, Feather Grinding",false,A,HOPPER,Jay Gee Manufacturing,12,,,,1678609,14959,Fthr Grinding
+7402,100-SCREW CONVEYOR-64,"SCREW CONVEYOR, Feather Hopper Rotolift Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1678609,14959,Fthr Grinding
+7404,100-HOPPER-00541,Hopper Bin #2,false,A,HOPPER,Jay Gee Manufacturing,12,,,,425828,7852,Obsolete Assets - Do not use
+7405,100-HYDROLYZER-00033,"HYDROLYZER, A-side",false,A,HYDROLYZER,Jay Gee Manufacturing,NB (29583),,,,1679379,14956,Fthr Hydrolizing
+7406,100-SCREW CONVEYOR-00024,Pre-Heater A,false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE,,,,1678609,14955,Fthr Raw
+7408,100-COOLING-TOWER-1,"COOLING-TOWER, Poultry Plant",false,A,Cooling Tower,Jay Gee Manufacturing,700 TON COOLING TOWER,,,,564034,7852,Obsolete Assets - Do not use
+7409,100-COOLING-TOWER-2,"COOLING-TOWER, 1800/Feather Plant",false,A,Cooling Tower,Jay Gee Manufacturing,700 TON COOLING TOWER,,,,537695,7852,Obsolete Assets - Do not use
+7410,100-COOLING-TOWER-3,Cooling-Tower 3,false,A,Cooling Tower,Jay Gee Manufacturing,700 TON COOLING TOWER,,,,,7301,*Trash* Cooling Tower Area
+7411,100-COOLING-TOWER-4,Cooling-Tower 4,false,A,Cooling Tower,Jay Gee Manufacturing,700 TON COOLING TOWER,,,,,7301,*Trash* Cooling Tower Area
+7412,100-DRAINER-00015,"DRAINER, 200U",false,A,DRAINER,Jay Gee Manufacturing,"P.N. 44003, 2 SECTION, STAINLESS STEEL",,,,1681390,14942,200U Cooking
+7413,100-DRAINER-00420,"DRAINER, n4300",false,A,DRAINER,Jay Gee Manufacturing,JAY GEE 2 DOOR DRAINER,,,,1679614,14946,N4300 Cooking
+7416,100-ROTOLIFT-4,"ROTOLIFT, Feather Rotex Overs",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1678609,14959,Fthr Grinding
+7417,100-ROTOLIFT-00515,"ROTOLIFT, Overs A-side",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1679379,14937,PP A-Side Grinding
+7418,100-ROTOLIFT-00505,"ROTOLIFT, Finished A-side",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14937,PP A-Side Grinding
+7419,100-ROTOLIFT-00906R,ROTOLIFT Blood,false,A,ROTOLIFT,Jay Gee Manufacturing,"JAY GEE, 12",,,,526359,7852,Obsolete Assets - Do not use
+7421,100-ROTOLIFT-00900,"ROTOLIFT, A-side",false,A,ROTOLIFT,Jay Gee Manufacturing,JAY GEE - 12,,,,901514,14966,SILOS
+7422,100-ROTOLIFT-6,Rotolift Blood Discharge,false,A,ROTOLIFT,Jay Gee Manufacturing,"JAY GEE, 9",,,,526359,7852,Obsolete Assets - Do not use
+7424,100-ROTOLIFT-01018,"Rotolift, Overs 1800U",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,575605,7852,Obsolete Assets - Do not use
+7425,100-ROTOLIFT-10,"ROTOLIFT, Finish 1800",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1683510,14952,1800 Cook Line Grinding
+7427,100-ROTOLIFT-00520,"ROTOLIFT, Crax A-side",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1679379,7852,Obsolete Assets - Do not use
+7428,100-ROTOLIFT-13,"ROTOLIFT, Feather Hopper discharge",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1678609,14959,Fthr Grinding
+7431,100-ROTOLIFT-00511,"ROTOLIFT, Hammer Mill A Discharge",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14937,PP A-Side Grinding
+7432,100-ROTOLIFT-00005,"ROTOLIFT, Crax 200U",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1664237,14943,200U Pressing
+7435,100-SCREW CONVEYOR-00508,"SCREW CONVEYOR, Rotary Valve A Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14937,PP A-Side Grinding
+7437,100-SCREW CONVEYOR-511,"SCREW CONVEYOR, Skimmer solids discharge #2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1674970,14977,SKIMMER
+7439,100-SCREW CONVEYOR-517,"SCREW CONVEYOR, Conv. B, Truck Loadout",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,7852,Obsolete Assets - Do not use
+7440,100-SCREW CONVEYOR-00902,"SCREW CONVEYOR, Silo Loadout Screw A-2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+7442,100-SCREW CONVEYOR-00007,"SCREW CONVEYOR, Feather Mill Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1678609,14959,Fthr Grinding
+7443,100-SCREW CONVEYOR-00225,"SCREW CONVEYOR, Preheater B Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 24",,,,1682330,14955,Fthr Raw
+7446,100-SCREW CONVEYOR-00557,"SCREW CONVEYOR, Direct Loadout Incline (A System)",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14937,PP A-Side Grinding
+7448,100-SCREW CONVEYOR-00004,"SCREW CONVEYOR, Crax #3 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7449,100-SCREW CONVEYOR-00017,"SCREW CONVEYOR, Cooker Discharge #2 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14942,200U Cooking
+7450,100-SCREW CONVEYOR-00016,"SCREW CONVEYOR, Cooker Discharge #3 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14942,200U Cooking
+7451,100-SCREW CONVEYOR-46,"SCREW CONVEYOR, Crax Bin #3 Leveling Screw",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1306146,14920,PP Grinding
+7453,100-SCREW CONVEYOR-00406,"SCREW CONVEYOR, Crax Screw #2 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+7456,100-SCREW CONVEYOR-67,"SCREW CONVEYOR, Press A Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE - 12,,,,1678609,14956,Fthr Hydrolizing
+7457,100-SCREW CONVEYOR-68,"SCREW CONVEYOR, Press A-B Screw",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE - 12,,,,1678609,14956,Fthr Hydrolizing
+7459,100-SCREW CONVEYOR-56,"SCREW CONVEYOR, Bottom Solids",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1674970,14976,DAF - PRODUCTION
+7462,100-SCREW CONVEYOR-00901,"SCREW CONVEYOR, Silo Loadout Screw A-1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+7463,100-SCREW CONVEYOR-521,"SCREW CONVEYOR, Lemanco Loadout Conv. A, Railcar",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14967,LEMANCO
+7464,100-SCREW CONVEYOR-522,"SCREW CONVEYOR, Lemanco Loadout Conv. B, Truck",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14967,LEMANCO
+7465,100-SCREW CONVEYOR-00921,"SCREW CONVEYOR, Conv. B, Bins Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14967,LEMANCO
+7466,100-SCREW CONVEYOR-00920,"SCREW CONVEYOR, Conv. A, Bins Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14967,LEMANCO
+7467,100-SCREW CONVEYOR-0003,"SCREW CONVEYOR, Crax #4 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7473,100-SCREW CONVEYOR-00006,"SCREW CONVEYOR, Press Discharge 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7474,100-SCREW CONVEYOR-00405,"SCREW CONVEYOR, Crax Screw #3 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+7475,100-SCREW CONVEYOR-00404,"SCREW CONVEYOR, Crax Screw #4 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+7476,100-SCREW CONVEYOR-00403,"SCREW CONVEYOR, Crax Screw #5 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+7477,100-SCREW CONVEYOR-00423,"SCREW CONVEYOR, Cooker Discharge #1 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14946,N4300 Cooking
+7478,100-SCREW CONVEYOR-00422,"SCREW CONVEYOR, Cooker Discharge #2 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14946,N4300 Cooking
+7479,100-SCREW CONVEYOR-00418,"SCREW CONVEYOR, Press Feed n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14947,N4300 Pressing
+7480,100-SCREW CONVEYOR-00415,"SCREW CONVEYOR, Press Fines n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14947,N4300 Pressing
+7481,100-SCREW CONVEYOR-00413,"SCREW CONVEYOR, Runaround #1 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14946,N4300 Cooking
+7482,100-SCREW CONVEYOR-00412,"SCREW CONVEYOR, Runaround #2 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14946,N4300 Cooking
+7484,100-SCREW CONVEYOR-00411,"SCREW CONVEYOR, Runaround #3 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1676942,14946,N4300 Cooking
+7485,100-SCREW CONVEYOR-00002,"SCREW CONVEYOR, Crax #5 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14943,200U Pressing
+7487,100-ROTOLIFT-00009,"ROTOLIFT, Press Fines 200U",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7490,100-SCREW CONVEYOR-01032,"SCREW CONVEYOR, Cooker Discharge #1 1800U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14950,1800 Cook Line Cooking
+7492,100-SCREW CONVEYOR-01024,"SCREW CONVEYOR, Press Fines 1800",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14951,1800 Cook Line Pressing
+7496,100-SCREW CONVEYOR-836,"SCREW CONVEYOR, Skimmer solids discharge #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1674970,14977,SKIMMER
+7497,SCREW CONVEYOR-837,"SCREW CONVEYOR, Outside Blower INCLINE",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1527382,14920,PP Grinding
+7501,100-SCREW CONVEYOR-00903,"SCREW CONVEYOR, Silo Loadout Screw A-3",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+7502,100-SCREW CONVEYOR-00904,"SCREW CONVEYOR, Silo Loadout Screw A-4",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,7505,"SCREW CONVEYOR, Silo Loadout Screw A-5"
+7505,100-SCREW CONVEYOR-00905,"SCREW CONVEYOR, Silo Loadout Screw A-5",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+7508,100-SCREW CONVEYOR-63,Screw Conveyor Bin Leveling Screw (Feather Drying),false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE 9,,,,303670,7854,*Trash* Feather Drying System
+7509,100-SCREW CONVEYOR-00408,"SCREW CONVEYOR, Crax Screw #1 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+7510,100-SCREW CONVEYOR-99,Screw Conveyor Vat,false,A,SCREW CONVEYOR,Jay Gee Manufacturing,6,,,,,7302,*Trash* DAF Area
+7511,100-SCREW CONVEYOR-00528,"SCREW CONVEYOR, Screener feed B-side",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14938,PP B-Side Grinding
+7514,100-SEDIMENTER-00417,"SEDIMENTER, n4300",false,A,SEDIMENTER,Jay Gee Manufacturing,9,,,,1676942,14946,N4300 Cooking
+7519,100-SCREW CONVEYOR-74,"SCREW CONVEYOR, Feather Hopper Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1678609,14959,Fthr Grinding
+7520,100-SCREW CONVEYOR-00008,"SCREW CONVEYOR, Fines Return 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7521,100-SCREW CONVEYOR-76,Finish Mill (Feather Grinding),false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,498914,7852,Obsolete Assets - Do not use
+7522,100-SCREW CONVEYOR-00005,"SCREW CONVEYOR, Feather Mill Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1678609,14959,Fthr Grinding
+7523,100-SCREW CONVEYOR-00512,"SCREW CONVEYOR, Hammermill A Discharge #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14937,PP A-Side Grinding
+7524,100-SCREW CONVEYOR-00514,"SCREW CONVEYOR, Hammermill A Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14937,PP A-Side Grinding
+7526,100-SCREW CONVEYOR-00009,"SCREW CONVEYOR, Feather Rotex Overs",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1678609,14959,Fthr Grinding
+7527,100-SCREW CONVEYOR-00516,"SCREW CONVEYOR, Screen Overs A-side",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14937,PP A-Side Grinding
+7528,100-SCREW CONVEYOR-00010,"SCREW CONVEYOR, Press Fines 200U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1677943,14943,200U Pressing
+7530,100-SCREW CONVEYOR-88,"SCREW CONVEYOR, Lemanco Cross Screw",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1673704,14967,LEMANCO
+7531,100-SCREW CONVEYOR-89,Screen Feed Screw (Feather Grinding),false,A,SCREW CONVEYOR,Jay Gee Manufacturing,14,,,,303670,7900,*Trash* Feather Grinding System
+7532,100-SCREW PRESS-00410,"SCREW PRESS, n4300 (Haarslev)",false,A,SCREW PRESS,HAARSLEV,210-074-07 (TYPE),,,,1683513,14947,N4300 Pressing
+7534,100-PUMP-57,del Pump 200U Raw Feed,false,A,PUMP,HAARSLEV,HAARSLEV HM35-0060,,,,505024,7852,Obsolete Assets - Do not use
+7535,100-DRYER-9,"DRYER, Feathers (Haarslev)",false,A,DRYER,HAARSLEV,HM550-SS,,,,1679402,14958,Fthr Drying
+7536,100-PUMP-00435,"PUMP, n4300 Cooker Feed",false,A,PUMP,HAARSLEV,Haarslev HM35 - 009-24-096 (TYPE),,,,1681258,14945,N4300 Raw
+7538,RTO--AA-027,RTO,false,A,RTO,CONBUSTION CONTROLE SOLUT,RTOX - 15K SCFM,,,,1422089,7852,Obsolete Assets - Do not use
+7539,100-FAN-70,"FAN, RTO Combustion",false,A,Fan,MAXON,MAXON C-6060-24 F.G. BLWR.,,,,1676996,14964,Regenerative Thermal Oxidizer (RTO-AA-027)
+7542,100-COMPRESSOR-1,"COMPRESSOR,  Boiler Room AIR",false,A,COMPRESSOR,INGERSOLL RAND,MODEL 2340-E,,,,,7298,*Trash* Boiler Room 1-6
+7543,100-PUMP-49,Pump Old Evap Blood Centrifuge Feed,false,A,PUMP,GRISWOLD,GRISWOLD M-A60-10079,,,,454042,7852,Obsolete Assets - Do not use
+7545,100-PUMP-01303,New Evap Cooker Condensate Pump,false,A,PUMP,GRISWOLD,GRISWOLD 811 M,,,,1676995,15480,New Evaporator
+7546,100-PUMP-00004,"PUMP, Boiler #6 Feedwater",false,A,PUMP,GRISWOLD,MODEL MA60-10079,,,,1671638,14971,BOILER ROOM
+7547,100-PUMP-00002,"PUMP, Boiler #2 Feedwater",false,A,PUMP,GRISWOLD,MODEL MA60-10079 GRISWOLD M/3X2X8/0800/DDLM/CS,,,,1671638,14971,BOILER ROOM
+7548,100-PUMP-00001,"PUMP, Boiler #1 Feedwater",false,A,PUMP,GRISWOLD,MODEL MA60-10079 GRISWOLD M/3X2X8/0800/DDLM/CS,,,,1671638,14971,BOILER ROOM
+7549,100-PUMP-50,Pump Evap CIP,false,A,PUMP,GRISWOLD,GRISWOLD M-A60-10070,,,,1676995,7852,Obsolete Assets - Do not use
+7550,100-PUMP-53,"PUMP, Scrubber #1 (Feather Scrubber)",false,A,PUMP,GRISWOLD,GRISWOLD M-A80-10143,,,,1325159,7852,Obsolete Assets - Do not use
+7551,100-PUMP-76,"PUMP, Atmospheric Tank Discharge",false,A,PUMP,GRISWOLD,GRISWOLD M-A60-10080,,,,517242,7852,Obsolete Assets - Do not use
+7552,100-PUMP-01306,Evap Feed Pump,false,A,PUMP,GRISWOLD,GRISWOLD MA60-10061,,,,1676995,15479,Old Evaporator
+7556,100-PUMP-23,Pump 200U Add Back (Chicken),false,A,PUMP,ROPER,Roper 5058 HFLW,,,,1677943,14942,200U Cooking
+7558,100-PUMP-00024,"Pump, Add Fat Back 200U",false,A,PUMP,ROPER,Roper 3617 HBRV,,,,1658274,14942,200U Cooking
+7559,100-PUMP-26,Pump #4 1800U Concentrate,false,A,PUMP,ROPER,ROPER 3617HB,,,,42720,7852,Obsolete Assets - Do not use
+7560,100-PUMP-00447,"Pump, N4300 AddFatBack",false,A,PUMP,ROPER,3611-HBRV,,,,1676942,14946,N4300 Cooking
+7561,100-PUMP-00014,"Pump, Press fines 200U",false,A,PUMP,ROPER,Roper 3617 HBRV TYPE 3,,,,1681395,14943,200U Pressing
+7562,100-PUMP-01040,"Pump, AddFat Back 1800U",false,A,PUMP,ROPER,Roper 3617 HBRV,,,,1676933,14950,1800 Cook Line Cooking
+7569,100-RESIN SOFTENER-4,"RESIN SOFTENER, Boiler Water",false,A,RESIN SOFTENER,ANCO,ANCO MODEL 3900,,,,1497328,14971,BOILER ROOM
+7570,100-PUMP-68,"PUMP, 1800/FP Cooling Water Supply",false,A,PUMP,FLOWSERVE,MODEL 12LR14,,,,1676995,15471,"COOLING-TOWER, 1800/Feather Plant"
+7571,100-CONTROL VALVE-66,"CONTROL VALVE, ZONE 11",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE Qx2,,,,,7318,*Trash* Land Application System
+7572,100-CONTROL VALVE-67,"CONTROL VALVE, ZONE 10",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE Qx2,,,,,7318,*Trash* Land Application System
+7573,100-CONTROL VALVE-68,"CONTROL VALVE, ZONE 9",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7574,100-CONTROL VALVE-69,"CONTROL VALVE, ZONE 8",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7575,100-CONTROL VALVE-70,"CONTROL VALVE, ZONE 7",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7576,100-CONTROL VALVE-71,"CONTROL VALVE, ZONE 6",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7577,100-CONTROL VALVE-72,"CONTROL VALVE, ZONE 5",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7578,100-CONTROL VALVE-73,"CONTROL VALVE, ZONE 4",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7579,100-CONTROL VALVE-74,"CONTROL VALVE, ZONE 3",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7580,100-CONTROL VALVE-75,"CONTROL VALVE, ZONE 2",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7581,100-CONTROL VALVE-76,"CONTROL VALVE, ZONE 1",false,A,CONTROL VALVE,FLOWSERVE,LIMITORQUE QX2,,,,,7318,*Trash* Land Application System
+7582,100-PUMP-559,"PUMP, Irrigation",false,A,PUMP,BERKELEY,BERKELEY MOD# B4JPBHH,,,,1674970,22222,"POND #6, 10MM Gallon"
+7583,100-COOLING TOWER-11,"COOLING TOWER, Poultry Cooling Tower 1",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON  T-10H BOOTED,,,,1595374,15472,"COOLING-TOWER, Poultry Plant"
+7584,100-COOLING TOWER-12,"COOLING TOWER, Poultry Cooling Tower 2",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1595374,15472,"COOLING-TOWER, Poultry Plant"
+7585,100-COOLING TOWER-13,"COOLING TOWER, Poultry Cooling Tower 3",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1683432,15472,"COOLING-TOWER, Poultry Plant"
+7586,100-COOLING TOWER-14,"COOLING TOWER, Poultry Cooling Tower 4",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1341330,15472,"COOLING-TOWER, Poultry Plant"
+7587,100-PUMP-41,Pump Basin Fill,false,A,PUMP,GATOR PRIME,HT-48-01,,,,,7852,Obsolete Assets - Do not use
+7594,100-PUMP-803,"PUMP, Pond #1 Discharge #2",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674970,22226,"POND #1, Covered Anearobic"
+7595,100-PUMP-804,"PUMP, Pond #1 Sludge",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674970,22226,"POND #1, Covered Anearobic"
+7596,100-PUMP-18,"PUMP, Heat Exchanger",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T-3,,,,1674970,22221,"POND #5, 2nd Stage Aeration"
+7597,100-PUMP-15,"PUMP, DAF Feed",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674970,22221,"POND #5, 2nd Stage Aeration"
+7602,100-PUMP-554,"PUMP, Storm Water SW Outfalll #2 (3x3)",false,A,SUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674969,14979,SUMPS
+7604,100-SUMP-6,"SUMP, Yellow Grease Room (3x3)",false,A,SUMP,GORMAN RUMP,GORMAN RUMP T-3 TRASH PUMP,,,,1674969,14979,SUMPS
+7605,100-PUMP-777,"PUMP, Pond #1 Discharge #1",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674970,22226,"POND #1, Covered Anearobic"
+7606,100-PUMP-75,"PUMP, Anoxic Recirculation",false,A,PUMP,GORMAN RUMP,GORMAN RUPP T-4,,,,1674970,22221,"POND #5, 2nd Stage Aeration"
+7608,100-SUMP-82,"SUMP, Storm Water SW Outfalll #3 (3x3)",false,A,SUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1674969,14979,SUMPS
+7610,100-PUMP-92,"PUMP, DAF Recycle",false,A,PUMP,GORMAN RUMP,,,,,1669975,14976,DAF - PRODUCTION
+7611,100-CENTRIFUGE-01026,"CENTRIFUGE, 1800",false,A,CENTRIFUGE,IPE INDUSTRIAL PROCESS EQUIPMENT,375-IPE 09,,,,1676933,14950,1800 Cook Line Cooking
+7612,100-PUMP-01034,"PUMP, 1800 Shaft Condensate",false,A,PUMP,DEAN BROTHERS,Summit,,,,1676933,14950,1800 Cook Line Cooking
+7613,100-PUMP-00431,"PUMP, n4300 Condensate (15hp)",false,A,PUMP,DEAN BROTHERS,MetPro PH-2111 - 3196ST,,,,1676942,14946,N4300 Cooking
+7615,100-PUMP-577,"PUMP, Feather Dryer Condensate (Feather Drying)",false,A,PUMP,,Summit Model - 2196 STO,,,,1678609,14958,Fthr Drying
+7616,100-PUMP-00428,N4300 Cooker Bearing Oil Pump #1 (Feed End),false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,1679402,23679,N4300 Cooker Bearing #1 (Feed End) Lube System
+7617,100-FAN-10,dup_Finish Blower R.V. (Feather Grinding),false,A,PNEUMATIC BLOWER,GARDNER DENVER,HYCHMCA,,,,45663,7900,*Trash* Feather Grinding System
+7618,100-PNEUMATIC BLOWER-9,"PNEUMATIC BLOWER, Finish Blower (Feather Grinding)",false,A,PNEUMATIC BLOWER,GARDNER DENVER,GAHHBPA,,,,1678609,14959,Fthr Grinding
+7619,100-ROTOLOCK-00916,Rotolock Rotary Valve A Blower Bin,false,A,ROTOLOCK,ROTOLOCK,73055-3 (EQUIPMENT #),,,,1673704,14967,LEMANCO
+7622,100-ROTOLOCK-3,"Rotolock, Rotary Valve (feather grinding)",false,A,ROTOLOCK,ROTOLOCK,ROTOLOCK - 73055-3,,,,1678609,14959,Fthr Grinding
+7624,100-SEPARATOR-00517,Rotex A Screen #1,false,A,SEPARATOR,ROTEX,522,,,,1679379,34155,"SEPARATOR, Shaker A-Side"
+7626,100-SEPARATOR-00518,Rotex A Screen #2,false,A,SEPARATOR,ROTEX,52,,,,1679379,34155,"SEPARATOR, Shaker A-Side"
+7627,100-SEPARATOR-4,"Separator, Rotex Screen (Feather Grinding)",false,A,SEPARATOR,ROTEX,ROTEX - #R341GP-AWMS,,,,1683424,14959,Fthr Grinding
+7634,100-HOPPER-7,"HOPPER, Pit DBONE RAW",false,A,HOPPER,SUNRISE CORPORATION,"JAY GEE, 24",,,,1676933,23085,D-BONE RAW
+7635,100-CENTRIFUGE-00110,Centrifuge 200U,false,A,CENTRIFUGE,BIRD,BIRD 18 X 42,,,,1669862,14942,200U Cooking
+7637,100-FAN-4,Fan Feather Wet Scrubber,false,A,Fan,FLAKT WOODS CO.,AMERICAN FAN COMPANY #IE-19-MH,,,,291671,7852,Obsolete Assets - Do not use
+7638,100-FAN-72,"FAN, Feather Cross Flow Scrubber",false,A,Fan,"HOWDEN BUFFALO, INC.",AXIVANE FAN MODEL # 66-26-1300.BD.AP,,,,1679471,8679,"SCRUBBER, Room Air Feather"
+7639,100-CONDENSER-21,"CONDENSER, FEATHER AIR",false,A,CONDENSER,YUBA,YUBA,,,,477109,15485,*Trash* Feather Odor/Vapor handling
+7640,100-PUMP-54,"PUMP, Scrubber #2 (Feather Scrubber)",false,A,PUMP,MANN,MANN MODEL 911L,,,,1320928,7852,Obsolete Assets - Do not use
+7641,100-PUMP-67,Pump Feather Scrubber #1,false,A,PUMP,Summit Pump Inc.,SUMMIT MODEL 2196 MTO,,,,472874,7852,Obsolete Assets - Do not use
+7650,100-PUMP-59,Old Evap Vacuum #1 (East),false,A,PUMP,NASH,NASH VECTRA XL-60,,,,1676995,15479,Old Evaporator
+7652,100-HOPPER-00036,"HOPPER, Raw Feather Pit A",false,A,HOPPER,GRABER EQUIPMEMT,"JAY GEE, FEATHER RAW MATERIAL PIT",,,,1678609,14955,Fthr Raw
+7655,100-MIXER-5,"MIXER, DAF Tank 2 Alum",false,A,MIXER,PHILADELPHIA,3805SPTM,,,,1301722,14976,DAF - PRODUCTION
+7656,100-MIXER-6,"MIXER, DAF Tank 1 Poly",false,A,MIXER,PHILADELPHIA,38075 PTM,,,,1661078,14976,DAF - PRODUCTION
+7657,100-PUMP-4,"PUMP, Plant Washdown",false,A,PUMP,GOULS,,,,,1638387,14953,PRODUCTION
+7658,100-UNLOADER-00927,Unloader Silo #1,false,A,UNLOADER,A.O. SMITH HARVESTORE,"A.O. SMITH HARVESTORE, Goliath 74",,,,1672340,14966,SILOS
+7659,100-UNLOADER-00928,Unloader Silo #2,false,A,UNLOADER,A.O. SMITH HARVESTORE,"A.O. SMITH HARVESTORE, GOLIATH 74",,,,1672340,14966,SILOS
+7660,100-UNLOADER-00929,Unloader Silo #3,false,A,UNLOADER,A.O. SMITH HARVESTORE,"A.O. SMITH HARVESTORE, GOLIATH 74",,,,1672340,14966,SILOS
+7661,100-MIXER-2,"MIXER #1, Pond 3",false,A,MIXER,AQUA TURBO,MODEL: MIX-AS 1100-30,,,,,22228,"POND #3, 2nd Stage Anaerobic"
+7662,100-MIXER-3,"MIXER #2, Pond 3",false,A,MIXER,AQUA TURBO,MODEL: MIX-AS 100-30,,,,,22228,"POND #3, 2nd Stage Anaerobic"
+7663,100-AERATOR-1,AERATOR 4-1,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,12345,,,1638512,22220,"POND #4, 1st Stage Aeration"
+7664,100-AERATOR-2,AERATOR 5-1 (75hp),false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,1587239,22221,"POND #5, 2nd Stage Aeration"
+7665,100-AERATOR-25,AERATOR 5-4,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,429100,22221,"POND #5, 2nd Stage Aeration"
+7666,100-AERATOR-26,AERATOR 5-5,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,1194435,22221,"POND #5, 2nd Stage Aeration"
+7667,100-AERATOR-27,AERATOR #3 POND 5,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,,7852,Obsolete Assets - Do not use
+7668,100-AERATOR-28,AERATOR 6-1,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,654848,7852,Obsolete Assets - Do not use
+7669,100-AERATOR-29,AERATOR #2 POND 6,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,,7852,Obsolete Assets - Do not use
+7670,100-AERATOR-4,Aerator #2 Pond 4,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,446557,7852,Obsolete Assets - Do not use
+7671,100-AERATOR-6,AERATOR 5-3,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,1253473,22221,"POND #5, 2nd Stage Aeration"
+7672,100-AERATOR-7,AERATOR 5-2,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,1459946,22221,"POND #5, 2nd Stage Aeration"
+7673,100-STACK-4,"STACK, Biogas Flare",false,A,STACK,FLARE KING INC.,FKUT-H25-R35-EPTK,,,,1319926,22226,"POND #1, Covered Anearobic"
+7674,100-FAN-2,"FAN, Biogas Flare Blower #2",false,A,Fan,AMETEK,"AMETEK, EN757F7XI",,,,,7852,Obsolete Assets - Do not use
+7675,100-FAN-01000,"FAN, Biogas Flare Blower",false,A,Fan,AMETEK,"AMETEK, EN757F7XI",,,,1291663,22226,"POND #1, Covered Anearobic"
+7852,100-OB,Obsolete Assets - Do not use,true,L,Bin Folder,,,,,,484545,7303,Jackson Rendering
+7853,HYDROLYZER-10,*Trash* A Hydrolyzer (Feather Plant),false,A,System,,,,,,667803,10437,"*Trash* Feather Dryer, Hydrolizer & Scrubber"
+7854,SYSTEM-63,*Trash* Feather Drying System,false,A,System,,,,,,,10437,"*Trash* Feather Dryer, Hydrolizer & Scrubber"
+7855,100-HYDRAULIC UNIT-00022,"HYDRAULIC UNIT, Hydrolyzer A Primary Gates",false,A,HYDRAULIC UNIT,,,,,,1678609,14956,Fthr Hydrolizing
+7856,100-VALVE-15,A Top Gate (A Hydrolyzer),false,A,VALVE,,,,,,42887,7853,*Trash* A Hydrolyzer (Feather Plant)
+7857,VALVE-16,A Bottom Gate (A Hydrolyzer),false,A,VALVE,,,,,,152654,7853,*Trash* A Hydrolyzer (Feather Plant)
+7858,100-SCREW PRESS-72,"SCREW PRESS, Feather Press A",false,A,SCREW PRESS,,,,,,1678609,14956,Fthr Hydrolizing
+7861,100-VALVE-17,A Inlet Gate (A Hydrolyzer),false,A,VALVE,,,,,,,7853,*Trash* A Hydrolyzer (Feather Plant)
+7867,100-SCREW CONVEYOR-1161,"SCREW CONVEYOR, Poptank A Discharge",false,A,SCREW CONVEYOR,,,,,,1678609,14956,Fthr Hydrolizing
+7868,100-TANK-00026,"SURGE TANK, Pop Tank A",false,A,TANK,,,,,,1678609,14956,Fthr Hydrolizing
+7872,SYSTEM-60,*Trash* B Hydrolyzer (Feather Plant),false,A,System,,,,,,29011,10437,"*Trash* Feather Dryer, Hydrolizer & Scrubber"
+7873,100-HYDRAULIC UNIT-00223,"HYDRAULIC UNIT, Hydrolyzer B Primary Gates",false,A,HYDRAULIC UNIT,,,,,,1678609,14956,Fthr Hydrolizing
+7874,100-VALVE-20,B Top Gate (B Hydrolyzer),false,A,VALVE,,,,,,42363,7872,*Trash* B Hydrolyzer (Feather Plant)
+7875,100-VALVE-21,B Bottom Gate (B Hydrolyzer),false,A,VALVE,,,,,,153470,7872,*Trash* B Hydrolyzer (Feather Plant)
+7879,100-VALVE-22,B Inlet Gate (B Hydrolyzer),false,A,VALVE,,,,,,,7872,*Trash* B Hydrolyzer (Feather Plant)
+7880,100-PUMP-66,"PUMP, Press B Water Pump",false,A,PUMP,,,,,,1678609,14956,Fthr Hydrolizing
+7882,100-SCREW CONVEYOR-1160,"SCREW CONVEYOR, Poptank B Discharge",false,A,SCREW CONVEYOR,,,,,,1678609,14956,Fthr Hydrolizing
+7883,100-TANK-00221,"SURGE TANK, Pop Tank B",false,A,TANK,,,,,,1678609,14956,Fthr Hydrolizing
+7893,100-BAG HOUSE-19,Bin BAGHOUSE (Feather Drying),false,A,BAG HOUSE,,,,,,,7854,*Trash* Feather Drying System
+7894,100-PNEUMATIC BLOWER-30,"PNEUMATIC BLOWER, Dryer Discharge (Feather Drying)",false,A,PNEUMATIC BLOWER,,,,,,1678609,14958,Fthr Drying
+7895,100-ROTOLOCK-6,"Rotolock, Dryer Discharge Blower",false,A,ROTOLOCK,,,,,,1683437,14958,Fthr Drying
+7896,100-SEPARATOR-104,"SEPARATOR, Midwestern Screen",false,A,SEPARATOR,,,,,,1678609,14958,Fthr Drying
+7897,100-SCREW CONVEYOR-848,"SCREW CONVEYOR, Midwestern Feed Screw",false,A,SCREW CONVEYOR,,,,,,1678609,14958,Fthr Drying
+7898,100-SCREW CONVEYOR-19,"SCREW CONVEYOR, Dryer Discharge Screw 2",false,A,SCREW CONVEYOR,,,,,,1678609,14958,Fthr Drying
+7899,100-SCREW CONVEYOR-20,"SCREW CONVEYOR, Dryer Discharge Screw 1",false,A,SCREW CONVEYOR,,,,,,1678609,14958,Fthr Drying
+7900,SYSTEM-64,*Trash* Feather Grinding System,false,A,System,,,,,,54044,7852,Obsolete Assets - Do not use
+7903,100-PNEUMATIC BLOWER-14,BLOWER R.V. (Feather Grinding),false,A,PNEUMATIC BLOWER,,,,,,667802,7900,*Trash* Feather Grinding System
+7907,SYSTEM-61,*Trash* Air Quality (Feather Scrubber),false,A,System,,,,,,44225,7310,*Trash* Feather Scrubber Area
+7908,100-SCRUBBER-42,"TANK, Feather Cross Flow Scrubber, tank 2",false,A,SCRUBBER,AC Corporation,MODEL RDS-100,,,,937269,8679,"SCRUBBER, Room Air Feather"
+7909,100-LEVEL TRANSMITTER-19,Packtower Level Control (Feather Scrubber),false,A,LEVEL TRANSMITTER,,,,,,,7907,*Trash* Air Quality (Feather Scrubber)
+7910,100-FAN-114,"FAN, Packtower (Feather Scrubber)",false,A,Fan,,,,,,291671,7852,Obsolete Assets - Do not use
+7911,100-PUMP-805,Pack Tower Pump (Feather Scrubber),false,A,PUMP,,,,,,1382661,7852,Obsolete Assets - Do not use
+7912,100-PUMP-806,Spray Chamber Level Control (Feather Scrubber),false,A,PUMP,,,,,,519892,7907,*Trash* Air Quality (Feather Scrubber)
+7913,SYSTEM-59,*Trash* BLOOD (Feather Plant),false,A,System,,,,,,661370,7852,Obsolete Assets - Do not use
+7914,100-CENTRIFUGE-00048,"CENTRIFUGE, Blood",false,A,CENTRIFUGE,,,,,,1681861,14957,Fthr Blood
+7915,SCREW CONVEYOR-1158,"SCREW CONVEYOR, Centrifuge Solids Blood",false,A,SCREW CONVEYOR,,,,,,303670,7917,"*Trash* CENTRIFUGE, BLOOD"
+7916,100-PUMP-,"PUMP, Centrifuge Feed Evap 2 Blood",false,A,PUMP,,,,,,303670,7917,"*Trash* CENTRIFUGE, BLOOD"
+7917,SYSTEM-58,"*Trash* CENTRIFUGE, BLOOD",false,A,System,,,,,,661372,7913,*Trash* BLOOD (Feather Plant)
+7918,100-SYSTEM-084,*Trash* Dryer Screws (Blood),false,A,System,,,,,,,7913,*Trash* BLOOD (Feather Plant)
+7919,100-SCREW CONVEYOR-?,"SCREW, Dryer Feed (Blood)",false,A,SCREW CONVEYOR,,,,,,303670,7918,*Trash* Dryer Screws (Blood)
+7920,100-SCREW CONVEYOR-849,"SCREW CONVEYOR, Blood Rotolift discharge",false,A,SCREW CONVEYOR,,,,,,1678609,14957,Fthr Blood
+7921,100-SCREW CONVEYO-848,"SCREW CONVEYOR, Blood Centrifuge Solids Discharge",false,A,SCREW CONVEYOR,,,,,,1678609,14957,Fthr Blood
+7922,100-CYCLONE-20,CYCLONE R.V. (Blood),false,A,CYCLONE,,,,,,303670,7918,*Trash* Dryer Screws (Blood)
+7923,SYSTEM-56,*Trash* Product to Storage (Blood),false,A,System,,,,,,,7913,*Trash* BLOOD (Feather Plant)
+7924,100-FAN-115,Blower (Blood),false,A,Fan,,,,,,303670,7923,*Trash* Product to Storage (Blood)
+7925,100-FAN-116,Blower R.V. (Blood),false,A,ROTOLOCK,,,,,,303670,7923,*Trash* Product to Storage (Blood)
+7926,SEPARATOR-105,"Screen, Midwestern (Blood)",false,A,SEPARATOR,,,,,,303670,7923,*Trash* Product to Storage (Blood)
+7927,100-SEDIMENTER-13,Screen Feed (Blood),false,A,SCREW CONVEYOR,,,,,,657321,7923,*Trash* Product to Storage (Blood)
+7928,SYSTEM-62,*Trash* VAPOR CONDENSING (Blood),false,A,System,,,,,,57239,7913,*Trash* BLOOD (Feather Plant)
+7929,100-FAN-117,"FAN, Air Condensing 2 VFD (Blood)",false,A,Fan,,,,,,303670,7928,*Trash* VAPOR CONDENSING (Blood)
+7930,100-FAN-118,"FAN, Air Condensing 1 VFD (Blood)",false,A,Fan,,,,,,303670,7928,*Trash* VAPOR CONDENSING (Blood)
+7931,100-FAN-119,"FAN, Condensing Booster (Blood)",false,A,Fan,,,,,,303670,7928,*Trash* VAPOR CONDENSING (Blood)
+7932,100-CYCLONE-21,CYCLONE Booster (Blood),false,A,CYCLONE,,,,,,303670,7928,*Trash* VAPOR CONDENSING (Blood)
+7933,SYSTEM-57,*Trash* DRYER (Blood),false,A,System,,,,,,60062,7913,*Trash* BLOOD (Feather Plant)
+7934,100-PUMP-807,"PUMP, Front Bearing (Blood)",false,A,PUMP,,,,,,303670,7933,*Trash* DRYER (Blood)
+7935,100-PUMP-808,"PUMP, Rear Bearing Pump (Blood)",false,A,PUMP,,,,,,303670,7933,*Trash* DRYER (Blood)
+7936,100-DRYER-22,DRYER (Blood),false,A,DRYER,,,,,,303670,7933,*Trash* DRYER (Blood)
+7937,100-PUMP-809,"PUMP, Shaft Condensate (Blood)",false,A,PUMP,,,,,,303670,7933,*Trash* DRYER (Blood)
+7938,100-PROCESS LINE-01xxx,*Trash* TST & O4300 Cook Line,true,L,Process Line,,,,,,517236,7852,Obsolete Assets - Do not use
+7939,100-SCREW CONVEYOR-98,"SCREW CONVEYOR, Poultry Raw Material Incline Screw",false,A,SCREW CONVEYOR,,,,,,1679379,14917,PP Raw
+7940,100-SCREW CONVEYOR-999,"SCREW CONVEYOR, Poultry Hogger Discharge Screw",false,A,SCREW CONVEYOR,,,,,,1679379,14917,PP Raw
+7941,100-HYDRAULIC UNIT-30,Hydraulic Unit TST & O4300 Press #1 Choke,false,A,HYDRAULIC UNIT,,Dupro Hydraulic,,,,,7852,Obsolete Assets - Do not use
+7942,100-PUMP-817,"Pump, 4300 Centrifuge Discharge",false,A,PUMP,Crane-Demming,Crane Demming 4021 2M,,,,1679379,14935,O4300 Cooker Equipment
+7943,100-GRINDER-36,Grinder TST & O4300 PRE-HOGGOR,false,A,GRINDER,The Dupps Company,180A,,,,672764,7852,Obsolete Assets - Do not use
+7944,100-PUMP-818,Pump TST & O4300 Press Drainer #2,false,A,PUMP,The Dupps Company,Dupps Taddle Pump,,,,1679379,14919,PP Pressing
+7945,100-PUMP-831,"PUMP, Poultry Centrifuge Feed",false,A,PUMP,DUPPS COMPANY 720,DUPPS Duke 45,,,,1679379,16279,TST & O4300
+7946,100-COOKER-00102,"COOKER, O4300",false,A,COOKER,DUPPS COMPANY 720,0912016,,,,1675153,14935,O4300 Cooker Equipment
+7947,100-SCREW CONVEYOR-858,"SCREW CONVEYOR, Cooker Sight Glass o4300",false,A,SCREW CONVEYOR,DUPPS COMPANY 720,6,,,,1679379,14935,O4300 Cooker Equipment
+7948,100-HYDRAULIC UNIT-31,Hydraulic Unit O4300 Cooker Discharge Gate,false,A,HYDRAULIC UNIT,Jay Gee Manufacturing,,,,,1361426,14935,O4300 Cooker Equipment
+7949,100-DRAINER-12,"DRAINER, O4300",false,A,DRAINER,Jay Gee Manufacturing,JAY GEE 2 DOOR DRAINER,,,,1679379,14935,O4300 Cooker Equipment
+7950,100-ROTOLIFT-94,Rotolift 4300 Crax,false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,431424,7852,Obsolete Assets - Do not use
+7951,100-ROTOLIFT-95,"ROTOLIFT, Poultry Plant Press Fines",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14919,PP Pressing
+7952,100-SCREW CONVEYOR-859,"SCREW CONVEYOR, Poultry Plant Crax Discharge #2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+7953,100-SCREW CONVEYOR-860,"SCREW CONVEYOR, Poultry Plant Crax Discharge #3",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+7954,100-SCREW CONVEYOR-861,"SCREW CONVEYOR, Poultry Plant Crax Cross Screw",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+7955,100-SCREW CONVEYOR-862,"SCREW CONVEYOR, Crax Bin #2 Leveling Screw",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+7956,100-SCREW CONVEYOR-863,"SCREW CONVEYOR, Cooker Discharge #1 o4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14935,O4300 Cooker Equipment
+7957,100-SCREW CONVEYOR-864,"SCREW CONVEYOR, Cooker Discharge #2 o4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14935,O4300 Cooker Equipment
+7958,100-SCREW CONVEYOR-865,"SCREW CONVEYOR, Poultry Plant Press #1 Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14919,PP Pressing
+7959,100-SCREW CONVEYOR-866,"SCREW CONVEYOR, Press Fines Poultry",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14919,PP Pressing
+7960,100-SCREW CONVEYOR-867,"SCREW CONVEYOR, Poultry Plant Runaround #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,16279,TST & O4300
+7961,100-SCREW CONVEYOR-868,"SCREW CONVEYOR, Poultry Plant Runaround #2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,16279,TST & O4300
+7962,100-SCREW CONVEYOR-869,"SCREW CONVEYOR, Poultry Plant Runaround #3",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,16279,TST & O4300
+7963,100-SCREW CONVEYOR-870,"SCREW CONVEYOR, Poultry Plant Runaround #4",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,16279,TST & O4300
+7964,100-SCREW CONVEYOR-871,"SCREW CONVEYOR, Poultry Plant Crax Discharge #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+7965,100-SEDIMENTER-14,"SEDIMENTER, TST & o4300",false,A,SEDIMENTER,Jay Gee Manufacturing,9,,,,1679379,16279,TST & O4300
+7966,100-SCREW PRESS-00104,"SCREW PRESS, TST/O4300 1 (Dupps)",false,A,SCREW PRESS,HAARSLEV,210-074-07 (TYPE),,,,1679379,14919,PP Pressing
+7967,100-PUMP-00111,"PUMP, o4300 Cooker Feed",false,A,PUMP,HAARSLEV,Haarslev HM35 - 009-24-096 (TYPE),,,,1677910,14917,PP Raw
+7968,100-PUMP-821,"Pump ,O4300 Add Back Fat Tank 15",false,A,PUMP,ROPER,3611-HBRV,,,,1679379,14935,O4300 Cooker Equipment
+7969,100-PUMP-822,"PUMP, O4300 Add Fat",false,A,PUMP,ROPER,Roper 3617 HBRV,,,,1679379,14935,O4300 Cooker Equipment
+7970,100-CENTRIFUGE-41,"CENTRIFUGE, Poultry",false,A,CENTRIFUGE,IPE INDUSTRIAL PROCESS EQUIPMENT,375-IPE 09,,,,1679402,16279,TST & O4300
+7971,100-PUMP-823,"PUMP, O4300 Condensate",false,A,PUMP,DEAN BROTHERS,MetPro PH-2111 - 3196ST,,,,1679379,14935,O4300 Cooker Equipment
+7972,100-PUMP-824,O4300 Cooker Bearing Oil Pump,false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,1679402,23671,"Cooker, O4300 Bearing Lube System"
+7973,100-PUMP-825,"PUMP, Raw Material N4300",false,A,PUMP,,,,,,1677943,14941,200U Raw
+7974,100-MAGNET-18,"del MAGNET, Raw Material N4300 & 200U",false,A,MAGNET,,,,,,,7852,Obsolete Assets - Do not use
+7979,100-PUMP-00429,N4300 Cooker Bearing Oil Pump #2 (Discharge End),false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,1679402,23680,N4300 Cooker Bearing #2 (Discharge End) Lube System
+7980,100-SUMP-820,"SUMP, Poultry Raw Pit (3x3)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+7983,100-CENTRIFUGE-00426,"CENTRIFUGE, n4300",false,A,CENTRIFUGE,,,,,,1679402,14946,N4300 Cooking
+7984,100 PUMP-00425,N4300 Centrifuge Bearing Oil Pump,false,A,PUMP,DUPPS COMPANY 720,DUPPS Duke 45,,,,1676942,23686,N4300 Centrifuge Bearing Lube System
+8074,100-PUMP-00424,"PUMP, Centrifuge Discharge N4300",false,A,PUMP,,,,,,1676942,14946,N4300 Cooking
+8075,100-PUMP-00416,"PUMP, Press Fines N4300",false,A,PUMP,,,,,,1676942,14947,N4300 Pressing
+8076,100-100-PUMP-00421,"PUMP, Drainor N4300",false,A,PUMP,,,,,,1662352,14946,N4300 Cooking
+8077,100-SCREW CONVEYOR-00419,"SCREW CONVEYOR, Drainor Discharge n4300",false,A,SCREW CONVEYOR,,,,,,1676942,14946,N4300 Cooking
+8105,100-FAN-00433,"CONDENSER, 1A Air N4300",false,A,Fan,,,,,,1679471,33613,N4300 Cooker Air-Cooled  Condenser (1-east)
+8106,100-FAN-00449,"CONDENSER, 2A Air  N4300",false,A,Fan,,,,,,1679471,33611,N4300 Cooker Air-Cooled Condenser (2-west)
+8107,100-FAN-00434,"CONDENSER, 1B Air N4300",false,A,Fan,,,,,,1679471,33613,N4300 Cooker Air-Cooled  Condenser (1-east)
+8108,100-FAN-00450,"CONDENSER, 2B Air  N4300",false,A,Fan,,,,,,1679471,33611,N4300 Cooker Air-Cooled Condenser (2-west)
+8114,100-SCREW CONVEYOR-00402,"SCREW CONVEYOR, Crax Screw #6 n4300",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1676942,14947,N4300 Pressing
+8115,100-BUCKET ELEVATOR-00407,"BUCKET ELEVATOR, Crax N4300",false,A,BUCKET ELEVATOR,,,,,,1676942,14947,N4300 Pressing
+8116,100-SCREW CONVEYOR-00401,"SCREW CONVEYOR, Crax Cross n4300",false,A,SCREW CONVEYOR,,,,,,1676942,14947,N4300 Pressing
+8124,100-PUMP-00409,"PUMP, Press Gearbox Oil Cooler N4300",false,A,PUMP,,,,,,1497331,7532,"SCREW PRESS, n4300 (Haarslev)"
+8126,100-SCREW CONVEYOR-898,"SCREW CONVEYOR, Roof Screw #5 (Meal Screw)",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8128,100-SCREW CONVEYOR-899,"SCREW CONVEYOR, Roof 1, 1800",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8129,100-SCREW CONVEYOR-900,"SCREW CONVEYOR, Roof 2, 1800",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8130,100-SCREW CONVEYOR-901,"SCREW CONVEYOR, Roof 3, 1800",false,A,SCREW CONVEYOR,,,,,,1681389,14952,1800 Cook Line Grinding
+8131,100-SCREW CONVEYOR-902,"SCREW CONVEYOR, Roof 4, 1800",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8132,100-SCREW CONVEYOR-01005,"SCREW CONVEYOR, 1800 Screen Finished",false,A,SCREW CONVEYOR,,,,,,1682307,14952,1800 Cook Line Grinding
+8133,100-SEDIMENTER-15,"Screen, 1800",false,A,SEDIMENTER,,,,,,512311,7852,Obsolete Assets - Do not use
+8134,100-SCREW CONVEYOR-904,"SCREW CONVEYOR, 1800 Mill Discharge #2",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8135,100-SCREW CONVEYOR-905,"SCREW CONVEYOR, 1800 Mill Discharge #1",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8136,100-SCREW CONVEYOR-906,"SCREW CONVEYOR, 1800 Mill Feed",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8137,100-SCREW CONVEYOR-01010,"SCREW CONVEYOR, 1800 Mill Rotolift",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+8138,100-SCREW CONVEYOR-01011,"SCREW CONVEYOR, 1800 Screen Overs",false,A,SCREW CONVEYOR,,,,,,1682306,14952,1800 Cook Line Grinding
+8139,100-HOPPER-106,"HOPPER, n4300 Surge",false,A,HOPPER,,,,,,1678199,14945,N4300 Raw
+8140,100-HOPPER-107,"HOPPER, 1800 Crax Surge",false,A,HOPPER,,,,,,1676933,14952,1800 Cook Line Grinding
+8142,100-COOKER-33,*Trash* 1800 Raw Material,false,A,System,,,,,,,7296,*Trash* 1800 Cook Line
+8143,100-SCREW PRESS-01020,"SCREW PRESS, 1800 (Dupps)",false,A,SCREW PRESS,,,,,,1676933,14951,1800 Cook Line Pressing
+8144,100-COOKER-01036,"COOKER, 1800",false,A,COOKER,,,,,,1675153,14950,1800 Cook Line Cooking
+8145,100-SCREW CONVEYOR-909,Mill 1800U,false,A,SCREW CONVEYOR,,,,,,303670,8142,*Trash* 1800 Raw Material
+8147,100-FAN-01041,"Fan, Booster 1800U",false,A,Fan,,,,,,,14950,1800 Cook Line Cooking
+8148,100-PUMP-01035,"PUMP, 1800 Shell Condensate",false,A,PUMP,,,,,,1676933,14950,1800 Cook Line Cooking
+8149,100-SCREW CONVEYOR-000,"SCREW CONVEYOR, Cooker Feed 1800U",false,A,SCREW CONVEYOR,,,,,,1676933,7852,Obsolete Assets - Do not use
+8150,100-SCREW CONVEYOR-911,"SCREW CONVEYOR, Cooker Feed Cross 1800U",false,A,SCREW CONVEYOR,,,,,,1676933,7852,Obsolete Assets - Do not use
+8151,100-GRINDER-47,1800 TO POULTRY GRINDING,false,A,System,,,,,,,7296,*Trash* 1800 Cook Line
+8152,100-ROTOLIFT-01016,"Rotolift, Crax Discharge 1800U",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,575605,7852,Obsolete Assets - Do not use
+8153,100-SEPARATOR-73,GREASE EXTRACTION 1800U,false,A,System,,,,,,,7296,*Trash* 1800 Cook Line
+8154,100-SCREW CONVEYOR-01031,"SCREW CONVEYOR, Cooker Discharge #2 1800U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14950,1800 Cook Line Cooking
+8155,100-SCREW CONVEYOR-01030,"SCREW CONVEYOR, Cooker Discharge #3 1800U",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14950,1800 Cook Line Cooking
+8159,100-SCREW CONVEYOR-01022,"SCREW CONVEYOR, Fines Return 1800",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14951,1800 Cook Line Pressing
+8160,100-ROTOLIFT-01023,"ROTOLFT, Fines Rotolift 1800",false,A,ROTOLIFT,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14951,1800 Cook Line Pressing
+8162,100-PUMP-01025,"Pump, Centrifuge Tallow 1800U",false,A,PUMP,The Dupps Company,"DUPPS, DUKE 45 CRUDE FAT PUMP",,,,1676933,14950,1800 Cook Line Cooking
+8163,100-DRAINER-01029,DRAINOR 1800U,false,A,DRAINER,,,,,,1676933,14950,1800 Cook Line Cooking
+8164,HYDRAULIC UNIT-01021,"HYDRAULIC, Press Console 1800",false,A,HYDRAULIC UNIT,Jay Gee Manufacturing,,,,,423869,7852,Obsolete Assets - Do not use
+8165,100-COOKER-35,RAW MATERIAL 200U,false,A,System,,,,,,50261,7295,*Trash* 200U Cook Line
+8166,100-MAGNET-21,"MAGNET, N4300",false,A,MAGNET,,,,,,1677539,14945,N4300 Raw
+8167,100-FAN-125-00020,"Fan, Booster 200U",false,A,Fan,,,,,,1495564,14942,200U Cooking
+8168,100-PUMP-844,"PUMP, Prehogger",false,A,PUMP,,,,,,626478,7852,Obsolete Assets - Do not use
+8169,100-SCREW CONVEYOR-918,"SCREW CONVEYOR, Incline (n4300)",false,A,SCREW CONVEYOR,,,,,,1677943,14945,N4300 Raw
+8170,100-DUCT-00028,"DUCT, Vapor R.V. 200U",false,A,ROTOLOCK,,,,,,727584,14942,200U Cooking
+8171,100-PUMP-00437,"PUMP, 200U Cooker Feed",false,A,PUMP,,,,,,1683509,14941,200U Raw
+8173,100-PUMP-00308,"PUMP, Evap Feed P8 N4300",false,A,PUMP,,,,,,1676995,7852,Obsolete Assets - Do not use
+8174,100-PUMP-00302,New Evap Recirculation P1 Pump,false,A,PUMP,,,,,,1676995,15480,New Evaporator
+8175,100-PUMP-00301,New Evap Recirculation P2 Pump,false,A,PUMP,,,,,,1676995,15480,New Evaporator
+8176,100-PUMP-00304,New Evaporator Condenser Condensate Pump,false,A,PUMP,,,,,,1676995,33754,New Evaporator Condenser
+8177,100-PUMP-00306,New Evaporator Vacuum Pump,false,A,PUMP,,,,,,1676995,15480,New Evaporator
+8178,100-PUMP-00305,Evaporators CIP Pump,false,A,PUMP,,,,,,1676995,14961,Evaporators
+8180,100-CENTRIFUGE-44,*Trash* Oil Removing/Cooking Discharge 200U,false,A,System,,,,,,,7295,*Trash* 200U Cook Line
+8181,100-SCREW PRESS-64,"PRESS, 200U",false,A,SCREW PRESS,,,,,,582559,7852,Obsolete Assets - Do not use
+8182,100-SEPARATOR-74,Fines Screen 200U,false,A,SEPARATOR,,,,,,,8180,*Trash* Oil Removing/Cooking Discharge 200U
+8183,100-PUMP-00022,"PUMP, Grease Transfer 200U",false,A,PUMP,,,,,,1677943,14942,200U Cooking
+8184,100-SCREW CONVEYOR-919,"SCREW CONVEYOR, Crax 5 By-Pass",false,A,SCREW CONVEYOR,,,,,,1677943,14943,200U Pressing
+8185,100-HYDRAULIC UNIT-00007,"HYDRAULIC CONSOLE, Press 200U",false,A,HYDRAULIC UNIT,,,,,,1677618,14943,200U Pressing
+8186,100-SYSTEM-21,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant,false,A,System,,,,,,,7301,*Trash* Cooling Tower Area
+8187,100-FAN-125,"Fan, #1 1800/FP CWS",false,A,Fan,,,,,,479490,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8188,FAN-126,"Fan, #2 1800/FP CWS",false,A,Fan,,,,,,303670,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8189,100-FAN-127,"Fan, #3 1800/FP CWS",false,A,Fan,,,,,,303670,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8190,100-PUMP-853,"PUMP, #1 1800/FP",false,A,PUMP,,,,,,303670,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8191,100-PUMP-854,"PUMP, #2 1800/FP",false,A,PUMP,,,,,,303670,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8192,100-PUMP-855,"PUMP, #3 1800/FP",false,A,PUMP,,,,,,303670,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8193,100-PUMP-856,"PUMP, Air Scrubber",false,A,PUMP,,,,,,1262367,8186,*Trash* BOILER STATUS/COOLING WATER SYSTEM 1800U/Feather Plant
+8194,100-PROCESS LINE-01,POULTRY PROCESSING,true,L,Process Line,,,,,,1679379,14953,PRODUCTION
+8195,100-SYSTEM-22,*Trash* Boiler Status/Cooling Water System,false,A,System,,,,,,,7852,Obsolete Assets - Do not use
+8196,100-FAN-128,"Fan, #1 Poultry Fan",false,A,Fan,,,,,,,8195,*Trash* Boiler Status/Cooling Water System
+8197,100-FAN-129,"Fan, #2 Poultry Fan",false,A,Fan,,,,,,661300,8195,*Trash* Boiler Status/Cooling Water System
+8198,100-FAN-130,"Fan, #3 Poultry Fan",false,A,Fan,,,,,,,8195,*Trash* Boiler Status/Cooling Water System
+8199,100-FAN-131,"Fan, #5 Poultry Fan",false,A,Fan,,,,,,,8195,*Trash* Boiler Status/Cooling Water System
+8200,100-PUMP-857,"PUMP, Poultry",false,A,PUMP,,,,,,382916,8195,*Trash* Boiler Status/Cooling Water System
+8252,100-COOKER-00101,"COOKER, TST",false,A,COOKER,DUPPS COMPANY 720,0912016 - 100,,,,1675153,14936,TST Cooker Equipment
+8255,100-SCREW PRESS-00108,"SCREW PRESS, TST/o4300 #2 (Haarslev)",false,A,SCREW PRESS,HAARSLEV,210-074-07 (TYPE),,,,1679379,14919,PP Pressing
+8256,100-SCREW PRESS-00105,"SCREW PRESS, TST/O4300 #3 (Dupps)",false,A,SCREW PRESS,HAARSLEV,210-074-07 (TYPE),,,,1679379,14919,PP Pressing
+8257,100-PUMP-00112,"PUMP, TST Cooker Feed",false,A,PUMP,HAARSLEV,Haarslev HM35 - 009-24-096 (TYPE),,,,1679385,14917,PP Raw
+8258,100-SCREW CONVEYOR-922,"SCREW CONVEYOR, Cooker Discharge #1 TST",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14936,TST Cooker Equipment
+8260,100-PUMP-872,Pump O4300 FatBack,false,A,PUMP,ROPER,Roper 3617 HBRV,,,,292110,7852,Obsolete Assets - Do not use
+8261,100-PUMP-873,"PUMP, TST Add Fat",false,A,PUMP,ROPER,Roper 3617 HBRV,,,,1679379,14936,TST Cooker Equipment
+8262,100-HYDRAULIC UNIT-37,Hydraulic Unit TST & O4300 Press #3 Choke,false,A,HYDRAULIC UNIT,,Dupro Hydraulic,,,,,7852,Obsolete Assets - Do not use
+8263,100-HYDRAULIC UNIT-38,HYDRAULIC UNIT TST & O4300 Press Console,false,A,HYDRAULIC UNIT,,,,,,1082611,14919,PP Pressing
+8264,100-SCREW CONVEYOR-1159,"SCREW CONVEYOR, TST & O4300 Press Drainor Screw",false,A,SCREW CONVEYOR,,,,,,1679379,14919,PP Pressing
+8265,100-PUMP-874,"PUMP, Poultry Centrifuge Finished Grease",false,A,PUMP,,,,,,1679379,16279,TST & O4300
+8266,100-PUMP-875,Poultry Centrifuge Bearing Oil Pump,false,A,PUMP,,,,,,1679379,23685,Poultry Centrifuge Bearing Lube System
+8269,100-COOKER-40,O4300,false,A,System,,,,,,,7852,Obsolete Assets - Do not use
+8270,100-PUMP-877,"PUMP, Tesla TST Drainor",false,A,PUMP,,3x2x10-2H50,4001-021222,,,1679379,14936,TST Cooker Equipment
+8271,100-SCREW CONVEYOR-923,"SCREW CONVEYOR, Drainor Discharge o4300",false,A,SCREW CONVEYOR,,,,,,1679379,14935,O4300 Cooker Equipment
+8272,100-BUCKET ELV-1,"Bucket Elevator, TST & O4300 Crax",false,A,BUCKET ELEVATOR,,,,,,1679379,14919,PP Pressing
+8273,100-PUMP-878,"Pump, TST Cooker Gearbox oil",false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,1679402,14936,TST Cooker Equipment
+8274,100-PUMP-879,"PUMP, TST Condensate (15HP)",false,A,PUMP,DEAN BROTHERS,MetPro PH-2111 - 3196ST,,,,1679379,14936,TST Cooker Equipment
+8275,100-DRAINER-14,"DRAINER, TST",false,A,DRAINER,Jay Gee Manufacturing,JAY GEE 2 DOOR DRAINER,,,,1679379,14936,TST Cooker Equipment
+8276,100-PUMP-880,"PUMP, Tesla O4300 Drainor",false,A,PUMP,,,,,,1679379,14935,O4300 Cooker Equipment
+8277,100-HYDRAULIC UNIT-39,Hydraulic Unit TST Cooker Discharge Gate,false,A,HYDRAULIC UNIT,Jay Gee Manufacturing,,,,,1610033,14936,TST Cooker Equipment
+8278,100-SCREW CONVEYOR-925,"SCREW CONVEYOR, Cooker Discharge #2 TST",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14936,TST Cooker Equipment
+8279,100-AGITATOR-35,AUGER DAF,false,A,AGITATOR,,,,,,,7302,*Trash* DAF Area
+8280,100-MOTOR-95,MOTOR DAF Skimmer Speed,false,A,MOTOR,,,,,,,7302,*Trash* DAF Area
+8281,MOTOR-96,MOTOR DAF FLOC Mixer Speed,false,A,MOTOR,,,,,,439944,7302,*Trash* DAF Area
+8282,100-PUMP-881,"PUMP, DAF Coagulant",false,A,PUMP,,,,,,1251196,14976,DAF - PRODUCTION
+8283,100-PUMP-882,"PUMP, DAF Flocculant",false,A,PUMP,,,,,,1568567,14976,DAF - PRODUCTION
+8289,SYSTEM-75,EVAPORATOR Pumps,false,A,System,,,,,,897838,7304,*Trash* Evaporator Area
+8290,100-PUMP-885,Pump #5 200U Concentrate,false,A,PUMP,ROPER,ROPER 3617HB,,,,42722,7852,Obsolete Assets - Do not use
+8291,SYSTEM-74,*Trash* Concentrate Pumps and Damper Gate,false,A,System,,,,,,37684,7304,*Trash* Evaporator Area
+8292,100-PUMP-886,TST Concentrate Pump,false,A,PUMP,ROPER,ROPER 3617HB,,,,1676995,14961,Evaporators
+8293,100-PUMP-887,O4300 Concentrate Pump,false,A,PUMP,ROPER,ROPER 3617HB,,,,1676995,14961,Evaporators
+8294,100-PUMP-888,N4300 Concentrate Pump,false,A,PUMP,ROPER,ROPER 3617HB,,,,1676995,14961,Evaporators
+8295,100-DAMPER-2,DAMPER 1800,false,A,DAMPER,,,,,,,8291,*Trash* Concentrate Pumps and Damper Gate
+8296,100-DAMPER-3,DAMPER O4300,false,A,DAMPER,,,,,,474495,8291,*Trash* Concentrate Pumps and Damper Gate
+8297,100-DAMPER-4,DAMPER TST,false,A,DAMPER,,,,,,43500,8291,*Trash* Concentrate Pumps and Damper Gate
+8298,100-DAMPER-5,DAMPER Tail Gas,false,A,DAMPER,,,,,,,8291,*Trash* Concentrate Pumps and Damper Gate
+8299,SYSTEM-76,*Trash* SKIMMER and Old Evaporator,false,A,System,,,,,,,7304,*Trash* Evaporator Area
+8300,100-PUMP-889,"PUMP, DAF Feed",false,A,PUMP,,,,,,1679771,14976,DAF - PRODUCTION
+8301,100-DRAG CONVEYOR-26,"DRAG, Skimmer Solids",false,A,DRAG CONVEYOR,,,,,,1674970,14977,SKIMMER
+8302,100-DRAG CONVEYOR-27,"DRAG, Skimmer Grease",false,A,DRAG CONVEYOR,,,,,,1674970,14977,SKIMMER
+8303,100-AGITATOR-36,"AGITATOR, Skimmer Feed Tank",false,A,AGITATOR,,,,,,1150037,14977,SKIMMER
+8304,100-PUMP-890,"PUMP, Skimmer Feed",false,A,PUMP,,,,,,1674970,14977,SKIMMER
+8305,100-PUMP-891,Old Evap Washdown Pump,false,A,PUMP,,,,,,1676995,15479,Old Evaporator
+8306,100-COMPRESSOR-55,COMPRESSOR Air Old Evap,false,A,COMPRESSOR,,,,,,,8299,*Trash* SKIMMER and Old Evaporator
+8308,100-BOILER-2,BOILER #2,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1679435,14971,BOILER ROOM
+8309,100-BOILER-3,BOILER #3,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1680261,14971,BOILER ROOM
+8310,100-BOILER-4,BOILER #4,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1680262,14971,BOILER ROOM
+8311,100-BOILER-5,BOILER #5,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1679435,14971,BOILER ROOM
+8312,100-BOILER-6,BOILER #6,false,A,BOILER,Hurst,"HURST 1200HP, NATIONAL BOARD #16138",,,,1679435,14971,BOILER ROOM
+8313,100-PUMP-00005,"PUMP, Boiler #3 Feedwater",false,A,PUMP,GRISWOLD,MODEL MA60-10079 GRISWOLD M/3X2X8/0800/DDLM/CS,,,,1678992,14971,BOILER ROOM
+8314,100-PUMP-00003,"PUMP, Boiler #5 Feedwater",false,A,PUMP,Goulds Pump,GOULDS MTX 3196,,,,1671638,14971,BOILER ROOM
+8315,100-PUMP-895,"PUMP, Soft Water Tank Discharge",false,A,PUMP,,,,,,1671638,14971,BOILER ROOM
+8316,100-FAN-136,"FAN, Boiler Exhaust #1",false,A,Fan,,,,,,,14971,BOILER ROOM
+8317,SYSTEM-81,Boiler Room Wall Fans,false,A,System,,,,,,,7298,*Trash* Boiler Room 1-6
+8318,100-FAN-138,"FAN, Boiler Exhaust #2",false,A,Fan,,,,,,,14971,BOILER ROOM
+8319,100-FAN-139,"FAN, Boiler Exhaust #3",false,A,Fan,,,,,,,14971,BOILER ROOM
+8320,SYSTEM-82,Feedwater Pumps,false,A,System,,,,,,,7298,*Trash* Boiler Room 1-6
+8323,100-ROTOLIFT-00519,"ROTOLIFT, Crax A-side",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14937,PP A-Side Grinding
+8324,100-SCREW CONVEYOR-00510,"SCREW CONVEYOR, Hammermill A Discharge #2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14937,PP A-Side Grinding
+8325,100-PNEUMATIC BLOWER-00506,"PNEUMATIC BLOWER, Poultry Grinding A-side",false,A,PNEUMATIC BLOWER,,,,,,1679379,14937,PP A-Side Grinding
+8326,100-SCREW CONVEYOR-00521,"SCREW CONVEYOR, Crax Bin #2 Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1306146,14920,PP Grinding
+8327,SCREW CONVEYOR-00526,"SCREW CONVEYOR, Crax Bin #3 Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1306146,14920,PP Grinding
+8331,100-HAMMER MILL-00531,"HAMMER MILL, Poultry Grinding B-side",false,A,HAMMER MILL,,,,,,1679379,14938,PP B-Side Grinding
+8332,SCREW CONVEYOR-939,"SCREW CONVEYOR, 1800 Meal Screw",false,A,SCREW CONVEYOR,,,,,,1206404,14920,PP Grinding
+8333,100-ROTOLOCK-00525,"Rotolock, Rotary Valve B",false,A,ROTOLOCK,,73055-3,,,,1679379,14938,PP B-Side Grinding
+8334,100-SCREW CONVEYOR-00527,"SCREW CONVEYOR, Screen Finished B-side",false,A,SCREW CONVEYOR,,,,,,1679379,14938,PP B-Side Grinding
+8335,100-HOPPER-00540,Hopper Bin #1,false,A,HOPPER,Jay Gee Manufacturing,12,,,,452186,7852,Obsolete Assets - Do not use
+8336,100-ROTOLIFT-00533,"ROTOLIFT, Overs B-side",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1679379,14938,PP B-Side Grinding
+8338,100-ROTOLIFT-00538,ROTOLIFT. Crax B-side,false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1679379,7852,Obsolete Assets - Do not use
+8339,100-ROTOLIFT-00529,"ROTOLIFT, HammerMill B Discharge",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14938,PP B-Side Grinding
+8341,100-SCREW CONVEYOR-00530,"SCREW CONVEYOR, Hammermill B Discharge #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14938,PP B-Side Grinding
+8342,100-SCREW CONVEYOR-00532,"SCREW CONVEYOR, Hammermill B Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14938,PP B-Side Grinding
+8343,100-SCREW CONVEYOR-00534,"SCREW CONVEYOR, Screen Overs B-side",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14938,PP B-Side Grinding
+8344,100-SEPARATOR-00535,Rotex B Screen #1,false,A,SEPARATOR,ROTEX,522,,,,1679379,34156,"SEPARATOR, Shaker B-Side"
+8345,100-SEPARATOR-00536,Rotex B Screen #2,false,A,SEPARATOR,ROTEX,52,,,,1679379,34156,"SEPARATOR, Shaker B-Side"
+8347,100-ROTOLIFT-00537,"ROTOLIFT, Crax-B",false,A,ROTOLIFT,Jay Gee Manufacturing,9,,,,1679379,14938,PP B-Side Grinding
+8349,100-PNEUMATIC BLOWER-00524,"PNEUMATIC BLOWER, Poultry Grinding B-side",false,A,PNEUMATIC BLOWER,,,,,,1679379,14938,PP B-Side Grinding
+8350,100-SCREW CONVEYOR-00539,"SCREW CONVEYOR, Crax Bin #1 Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1306146,14920,PP Grinding
+8360,100-SCREW CONVEYOR-937,"SCREW CONVEYOR, Outside Blower Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1256323,14920,PP Grinding
+8361,SCREW CONVEYOR-938,"SCREW CONVEYOR, Outside Blower Alley",false,A,SCREW CONVEYOR,,,,,,1344056,14920,PP Grinding
+8362,100-PNEUMATIC BLOWER-142,"PNEUMATIC BLOWER, Outside Blower",false,A,PNEUMATIC BLOWER,,,,,,1679379,14920,PP Grinding
+8363,100-ROTOLOCK-00507A,"Rotolock, Outside Blower",false,A,ROTOLOCK,,,,,,1679379,14920,PP Grinding
+8369,100-SCREW CONVEYOR-41,"SCREW CONVEYOR, Direct Loadout Cross (A System)",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1679379,14937,PP A-Side Grinding
+8370,100-HOPPER-110,"HOPPER, Crax Bin #1",false,A,HOPPER,,,,,,1679379,14920,PP Grinding
+8371,100-HOPPER-111,"HOPPER, Crax Bin #2",false,A,HOPPER,,,,,,1679379,14920,PP Grinding
+8372,100-HOPPER-112,"HOPPER, Crax Bin #3",false,A,HOPPER,,,,,,1679379,14920,PP Grinding
+8373,100-HOPPER-113,"Bin, Petox #3 (Stabilizer)",false,A,HOPPER,,,,,,,7852,Obsolete Assets - Do not use
+8374,100-HOPPER-114,"Bin, Petox #2 (Stabilizer)",false,A,HOPPER,,,,,,,7852,Obsolete Assets - Do not use
+8375,100-HOPPER-115,"Bin, Petox #1 (Stabilizer)",false,A,HOPPER,,,,,,,7852,Obsolete Assets - Do not use
+8383,100-Pneumatic Blower-17,A Blower Manual,false,A,PNEUMATIC BLOWER,,,,,,408613,7852,Obsolete Assets - Do not use
+8384,100-UNLOADER-00930,Unloader Silo #4,false,A,UNLOADER,A.O. SMITH HARVESTORE,"A.O. SMITH HARVESTORE, GOLIATH 74",,,,1672340,14966,SILOS
+8385,100-ROTOLOCK-34,Rotolock Rotary Valve A Baghouse,false,A,ROTOLOCK,ROTOLOCK,73055-3 (EQUIPMENT #),,,,1467184,14967,LEMANCO
+8386,100-FAN-00925,"Fan, A Baghouse",false,A,Fan,,,,,,1321695,14967,LEMANCO
+8387,100-SCREW CONVEYOR-00902R,"SCREW CONVEYOR, Silo Discharge A",false,A,SCREW CONVEYOR,GARDNER DENVER,GAHHBPA,,,,1672340,14966,SILOS
+8389,100-Pneumatic Blower-18,B Blower Manual,false,A,System,,,,,,,7852,Obsolete Assets - Do not use
+8390,100-SCREW CONVEYOR-00904R,"SCREW CONVEYOR, Silo Discharge B",false,A,SCREW CONVEYOR,GARDNER DENVER,GAHHBPA,,,,1672340,14966,SILOS
+8391,100-FAN-00926,"Fan, B Baghouse",false,A,Fan,,,,,,1286992,14967,LEMANCO
+8392,100-ROTOLIFT-00907,"ROTOLIFT, B-side",false,A,ROTOLIFT,Jay Gee Manufacturing,JAY GEE - 12,,,,1673704,14966,SILOS
+8393,100-ROTOLOCK-00917,Rotolock Rotary Valve B Blower Bin,false,A,ROTOLOCK,ROTOLOCK,73055-3 (EQUIPMENT #),,,,1681249,14967,LEMANCO
+8394,100-ROTOLOCK-00919,Rotolock Rotary Valve B Baghouse,false,A,ROTOLOCK,ROTOLOCK,73055-3 (EQUIPMENT #),,,,1325040,14967,LEMANCO
+8395,100-SCREW CONVEYOR-00908,"SCREW CONVEYOR, Silo Loadout Screw B-1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+8396,100-SCREW CONVEYOR-00909,"SCREW CONVEYOR, Silo Loadout Screw B-2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+8397,100-SCREW CONVEYOR-00910,"SCREW CONVEYOR, Silo Loadout Screw B-3",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+8398,100-SCREW CONVEYOR-00911,"SCREW CONVEYOR, Silo Loadout Screw B-4",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+8399,100-SCREW CONVEYOR-00912,"SCREW CONVEYOR, Silo Loadout Screw B-5",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 12",,,,1673704,14966,SILOS
+8401,SYSTEM-79,Blood Loadout,false,A,System,,,,,,,7320,*Trash* Load Out
+8402,100-ROTOLIFT-105,Rotolift Blood Feed,false,A,ROTOLIFT,Jay Gee Manufacturing,"JAY GEE, 9",,,,526359,7852,Obsolete Assets - Do not use
+8403,100-ROTOLOCK-00909R,Rotolock Rotary Valve Blood Baghouse,false,A,ROTOLOCK,ROTOLOCK,73055-3 (EQUIPMENT #),,,,449595,7852,Obsolete Assets - Do not use
+8404,100-AGITATOR-00908R,"Vibrator, Blood Bin",false,A,AGITATOR,,,,,,,7852,Obsolete Assets - Do not use
+8405,SYSTEM-80,Loadout Manual,false,A,System,,,,,,,7320,*Trash* Load Out
+8407,100-CLNG-TWR-,Poultry Plant CCW,false,A,System,,,,,,40520,7301,*Trash* Cooling Tower Area
+8408,100-PUMP-898,"PUMP, Poultry Cooling Tower Basin Fill (pump 1)",false,A,PUMP,FLOWSERVE,MODEL 12LR14,,,,1676995,15472,"COOLING-TOWER, Poultry Plant"
+8409,100-COOLING TOWER-15,"COOLING TOWER, Poultry Cooling Tower 5",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1541757,15472,"COOLING-TOWER, Poultry Plant"
+8410,SYSTEM-83,*Trash* 1800/Feather Plant CCW System,false,A,System,,,,,,423371,7301,*Trash* Cooling Tower Area
+8411,100-COOLING TOWER-16,"COOLING TOWER, 1800/FP Cooling Tower 1",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON  T-10H BOOTED,,,,1595372,15471,"COOLING-TOWER, 1800/Feather Plant"
+8412,100-COOLING TOWER-17,"COOLING TOWER, 1800/FP Cooling Tower 2",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1595372,15471,"COOLING-TOWER, 1800/Feather Plant"
+8413,100-COOLING TOWER-18,"COOLING TOWER, 1800/FP Cooling Tower 3",false,A,Cooling Tower,HUDSON PRODUCTS,HUDSON T-10H BOOTED,,,,1610127,15471,"COOLING-TOWER, 1800/Feather Plant"
+8414,100-PUMP-899,"PUMP, Poultry Cooling Water Supply",false,A,PUMP,FLOWSERVE,MODEL 12LR14,,,,1676995,15472,"COOLING-TOWER, Poultry Plant"
+8417,100-PUMP-902,"PUMP, 1800/FP Cooling Tower Basin Fill (pump 2)",false,A,PUMP,FLOWSERVE,MODEL 12LR14,,,,1676995,15471,"COOLING-TOWER, 1800/Feather Plant"
+8418,100-PUMP-903,Pump Storm Water #2,false,A,PUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1463034,7852,Obsolete Assets - Do not use
+8419,100-SUMP-904,"SUMP, Storm Water Basin (6x6)",false,A,SUMP,GORMAN RUMP,GORMAN RUPP T6,,,,1674969,14979,SUMPS
+8420,100-SUMP-905,"SUMP, 1800 Cooling Tower Overflow (4x4)",false,A,SUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1502806,15471,"COOLING-TOWER, 1800/Feather Plant"
+8433,100-SCREW CONVEYOR-00024-1,Pre-Heater B,false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE,,,,1678609,14955,Fthr Raw
+8521,100-HYDROLYZER-00222,"HYDROLYZER, B-side",false,A,HYDROLYZER,Jay Gee Manufacturing,NB (29583),,,,1679379,14956,Fthr Hydrolizing
+8522,100-HOPPER-00037,"HOPPER, Raw Feather Pit A Screw 2",false,A,HOPPER,GRABER EQUIPMEMT,"JAY GEE, FEATHER RAW MATERIAL PIT",,,,456372,7852,Obsolete Assets - Do not use
+8523,100-HOPPER-00226,"HOPPER, Raw Feather Pit B",false,A,HOPPER,GRABER EQUIPMEMT,"JAY GEE, FEATHER RAW MATERIAL PIT",,,,1678609,14955,Fthr Raw
+8524,100-HOPPER-00227,"HOPPER, Raw Feather Pit B Screw 2",false,A,HOPPER,GRABER EQUIPMEMT,"JAY GEE, FEATHER RAW MATERIAL PIT",,,,489909,7852,Obsolete Assets - Do not use
+8525,100-SCREW CONVEYOR-00035,"SCREW CONVEYOR, Preheater A Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 24",,,,1678609,14955,Fthr Raw
+8526,100-SCREW PRESS-74,"SCREW PRESS, Feather Press B",false,A,SCREW PRESS,Crane-Demming,CRANE DEMMING 4021,,,,1683504,14956,Fthr Hydrolizing
+8527,100-SCREW CONVEYOR-955,"SCREW CONVEYOR, Press B Discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,JAY GEE - 12,,,,1681355,14956,Fthr Hydrolizing
+8678,RAS-AA-005,"SCRUBBER, Room Air Poultry",false,A,SCRUBBER,,,,,,1673415,16287,Meat Plant
+8679,RAS-AA-018,"SCRUBBER, Room Air Feather",false,A,SCRUBBER,,,,,,1679772,16286,Feather Plant
+8680,100-PTS-AA-004B,"SCRUBBER, Main Packed Tower",false,A,SCRUBBER,,,,,,1673412,16287,Meat Plant
+8681,100-VSO-AA-004A,"SCRUBBER, Main Plant Venturi",false,A,SCRUBBER,,,,,,1673413,16287,Meat Plant
+8682,100-FAN-156,"FAN, Parts Venturi",false,A,Fan,,,,,,1679471,22111,"SCRUBBER, Parts Venturi"
+8683,100-FAN-157,"FAN, Feather Plant Venturi",false,A,Fan,,,,,,1679471,22107,"SCRUBBER, Feather Venturi"
+8684,100-FAN-158,"FAN, Poultry Venturi",false,A,Fan,,,,,,1679471,22110,"SCRUBBER, Poultry Venturi"
+8685,100-VALVE-27,"VALVE, Pressure Tank Supply Actuator",false,A,VALVE,,,,,,27986,7298,*Trash* Boiler Room 1-6
+8686,100-SUMP-957,"SUMP, DAF Floor (3x3)",false,A,SUMP,,3X3,,,,1675282,14979,SUMPS
+8687,100-HAMMER MILL-20,"HAMMER MILL, 1800",false,A,HAMMER MILL,Sprout-Andritz,Andritz - #38125,,,,1683512,14952,1800 Cook Line Grinding
+8688,100-SEPARATOR-77,"SEPERATOR, 1800 Rotex Screen",false,A,SEPARATOR,,,,,,1676933,34154,"SEPARATOR, Shaker 1800"
+8689,100-PRODUCTION-01-,Yellow Grease Room,true,L,Area,,,,,,1667473,14620,GREASE & FAT STORAGE
+8690,100-TANK-372,TANK Y6 (Cook Tank),false,A,TANK,,,,,,1680599,8689,Yellow Grease Room
+8730,100-PUMP-962,"dup_PUMP, B Side Sump Pump (Feather Plant)",false,A,PUMP,,,,,,28826,7854,*Trash* Feather Drying System
+8737,CENTRIFUGE-51,"dup_CENTRIFUGE, BLOOD",false,A,CENTRIFUGE,ELGIN,ELGIN 375 - V15004 LEFT HAND,,,,498914,7917,"*Trash* CENTRIFUGE, BLOOD"
+8750,100-BLR-RM-1-6-,Chemical Feed System,true,L,Area,,,,,,56067,7298,*Trash* Boiler Room 1-6
+8751,100-BLR-RM-1-6-0,"Area, Chemical Feed System",true,L,Area,,,,,,61289,7298,*Trash* Boiler Room 1-6
+8940,100-SCREW CONVEYOR-1053,"SCREW CONVEYOR, Mid-Western Feed Screw",false,A,SCREW CONVEYOR,,,,,,303670,7923,*Trash* Product to Storage (Blood)
+8941,100-HYDRAULIC UNIT-47,O4300 Clutch,false,A,HYDRAULIC UNIT,,,,,,29546,7852,Obsolete Assets - Do not use
+8942,100-FAN-163,"Blower #2, Aerator Pond (New DAF)",false,A,Fan,,,,,,45461,7852,Obsolete Assets - Do not use
+9003,100-SCREW CONVEYOR-1081,"SCREW CONVEYOR, Drainor Fines TST",false,A,SCREW CONVEYOR,,,,,,1679379,14936,TST Cooker Equipment
+9010,100-TANK-374,TANK Y3 (Holding Tank),false,A,TANK,,,,,,1416621,8689,Yellow Grease Room
+9095,100-SCREW CONVEYOR-1112,"SCREW CONVEYOR, Hoggor Discharge Screw",false,A,SCREW CONVEYOR,,,,,,382916,7852,Obsolete Assets - Do not use
+9149,100-TANK-375,"TANK, Feather Spray Chamber",false,A,TANK,,,,,,1682318,16286,Feather Plant
+9150,100-TANK-376,Blood Spray Chamber Tank,false,A,TANK,,,,,,45653,7928,*Trash* VAPOR CONDENSING (Blood)
+9151,100-SUMP-995,"SUMP, Feather Plant A-side (3x3)",false,A,SUMP,,,,,,1681386,14979,SUMPS
+9152,100-AERATOR-43,AERATOR #8,false,A,AERATOR,,,,,,51126,7852,Obsolete Assets - Do not use
+9153,100-TANK-377,"TANK, Atmospheric",false,A,TANK,,,,,,1643539,14971,BOILER ROOM
+9154,100-PUMP-996,"PUMP, ATM Tank Discharge",false,A,PUMP,,,,,,1671638,14971,BOILER ROOM
+9155,100-PUMP-997,Pump TST & O4300 Press Drainer #1,false,A,PUMP,The Dupps Company,Dupps Taddle Pump,,,,1679379,14919,PP Pressing
+9156,100-SCREW CONVEYOR-1113,"SCREW CONVEYOR, Hammermill Discharge Screw",false,A,SCREW CONVEYOR,,,,,,1661816,14952,1800 Cook Line Grinding
+9160,100-SUMP-2,"SUMP, Main Waste Water (Turbine)",false,A,SUMP,,,,,,606597,7852,Obsolete Assets - Do not use
+9161,100-STRAINER-101,"STRAINER, Hycor Lyco Screen",false,A,STRAINER,,,,,,43263,7852,Obsolete Assets - Do not use
+9162,100-PUMP-998,"PUMP, Lyco Discharge",false,A,PUMP,,,,,,665573,7852,Obsolete Assets - Do not use
+9375,100-TANK-380,"TANK, Pressure",false,A,TANK,,,,,,1610941,14971,BOILER ROOM
+9376,100-TANK-381,"TANK, Y1 (Interphase)",false,A,TANK,,,,,,1622489,8689,Yellow Grease Room
+9377,100-TANK-382,"TANK, Y2",false,A,TANK,,,,,,1660983,8689,Yellow Grease Room
+9378,100-SUMP-1104,"SUMP, Alleyway (4x4)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9379,100-JACKSON-RNDRNG-0,*Trash* Finish Grease Room,true,L,Room,,,,,,423900,7852,Obsolete Assets - Do not use
+9380,100-TANK-383,TANK 6,false,A,TANK,,,,,,37325,9379,*Trash* Finish Grease Room
+9381,100-SUMP-1105,"SUMP, Sewage (2x2)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9383,100-PUMP-1107,"SUMP, Poultry dump pad (3x3)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9384,100-SUMP-1108,"SUMP, Boiler Room east (2x2)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9390,100-WASHER-9,Water Canon,false,A,Washer,,,,,,656472,7852,Obsolete Assets - Do not use
+9412,100-TANK-384,Evap Concentrate Tank,false,A,TANK,,,,,,1574643,14961,Evaporators
+9460,100-JACKSON-RNDRNG-9,Maintenance Shop,true,L,Area,,,,,,639243,7852,Obsolete Assets - Do not use
+9461,100-PUMP-1109,"PUMP, 10MM Gallon Pond return water",false,A,PUMP,,,,,,1674970,22222,"POND #6, 10MM Gallon"
+9531,100-SCREW CONVEYOR-1165,SCREW CONVEYOR Rotary Valve B Feed,false,A,SCREW CONVEYOR,,,,,,1679379,14938,PP B-Side Grinding
+9532,100-PNEUMATIC BLOWER-63,"PNEUMATIC BLOWER, MBBR Unit #2 (middle)",false,A,PNEUMATIC BLOWER,,40HP 1800RPM,,,,1674970,22222,"POND #6, 10MM Gallon"
+9533,100-SUMP-1129,"SUMP, Feather Plant B-Side",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9535,100-SKIMMER-28,"SKIMMER, New DAF Skimmer",false,A,SKIMMER,,,,,,56478,7302,*Trash* DAF Area
+9536,100-AERATOR-46,AERATOR 4-2,false,A,AERATOR,,,,,,1404617,22220,"POND #4, 1st Stage Aeration"
+9537,100-AERATOR-47,AERATOR 5-7,false,A,AERATOR,,,,,,1587238,22221,"POND #5, 2nd Stage Aeration"
+9545,100-PUMP-1131,"PUMP, Blood Storage Tank Supply",false,A,PUMP,,,,,,303670,7913,*Trash* BLOOD (Feather Plant)
+9676,100-TANK-388,"TANK, Blood Storage",false,A,TANK,,,,,,1656925,22206,BLOOD
+9677,100-SUMP-1170,"SUMP, Boiler Room south (2x2)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+9678,100-SCREW CONVEYOR-1208,"SCREW CONVEYOR, Cross Screw",false,A,SCREW CONVEYOR,,,,,,1678609,14958,Fthr Drying
+9679,100-TANK-389,"TANK, B Side Pit",false,A,TANK,,,,,,44224,7872,*Trash* B Hydrolyzer (Feather Plant)
+9684,100-VALVE-29,"VALVE, Atmospheric Tank Supply",false,A,VALVE,,,,,,45459,7298,*Trash* Boiler Room 1-6
+9685,100-PUMP-1141,"PUMP, DAF Poly",false,A,PUMP,,,,,,1469767,14976,DAF - PRODUCTION
+9686,100-PUMP-1142,"PUMP, DAF Alum",false,A,PUMP,,,,,,665573,14976,DAF - PRODUCTION
+9942,100-JACKSON-RNDRNG-0001,Warehouse,true,L,Stock Room,,,,,,48336,7852,Obsolete Assets - Do not use
+10437,100-100-JACKSON-RNDRNG-TRASH-1111,"*Trash* Feather Dryer, Hydrolizer & Scrubber",true,L,Area,,,,,,291671,7852,Obsolete Assets - Do not use
+10836,100-PNEUMATIC BLOWER-28,"PNEUMATIC BLOWER, A Side",false,A,PNEUMATIC BLOWER,,,,,,1674474,14967,LEMANCO
+10837,100-PNEUMATIC BLOWER-29,"PNEUMATIC BLOWER, B Side",false,A,PNEUMATIC BLOWER,,,,,,1679633,14967,LEMANCO
+14620,100-PRODUCTION-14,GREASE & FAT STORAGE,true,L,Process Line,,,,,,1673001,14953,PRODUCTION
+14621,100-LEMANCO BIN #1-563,Lemanco Bin #1,false,A,TANK,,,,,,1318763,14967,LEMANCO
+14622,100-LEMANCO BIN #2-564,Lemanco Bin #2,false,A,TANK,,,,,,1681391,14967,LEMANCO
+14623,100-LEMANCO BIN #3-565,Lemanco Bin #3,false,A,TANK,,,,,,1682310,14967,LEMANCO
+14624,100-LEMANCO BIN #4-566,Lemanco Bin #4,false,A,TANK,,,,,,1497643,14967,LEMANCO
+14625,100-LEMANCO BIN #5-567,Lemanco Bin #5,false,A,TANK,,,,,,1357230,14967,LEMANCO
+14626,100-LEMANCO BIN #6-568,Lemanco Bin #6,false,A,TANK,,,,,,1266880,14967,LEMANCO
+14627,100-FINISHED FAT TANK #1-569,Finished Fat Tank #1 (UCO),false,A,TANK,,,,,,1643847,16311,Finished Fat Storage
+14628,100-FINISHED FAT TANK #2-570,Finished Fat Tank #2 (Poultry Fat),false,A,TANK,,,,,,1354908,16311,Finished Fat Storage
+14629,100-FINISHED FAT TANK #3-571,Finished Fat Tank #3 (Poultry Fat),false,A,TANK,,,,,,767940,16311,Finished Fat Storage
+14630,100-FINISHED FAT TANK #4-572,Finished Fat Tank #4 (Poultry Fat),false,A,TANK,,,,,,1615895,16311,Finished Fat Storage
+14631,100-FINISHED FAT TANK #5-573,Finished Fat Tank #5 (Poultry Fat),false,A,TANK,,,,,,1446688,16311,Finished Fat Storage
+14632,100-FINISHED FAT TANK #6-574,Finished Fat Tank #6 (Poultry Fat),false,A,TANK,,,,,,1543728,16311,Finished Fat Storage
+14633,100-FINISHED FAT TANK #7-575,Finished Fat Tank #7 (Poultry Fat),false,A,TANK,,,,,,1489317,16311,Finished Fat Storage
+14634,100-FINISHED FAT TANK #8-576,Finished Fat Tank #8 (Poultry Fat),false,A,TANK,,,,,,1515799,16311,Finished Fat Storage
+14635,100-FINISHED FAT TANK #9-577,Finished Fat Tank #9 (Poultry Fat),false,A,TANK,,,,,,1541419,16311,Finished Fat Storage
+14636,100-FINISHED FAT TANK #10-578,Finished Fat Tank #10 (Poultry Fat),false,A,TANK,,,,,,1580344,16311,Finished Fat Storage
+14637,100-FINISHED FAT TANK #11-579,Finished Fat Tank #11 (Poultry Fat),false,A,TANK,,,,,,1609676,16311,Finished Fat Storage
+14638,100-FINISHED FAT TANK #12-580,Finished Fat Tank #12 (UCO),false,A,TANK,,,,,,1313588,16311,Finished Fat Storage
+14848,100-SCALE-36,"SCALE, Finished Goods",false,A,SCALE,,,,,,1223989,14965,LOADOUT
+14849,100-RAIL SCALE-37,"Scale, Rail Car",false,A,SCALE,,,,,,1547776,14965,LOADOUT
+14850,100-LAB SCALE-38,"Scale, LAB",false,A,SCALE,,,,,,1286389,14968,GROUNDS
+14851,100-POULTRY STABILIZER SCALE-39,"Scale, Poultry Stabilizer",false,A,SCALE,,,,,,1370907,14920,PP Grinding
+14852,100-SCALE-40,"SCALE, 1800 Stabilizer",false,A,SCALE,,,,,,1549046,14952,1800 Cook Line Grinding
+14853,100-NIR PM SCALE-41,"Scale, NIR PM",false,A,SCALE,,,,,,1609679,14968,GROUNDS
+14876,100-Production,Production,true,L,Area,,,,,,,7852,Obsolete Assets - Do not use
+14877,100-100-JACKSON-RNDRNG-TRASH-1,Grounds,true,L,Area,,,,,,633543,7852,Obsolete Assets - Do not use
+14878,100-Utilities,Utilities,true,L,Area,,,,,,672761,7852,Obsolete Assets - Do not use
+14917,100-AREA-01,PP Raw,true,L,Area,,,,,,1576430,8194,POULTRY PROCESSING
+14918,100-AREA-02,PP Cooking,true,L,Area,,,,,,1571606,8194,POULTRY PROCESSING
+14919,100-AREA-03,PP Pressing,true,L,Area,,,,,,1314485,8194,POULTRY PROCESSING
+14920,100-AREA-04,PP Grinding,true,L,Area,,,,,,1654425,8194,POULTRY PROCESSING
+14935,100-AREA-02-01,O4300 Cooker Equipment,true,L,Area,,,,,,1673365,14918,PP Cooking
+14936,100-AREA-02-02,TST Cooker Equipment,true,L,Area,,,,,,1666089,14918,PP Cooking
+14937,100-AREA-04-A,PP A-Side Grinding,true,L,Area,,,,,,1618854,14920,PP Grinding
+14938,100-AREA-04-B,PP B-Side Grinding,true,L,Area,,,,,,1632032,14920,PP Grinding
+14939,100-PROCESS LINE-02,200U COOK LINE,true,L,Process Line,,,,,,1677943,14953,PRODUCTION
+14941,100-AREA-05,200U Raw,true,L,Area,,,,,,1339934,14939,200U COOK LINE
+14942,100-AREA-06,200U Cooking,true,L,Area,,,,,,1679769,14939,200U COOK LINE
+14943,100-AREA-07,200U Pressing,true,L,Area,,,,,,1664181,14939,200U COOK LINE
+14944,100-PROCESS LINE-03,N4300 COOK LINE,true,L,Process Line,,,,,,1679724,14953,PRODUCTION
+14945,100-AREA-08,N4300 Raw,true,L,Area,,,,,,1570164,14944,N4300 COOK LINE
+14946,100-AREA-09,N4300 Cooking,true,L,Area,,,,,,1615227,14944,N4300 COOK LINE
+14947,100-AREA-10,N4300 Pressing,true,L,Area,,,,,,1387627,14944,N4300 COOK LINE
+14948,100-PROCESS LINE-04,1800 COOK LINE,true,L,Process Line,,,,,,1676933,14953,PRODUCTION
+14949,100-AREA-11,1800 Cook Line Raw,true,L,Area,,,,,,1368931,14948,1800 COOK LINE
+14950,100-AREA-12,1800 Cook Line Cooking,true,L,Area,,,,,,1616690,14948,1800 COOK LINE
+14951,100-AREA-13,1800 Cook Line Pressing,true,L,Area,,,,,,1562483,14948,1800 COOK LINE
+14952,100-AREA-14,1800 Cook Line Grinding,true,L,Area,,,,,,1669169,14948,1800 COOK LINE
+14953,100-PRODUCTION-01,PRODUCTION,true,L,PLANT,,,,,,1679402,7303,Jackson Rendering
+14955,100-AREA-15,Fthr Raw,true,L,Area,,,,,,1117358,7309,FEATHER PROCESSING
+14956,100-AREA-16,Fthr Hydrolizing,true,L,Area,,,,,,1679709,7309,FEATHER PROCESSING
+14957,100-AREA-17,Fthr Blood,true,L,Area,,,,,,1673241,7309,FEATHER PROCESSING
+14958,100-AREA-18,Fthr Drying,true,L,Area,,,,,,1535570,7309,FEATHER PROCESSING
+14959,100-AREA-19,Fthr Grinding,true,L,Area,,,,,,1669693,7309,FEATHER PROCESSING
+14960,100-PROCESS LINE-06,VAPOR COLLAPSING,true,L,Process Line,,,,,,1679471,14953,PRODUCTION
+14961,100-AREA-20,Evaporators,true,L,Area,,,,,,1568529,14960,VAPOR COLLAPSING
+14962,100-AREA-21,*Trash* Cooling Towers,true,L,Area,,,,,,479482,7852,Obsolete Assets - Do not use
+14963,100-PROCESS LINE-07,ODOR CONTROL,true,L,Process Line,,,,,,1676996,14953,PRODUCTION
+14964,100-AREA-22,Regenerative Thermal Oxidizer (RTO-AA-027),false,A,RTO,,,,,,1675609,14963,ODOR CONTROL
+14965,100-PLANT-02,LOADOUT,true,L,PLANT,,,,,,1673704,7303,Jackson Rendering
+14966,100-PROCESS LINE-08,SILOS,true,L,Process Line,,,,,,1672340,14965,LOADOUT
+14967,100-PROCESS LINE-09,LEMANCO,true,L,Process Line,,,,,,1668412,14965,LOADOUT
+14968,100-PLANT-03,GROUNDS,true,L,PLANT,,,,,,1678780,7303,Jackson Rendering
+14969,100-PLANT-04,UTILITIES,true,L,PLANT,,,,,,1640005,7303,Jackson Rendering
+14970,100-PROCESS LINE-10,AIR,true,L,Process Line,,,,,,1675952,14969,UTILITIES
+14971,100-PROCESS LINE-11,BOILER ROOM,true,L,Process Line,,,,,,1679435,14969,UTILITIES
+14972,100-MCC-1,MCC Area,true,L,Area,,,,,,1667559,14969,UTILITIES
+14973,100-PROCESS LINE-13,WASTEWATER,true,L,Process Line,,,,,,1674970,14969,UTILITIES
+14974,100-AREA-23,ANOXIC,true,L,Area,,,,,,1268176,14973,WASTEWATER
+14975,100-AREA-24,AERATION,true,L,Area,,,,,,1479421,14973,WASTEWATER
+14976,100-AREA-25,DAF - PRODUCTION,true,L,Area,,,,,,1679770,14973,WASTEWATER
+14977,100-AREA-26,SKIMMER,true,L,Area,,,,,,1677390,14973,WASTEWATER
+14978,100-AREA-27,LAND APPLICATION,true,L,Area,,,,,,,7852,Obsolete Assets - Do not use
+14979,100-PROCESS LINE-14,SUMPS,true,L,Process Line,,,,,,1674969,14969,UTILITIES
+15471,100-AREA-28,"COOLING-TOWER, 1800/Feather Plant",false,A,Cooling Tower,,,,,,1677405,14960,VAPOR COLLAPSING
+15472,100-AREA-29,"COOLING-TOWER, Poultry Plant",false,A,Cooling Tower,,,,,,1676103,14960,VAPOR COLLAPSING
+15479,100-EVAPORATOR-31,Old Evaporator,false,A,EVAPORATOR,,,,,,1676105,14961,Evaporators
+15480,100-EVAPORATOR-32,New Evaporator,false,A,EVAPORATOR,,,,,,1676106,14961,Evaporators
+15485,100-SYSTEM-110,*Trash* Feather Odor/Vapor handling,false,A,System,,,,,,479463,7852,Obsolete Assets - Do not use
+15575,100-VIBRATION ANALYSIS,Vibration Analysis,true,L,Bin Folder,,,,,,1405331,7303,Jackson Rendering
+15595,100-PUMP-1720,"PUMP, Plant Supply",false,A,PUMP,GOULS,,,,,1677644,14953,PRODUCTION
+16279,100-AREA-02-03,TST & O4300,true,L,Area,,,,,,1333812,14918,PP Cooking
+16280,100-INFRARED ANALYSIS,Infrared Analysis,true,L,Bin Folder,,,,,,1410573,7303,Jackson Rendering
+16285,100-PUMP-0082,Old Evap Vacuum #2 (West),false,A,PUMP,NASH,NASH VECTRA XL-60,,,,1676995,15479,Old Evaporator
+16286,100-AREA-30,Feather Plant,true,L,Area,,,,,,1409034,14963,ODOR CONTROL
+16287,100-AREA-31,Meat Plant,true,L,Area,,,,,,1268092,14963,ODOR CONTROL
+16311,100-TANK FARM AREA-,Finished Fat Storage,true,L,Area,,,,,,1632829,14620,GREASE & FAT STORAGE
+16312,100-TANK FARM AREA-,Production Grease Storage,true,L,Area,,,,,,1598265,14620,GREASE & FAT STORAGE
+16313,100-TANK-661,P1 Tank (Poultry Fat),false,A,TANK,,,,,,512716,16312,Production Grease Storage
+16314,100-TANK-662,P2 Tank (Poultry Fat),false,A,TANK,,,,,,1479399,16312,Production Grease Storage
+16315,100-TANK-663,P3 Tank (Poultry Fat),false,A,TANK,,,,,,512716,16312,Production Grease Storage
+16316,100-TANK-664,P4 Tank (Poultry Fat),false,A,TANK,,,,,,512716,16312,Production Grease Storage
+16317,100-TANK-665,P5 Tank (Poultry Fat),false,A,TANK,,,,,,1675324,16312,Production Grease Storage
+16318,100-TANK-666,P6 Tank (Poultry Fat),false,A,TANK,,,,,,1498226,16312,Production Grease Storage
+16319,100-TANK-667,P7 Tank (Poultry Fat),false,A,TANK,,,,,,1551537,16312,Production Grease Storage
+16320,100-TANK-668,P8 Tank (Poultry Fat),false,A,TANK,,,,,,512716,16312,Production Grease Storage
+16321,100-TANK-669,P1 Tank (Poultry Fat),false,A,TANK,,,,,,,7852,Obsolete Assets - Do not use
+16322,100-TANK-670,TANK Y4 (Holding Tank),false,A,TANK,,,,,,958597,8689,Yellow Grease Room
+16323,100-TANK-671,TANK Y5 (Holding Tank),false,A,TANK,,,,,,952686,8689,Yellow Grease Room
+16324,100-TANK-672,TANK Y7 (Cook Tank),false,A,TANK,,,,,,1675178,8689,Yellow Grease Room
+16359,100-PNEUMATIC BLOWER-52,A Blower Manual,false,A,PNEUMATIC BLOWER,,,,,,,7852,Obsolete Assets - Do not use
+16367,100-SCREW CONVEYOR-2321,"SCREW CONVEYOR, Poultry Plant Crax Discharge #4",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1679379,14919,PP Pressing
+16368,100-PLANT-03-1,"Building, Poultry plant",true,L,Rooms,,,,,,1667556,14968,GROUNDS
+16369,100-PLANT-03-2,"Building, Feather plant",true,L,Rooms,,,,,,1679470,14968,GROUNDS
+16370,100-PLANT-03-3,"Building, Grinding",true,L,Rooms,,,,,,1661075,14968,GROUNDS
+16371,100-PLANT-03-4,"Building, Boiler room",true,L,Rooms,,,,,,1666742,14968,GROUNDS
+16372,100-PLANT-03-5,"Building, Loadout and Lemanco structure",true,L,Rooms,,,,,,1661085,14968,GROUNDS
+16373,100-PLANT-03-6,"Building, Maintenance Shop",true,L,Rooms,,,,,,1683434,14968,GROUNDS
+16374,100-PLANT-03-7,"Building, Truck Shop",true,L,Rooms,,,,,,1679718,14968,GROUNDS
+16375,100-PLANT-03-8,"Building, Warehouse",true,L,Rooms,,,,,,1674457,14968,GROUNDS
+16376,100-PLANT-03-9,"Building, Lab",true,L,Rooms,,,,,,1664274,14968,GROUNDS
+16377,100-PLANT-03-10,"Building, Admin",true,L,Rooms,,,,,,1681230,14968,GROUNDS
+16378,100-PLANT-03-12,"Building, Blood and Water Screening",true,L,Rooms,,,,,,1682345,14968,GROUNDS
+16379,100-PLANT-03-11,"Building, Wastewater",true,L,Rooms,,,,,,1615223,14968,GROUNDS
+16380,100-PLANT-03-13,"Building, Truck Wash",true,L,Rooms,,,,,,1680607,14968,GROUNDS
+16496,100-PROCESS LINE-15,BLOOD/WATER PRETREATMENT,true,L,Process Line,,,,,,1673677,14953,PRODUCTION
+16497,100-PUMP-00122,"PUMP, Rotary Screen 1 Discharge Pump B",false,A,PUMP,,,,,,1673677,22207,WATER
+16517,100-SCREW CONVEYOR-2411,"SCREW CONVEYOR, Poultry Plant Press #2 Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14919,PP Pressing
+16518,100-SCREW CONVEYOR-2412,"SCREW CONVEYOR, Poultry Plant Press #3 Feed",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1679379,14919,PP Pressing
+16745,100-HYDRAULIC UNIT-00112,"HYDRAULIC UNIT, Hydrolyzer A Secondary Gates",false,A,HYDRAULIC UNIT,,,,,,1683515,14956,Fthr Hydrolizing
+16746,100-HYDRAULIC UNIT-00113,"HYDRAULIC UNIT, Hydrolyzer B Secondary Gates",false,A,HYDRAULIC UNIT,,,,,,1678609,14956,Fthr Hydrolizing
+16747,100-ROTOLIFT-02395,"ROTOLIFT, Blood Solids",false,A,ROTOLIFT,,,,,,1678609,14957,Fthr Blood
+16748,100-HOPPER-167,"HOPPER, Blood surgebin",false,A,HOPPER,,,,,,1678609,14957,Fthr Blood
+16749,100-SCREW CONVEYOR-02395,"SCREW CONVEYOR, Blood Surgebin Discharge",false,A,SCREW CONVEYOR,,,,,,1678609,14957,Fthr Blood
+16750,100-PUMP-1858,"PUMP, Coagulator Feed",false,A,PUMP,,,,,,1678609,14957,Fthr Blood
+16751,100-COAGULATOR-8,COAGULATOR A,false,A,COAGULATOR,,,,,,1673832,14957,Fthr Blood
+16752,100-COAGULATOR-9,COAGULATOR B,false,A,COAGULATOR,,,,,,869919,14957,Fthr Blood
+16753,100-ROTOLIFT-199,"ROTOLFT, 1800 Crax",false,A,ROTOLIFT,Jay Gee Manufacturing,"JAY GEE, 9",,,,1676933,14951,1800 Cook Line Pressing
+16754,100-SCREW CONVEYOR-2396,"SCREW CONVEYOR, Crax Rotolift Discharge 1800",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,"JAY GEE, 9",,,,1168999,14951,1800 Cook Line Pressing
+16755,100-AREA-04-TRSH,PP Trash System,true,L,Area,,,,,,1654424,14920,PP Grinding
+16756,100-HAMMER MILL-00066,"Hammer Mill, Trash system",false,A,HAMMER MILL,,,,,,1682332,16755,PP Trash System
+16757,SEPARATOR-191,"Rotex Screen, Trash system",false,A,SEPARATOR,ROTEX,52,,,,1480288,16755,PP Trash System
+16758,100-SCREW CONVEYOR-2397,"SCREW CONVEYOR, Trash HM discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1578431,16755,PP Trash System
+16759,100-SCREW CONVEYOR-2398,"SCREW CONVEYOR, Trash Rotex Overs",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1480328,16755,PP Trash System
+16760,100-SCREW CONVEYOR-2399,"SCREW CONVEYOR, Trash Rotex Finished",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1480328,16755,PP Trash System
+16761,ROTOLIFT-00533,"ROTOLIFT, Trash system",false,A,ROTOLIFT,Jay Gee Manufacturing,12,,,,1627680,16755,PP Trash System
+16763,100-HVAC-1,MCC Main HVAC,false,A,HVAC,,,,,,657318,14972,MCC Area
+16764,100-AREA-48,DAF - WASTEWATER,true,L,Area,,,,,,1671249,14973,WASTEWATER
+16765,100-SCREW CONVEYOR-2400,"SCREW CONVEYOR, Belt Press Solids Discharge #1",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1674970,16764,DAF - WASTEWATER
+16917,100-MIXER-101,"MIXER, DAF Polymer Mixing Tank",false,A,MIXER,,,,,,1656121,16764,DAF - WASTEWATER
+16944,100-SEPARATOR-1,"SEPARATOR, Rotary Screen 1",false,A,SEPARATOR,,,,,,1673677,22207,WATER
+16945,100-SEPARATOR-2,"SEPARATOR, Rotary Screen 2",false,A,SEPARATOR,,,,,,1673677,22207,WATER
+16946,100-PUMP-00121,"PUMP, Rotary Screen 1 Discharge Pump A",false,A,PUMP,,,,,,1673677,22207,WATER
+16947,100-PUMP-00131,"PUMP, Rotary Screen 2 Discharge Pump A",false,A,PUMP,,,,,,1673677,22207,WATER
+16948,100-PUMP-00132,"PUMP, Rotary Screen 2 Discharge Pump B",false,A,PUMP,,,,,,1673677,22207,WATER
+18111,100-CONDENSER-105,1800 Cooker Condenser,false,A,CONDENSER,,,,,,1646501,14960,VAPOR COLLAPSING
+18112,100-PUMP-2008,"PUMP, Acid Wash pump",false,A,PUMP,,,,,,1615225,14960,VAPOR COLLAPSING
+18113,100-CONDENSER-106,TST Cooker Tube Condenser,false,A,CONDENSER,,,,,,1669807,14960,VAPOR COLLAPSING
+18128,100-SUMP-2007,"SUMP, Plant Wastewater-to-ponds North pump #2 (4x4)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+18134,100-JACKSON ENVIRO SYSTM,Jackson Enviro System,true,L,Area,,,,,,1527381,7303,Jackson Rendering
+18141,100-TANK-751,"TANK, Cannon Supply",false,A,TANK,,,,,,1656114,14953,PRODUCTION
+18142,100-SCREW CONVEYOR-2487,"SCREW CONVEYOR, 1800 Crax Bin Leveling",false,A,SCREW CONVEYOR,,,,,,1676933,14952,1800 Cook Line Grinding
+18826,100-CONDENSER-107,200u Cooker Tube Condenser,false,A,CONDENSER,,,,,,1669808,14960,VAPOR COLLAPSING
+18827,100-ROTOLOCK-95,"ROTOLOCK, Outside Blower",false,A,ROTOLOCK,,,,,,1675942,14952,1800 Cook Line Grinding
+18828,100-AREA-23-001,"POND 1, Anaerobic covered",true,L,POND,,,,,,,7852,Obsolete Assets - Do not use
+18829,100-AREA-23-002,"POND 2, Anaerobic 2nd stage",true,L,POND,,,,,,,7852,Obsolete Assets - Do not use
+18830,100-AREA-24-,"POND 3, Aeration, 1st stage",true,L,POND,,,,,,,7852,Obsolete Assets - Do not use
+18837,100-SCREW CONVEYOR-02487,"SCREW CONVEYOR, Old Loadout A (east)",false,A,SCREW CONVEYOR,,,,,,1673704,14966,SILOS
+18838,100-SCREW CONVEYOR-2488,"SCREW CONVEYOR, Old Loadout B (west)",false,A,SCREW CONVEYOR,,,,,,1673704,14966,SILOS
+18839,100-CONDENSER-108,Feather Dryer Air-Cooled Condensesr,false,A,CONDENSER,,,,,,1669825,14960,VAPOR COLLAPSING
+18841,100-CONDENSER-109,Old Evaporator Condenser,false,A,CONDENSER,,,,,,1679806,15479,Old Evaporator
+18843,100-PUMP-2012,"PUMP, Serum Water",false,A,PUMP,,,,,,1678609,14957,Fthr Blood
+18849,100-JACKSON-RNDRNG-TRASH-,Trash Removal,true,L,Area,,,,,,677924,7852,Obsolete Assets - Do not use
+18850,100-HAMMER MILL-70,"Hammermill, Trash System",false,A,HAMMER MILL,,,,,,1679379,18849,Trash Removal
+18851,100-SCREW CONVEYOR-2489,"Screw Conveyor, Trash Hammermill Discharge",false,A,SCREW CONVEYOR,,,,,,1679379,18849,Trash Removal
+18852,100-SEPARATOR-194,"Separator, Trash Rotex Screen",false,A,SEPARATOR,,,,,,1679379,18849,Trash Removal
+18853,100-ROTOLIFT-201,"Rotolift, Trash System",false,A,ROTOLIFT,,,,,,1679379,18849,Trash Removal
+18854,100-SCREW CONVEYOR-2490,"Screw Conveyor, Trash Rotex Overs",false,A,SCREW CONVEYOR,,,,,,1679379,18849,Trash Removal
+18855,100-SCREW CONVEYOR-2491,"Screw Conveyor, Trash Rotex Finished",false,A,SCREW CONVEYOR,,,,,,1679379,18849,Trash Removal
+18856,100-SCREW CONVEYOR-2492,"Screw Conveyor, Trash System Rotolift Discharge",false,A,SCREW CONVEYOR,,,,,,1679379,18849,Trash Removal
+19432,100-PUMP-2123,"PUMP, UCO to Loadout",false,A,PUMP,,,,,,1429486,16311,Finished Fat Storage
+19433,100-PUMP-2124,"PUMP, Finished Fat to Loadout",false,A,PUMP,,,,,,1185262,16311,Finished Fat Storage
+19434,100-SUMP-2125,"SUMP, Finished Fat Storage containment (3x3)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+19435,100-PLANT-03-,"Building, Plant Main MCC",true,L,Rooms,,,,,,1673251,14968,GROUNDS
+19475,100-SUMP-2137,"SUMP, Truck wash sewage (2x2)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+19476,100-TANK-831,West Evaporator Feed Tank,false,A,TANK,,,,,,1356240,15479,Old Evaporator
+19477,TANK-832,East Evaporator Feed Tank,false,A,TANK,,,,,,1669201,15479,Old Evaporator
+19479,100-MCC-1-,"ROOM, Maintenance Shop MCC",true,L,Room,,,,,,805565,14972,MCC Area
+19483,100-PUMP-2139,"PUMP, Interphase Transfer",false,A,PUMP,,,,,,1573874,8689,Yellow Grease Room
+19484,100-PUMP-2140,"PUMP, UCO Transfer",false,A,PUMP,,,,,,1673001,8689,Yellow Grease Room
+19519,100-LIFT TRUCK-23,"LIFT TRUCK, Long-Reach lift (LULL)",false,A,LIFT TRUCK,,,,,,691135,19522,PLANT Fleet equipment
+19522,100-JACKSON-RNDRNG-,PLANT Fleet equipment,true,L,PLANT,,,,,,1400527,7303,Jackson Rendering
+19523,100-SCREW CONVEYOR-2572,"SCREW CONVEYOR, Belt Press Solids Discharge #3",false,A,SCREW CONVEYOR,,,,,,1674970,16764,DAF - WASTEWATER
+19598,100-WELDING MACHINE-17,"WELDING MACHINE, Bobcat #1",false,A,WELDING MACHINE,,250,,,,1491152,16373,"Building, Maintenance Shop"
+19599,100-TANK-841,"TANK, Plant Washdown",false,A,TANK,,,,,,1474382,14953,PRODUCTION
+19600,100-TANK-842,"TANK, Plant Cooling Water Supply",false,A,TANK,,,,,,1649429,14953,PRODUCTION
+19601,100-PUMP-2150,"PUMP, Poultry Plant Cannons",false,A,PUMP,,,,,,1604210,14953,PRODUCTION
+19602,100-PUMP-2151,"PUMP, Feather Plant Cannons",false,A,PUMP,,,,,,1598264,14953,PRODUCTION
+19603,100-MAGNET-65,"MAGNET, Poultry Plant raw",false,A,MAGNET,,,,,,1236597,14917,PP Raw
+19616,100-TANK-843,"TANK, Plant Wastewater Holding",false,A,TANK,,,,,,1662685,22207,WATER
+19684,100-FORK LIFT-15,"Forklift, Green Mitsubishi",false,A,Forklift,,,,,,1097658,19522,PLANT Fleet equipment
+19767,100-WELDING MACHINE-18,"WELDING MACHINE, Bobcat #2",false,A,WELDING MACHINE,,250,,,,1479050,16373,"Building, Maintenance Shop"
+19770,100-TANK-844,"TANK, n4300 Grease Production Tank",false,A,TANK,,,,,,1598277,14946,N4300 Cooking
+20395,100-PUMP-2159,"PUMP, MBBR wet well pump #2 (south)",false,A,PUMP,,,,,,1674970,22222,"POND #6, 10MM Gallon"
+21062,100-TANK-873,"TANK, 1800 Work Tank",false,A,TANK,,,,,,527831,14950,1800 Cook Line Cooking
+21082,100-PNEUMATIC BLOWER-68,"PNEUMATIC BLOWER, Pond 5, Blower #3",false,A,PNEUMATIC BLOWER,,,,,,1679802,22221,"POND #5, 2nd Stage Aeration"
+21639,100-TANK-875,"TANK, Soft water supply",false,A,TANK,,,,,,1222135,14971,BOILER ROOM
+21659,100-PUMP-2243,"PUMP, Production Grease Transfer",false,A,PUMP,,,,,,1673001,16312,Production Grease Storage
+21915,100-FAN-447,"FAN, RTO Main",false,A,Fan,,,,,,1679471,14964,Regenerative Thermal Oxidizer (RTO-AA-027)
+21918,100-SCREW CONVEYOR-2947,"SCREW CONVEYOR, Dryer Secondary incline screw",false,A,SCREW CONVEYOR,,,,,,1217500,14958,Fthr Drying
+21919,100-SCREW CONVEYOR-2948,"SCREW CONVEYOR, Discharge Screw 2 (Feather Drying)",false,A,SCREW CONVEYOR,,,,,,,7852,Obsolete Assets - Do not use
+21935,100-ROTOLIFT-221,"ROTOLIFT, Finished B-side",false,A,ROTOLIFT,,,,,,1681246,14938,PP B-Side Grinding
+21936,100-PUMP-2277,"PUMP, Feather Venturi",false,A,PUMP,,,,,,1676996,16286,Feather Plant
+21937,100-PNEUMATIC BLOWER-70,"PNEUMATIC BLOWER, Pond 5, Blower #1",false,A,PNEUMATIC BLOWER,,,,,,1679796,22221,"POND #5, 2nd Stage Aeration"
+21943,100-PNEUMATIC BLOWER-71,"PNEUMATIC BLOWER, Pond 5, Blower #2",false,A,PNEUMATIC BLOWER,,,,,,1679800,22221,"POND #5, 2nd Stage Aeration"
+21944,100-SUMP-2278,"SUMP, Plant Wastewater-to-ponds South pump #1 (4x4)",false,A,SUMP,,,,,,1674969,14979,SUMPS
+21961,100-BELT CONVEYOR-44,"BELT CONVEYOR, Belt Press",false,A,BELT CONVEYOR,,,,,,1674970,16764,DAF - WASTEWATER
+21962,100-SCREW CONVEYOR-2949,"SCREW CONVEYOR, Belt Press Solids Discharge #2",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,9,,,,1674970,16764,DAF - WASTEWATER
+21967,100-TANK-907,"TANK, DAF Sludge Holding Tank 1",false,A,TANK,,,,,,1674529,16764,DAF - WASTEWATER
+21968,100-PUMP-2279,"PUMP, WW DAF Recirculation",false,A,PUMP,,,,,,1674520,16764,DAF - WASTEWATER
+21969,100-FAN-446,1800 Condenser Booster Fan,false,A,Fan,,,,,,1678875,18111,1800 Cooker Condenser
+21981,100-PUMP-2283,"PUMP, WW DAF Sludge",false,A,PUMP,,,,,,1674970,16764,DAF - WASTEWATER
+21989,100-PUMP-2284,"PUMP, Poultry Pit wash connons",false,A,PUMP,,,,,,1361431,14953,PRODUCTION
+21990,100-SCREW CONVEYOR-2951,"SCREW CONVEYOR, Grinding crossover A-to-B",false,A,SCREW CONVEYOR,,,,,,1645758,14920,PP Grinding
+22000,100-SYSTEM-104,"SYSTEM, Feather/Blood PLC",false,A,System,Allen-Bradley,,,,,1678977,14972,MCC Area
+22001,100-SYSTEM-105,"SYSTEM, Meat/Evap PLC",false,A,System,Allen-Bradley,,,,,1542681,14972,MCC Area
+22002,100-PUMP-2286,"PUMP, Poultry CT containment sump",false,A,PUMP,,,,,,1526641,15472,"COOLING-TOWER, Poultry Plant"
+22034,100-SCREW CONVEYOR-2951,"SCREW CONVEYOR, A-side Rotex screens feed",false,A,SCREW CONVEYOR,,,,,,1591426,14937,PP A-Side Grinding
+22035,100-AERATOR-74,AERATOR 5-6,false,A,AERATOR,,,,,,658837,22221,"POND #5, 2nd Stage Aeration"
+22052,100-ELEC-CABINET-134,"ELEC-CABINET, Main MCC",false,A,ELEC-CABINET,,,,,,1439485,14972,MCC Area
+22053,100-ELEC-CABINET-135,"ELEC-CABINET, Poultry MCC",false,A,ELEC-CABINET,,,,,,679628,14972,MCC Area
+22054,100-ELEC-CABINET-136,"ELEC-CABINET, Poultry PLC/MC panel",false,A,ELEC-CABINET,,,,,,1663525,14972,MCC Area
+22055,100-ELEC-CABINET-137,"ELEC-CABINET, UCO MC panel",false,A,ELEC-CABINET,,,,,,631122,14972,MCC Area
+22056,100-ELEC-CABINET-138,"ELEC-CABINET, Poultry Grinding PLC/CT panel",false,A,ELEC-CABINET,,,,,,1665607,14972,MCC Area
+22057,100-PLANT-031,"Building, Chemcial Storage",true,L,Rooms,,,,,,1479466,14968,GROUNDS
+22058,100-ELEC-CABINET-139,"ELEC-CABINET, Boiler PLC/MC panel",false,A,ELEC-CABINET,,,,,,1598379,14972,MCC Area
+22059,100-ELEC-CABINET-140,"ELEC-CABINET, Cooling Tower MC panel",false,A,ELEC-CABINET,,,,,,1520249,14972,MCC Area
+22061,100-ELEC-CABINET-141,"ELEC-CABINET, Ponds 2-4 MC Panel",false,A,ELEC-CABINET,,,,,,631122,14972,MCC Area
+22062,100-ROOM-00001,"ROOM, Pond 6 MCC",true,L,Room,,,,,,631122,14972,MCC Area
+22069,100-ROTOLIFT-222,"ROTOLIFT, N4300 Press fines",false,A,ROTOLIFT,,,,,,1671862,14947,N4300 Pressing
+22105,100-PUMP-2292,"PUMP, Feather Cross Flow Recircuoation, pump 1",false,A,PUMP,,,,,,1676996,8679,"SCRUBBER, Room Air Feather"
+22106,100-PUMP-2293,"PUMP, Feather Cross Flow Recircuoation, pump 2",false,A,PUMP,,,,,,1676996,8679,"SCRUBBER, Room Air Feather"
+22107,100-SCRUBBER-153,"SCRUBBER, Feather Venturi",false,A,SCRUBBER,,,,,,1593898,16286,Feather Plant
+22108,100-PUMP-2294,"PUMP, Feather Venturi",false,A,PUMP,,,,,,1256412,22107,"SCRUBBER, Feather Venturi"
+22109,100-FAN-447b,"FAN, Poultry Room Air",false,A,Fan,,,,,,1676996,8678,"SCRUBBER, Room Air Poultry"
+22110,100-SCRUBBER-154,"SCRUBBER, Poultry Venturi",false,A,SCRUBBER,,,,,,1634508,16287,Meat Plant
+22111,100-SCRUBBER-155,"SCRUBBER, Parts Venturi",false,A,SCRUBBER,,,,,,1392199,16287,Meat Plant
+22112,100-PUMP-2295,"PUMP, Poultry Venturi",false,A,PUMP,Crane-Demming,CRANE DEMING 4001/SIZ 1 LIQUID END,,,,1676996,22110,"SCRUBBER, Poultry Venturi"
+22113,100-PUMP-2296,"PUMP, Main Plant Venturi",false,A,PUMP,Crane-Demming,CRANE DEMING 4001/SIZ 1 LIQUID END,,,,1676996,8681,"SCRUBBER, Main Plant Venturi"
+22114,100-PUMP-2297,"PUMP, Plant Packed Tower",false,A,PUMP,,,,,,1676996,8680,"SCRUBBER, Main Packed Tower"
+22115,100-PUMP-2298,"PUMP, Poultry Room Air",false,A,PUMP,,,,,,1676996,8678,"SCRUBBER, Room Air Poultry"
+22116,100-SUMP-2299,"SUMP, Poultry Cooling Tower Overflow (4x4)",false,A,SUMP,GORMAN RUMP,GORMAN RUPP T3,,,,1305671,15472,"COOLING-TOWER, Poultry Plant"
+22194,100-FAN-216,"Fan, 1800/FP Cooling Tower 1",false,A,Fan,,,,,,1611817,8411,"COOLING TOWER, 1800/FP Cooling Tower 1"
+22195,100-FAN-217,"Fan, 1800/FP Cooling Tower 2",false,A,Fan,,,,,,1611818,8412,"COOLING TOWER, 1800/FP Cooling Tower 2"
+22196,100-FAN-218,"Fan, 1800/FP Cooling Tower 3",false,A,Fan,,,,,,1611819,8413,"COOLING TOWER, 1800/FP Cooling Tower 3"
+22197,100-FAN-212,"Fan, Poultry Cooling Tower 2",false,A,Fan,,,,,,1633525,7584,"COOLING TOWER, Poultry Cooling Tower 2"
+22198,100-FAN-211,"Fan, Poultry Cooling Tower 1",false,A,Fan,,,,,,1633524,7583,"COOLING TOWER, Poultry Cooling Tower 1"
+22199,100-FAN-213,"Fan, Poultry Cooling Tower 3",false,A,Fan,,,,,,1313247,7585,"COOLING TOWER, Poultry Cooling Tower 3"
+22200,100-FAN-214,"Fan, Poultry Cooling Tower 4",false,A,Fan,,,,,,1561442,7586,"COOLING TOWER, Poultry Cooling Tower 4"
+22201,100-FAN-215,"Fan, Poultry Cooling Tower 5",false,A,Fan,,,,,,1542674,8409,"COOLING TOWER, Poultry Cooling Tower 5"
+22206,100-PROCESS LINE-16,BLOOD,true,L,Process Line,,,,,,1678972,16496,BLOOD/WATER PRETREATMENT
+22207,100-PROCESS LINE-17,WATER,true,L,Process Line,,,,,,1243288,16496,BLOOD/WATER PRETREATMENT
+22208,100-PUMP-00110,"PUMP, WW Surge Tank Discharge Pump A",false,A,PUMP,,,,,,1673677,22207,WATER
+22209,100-PUMP-000111,"PUMP, WW Surge Tank Discharge Pump B",false,A,PUMP,,,,,,1673677,22207,WATER
+22210,100-PUMP-000112,"PUMP, WW Surge Tank Discharge Pump C",false,A,PUMP,,,,,,1673677,22207,WATER
+22211,100-TANK-911,"TANK, Plant Wastewater Surge",false,A,TANK,,,,,,1498162,22207,WATER
+22212,100-PUMP-00140,"PUMP, WW Holding Tank Discharge Pump A",false,A,PUMP,,,,,,1673677,22207,WATER
+22213,100-PUMP-00142,"PUMP, WW Holding Tank Recirc Pump",false,A,PUMP,,,,,,1673677,22207,WATER
+22214,100-PUMP-00141,"PUMP, WW Holding Tank Discharge Pump B",false,A,PUMP,,,,,,1673677,22207,WATER
+22215,100-TANK-912,"TANK, Skimmer Feed",false,A,TANK,,,,,,982517,14977,SKIMMER
+22216,100-PUMP-2331,"PUMP, Blood Storage Tank Discharge",false,A,PUMP,,,,,,1673677,22206,BLOOD
+22217,100-DRAINER-50,"DRAINER, Blood Screw",false,A,DRAINER,,,,,,1673677,22206,BLOOD
+22218,100-PUMP-2332,"PUMP, Blood Drainer Discharge",false,A,PUMP,,,,,,1673677,22206,BLOOD
+22219,100-SUMP-38,"SUMP, Blood Building (3x3)",false,A,SUMP,,3X3,,,,1674969,14979,SUMPS
+22220,100-AREA-32,"POND #4, 1st Stage Aeration",true,L,POND,,,,,,1638499,14975,AERATION
+22221,100-AREA-33,"POND #5, 2nd Stage Aeration",true,L,POND,,,,,,1586599,14975,AERATION
+22222,100-AREA-34,"POND #6, 10MM Gallon",true,L,POND,,,,,,1680600,14975,AERATION
+22223,100-AERATOR-76,AERATOR 4-1,false,A,AERATOR,AQUA TURBO,MODEL: AER-AS 3000-30,,,,1252127,22225,POND #4
+22224,100-AERATOR-77,AERATOR 4-2,false,A,AERATOR,,,,,,,22225,POND #4
+22225,100-AREA-32-22225,POND #4,true,L,POND,,,,,,,7852,Obsolete Assets - Do not use
+22226,100-AREA-35,"POND #1, Covered Anearobic",true,L,POND,,,,,,1442788,14974,ANOXIC
+22227,100-AREA-36,"POND #2, 1st Stage Anaerobic",true,L,POND,,,,,,1244098,14974,ANOXIC
+22228,100-AREA-37,"POND #3, 2nd Stage Anaerobic",true,L,POND,,,,,,1620954,14974,ANOXIC
+22229,100-PUMP-2314,"PUMP, Pond #1 Cover Rainwater",false,A,PUMP,,,,,,1674970,22226,"POND #1, Covered Anearobic"
+22230,100-PNEUMATIC BLOWER-73,"PNEUMATIC BLOWER, MBBR Unit #1 (north)",false,A,PNEUMATIC BLOWER,,40HP 1800RPM,,,,1674970,22222,"POND #6, 10MM Gallon"
+22231,100-PNEUMATIC BLOWER-74,"PNEUMATIC BLOWER, MBBR Unit #3 (south)",false,A,PNEUMATIC BLOWER,,40HP 1800RPM,,,,1674970,22222,"POND #6, 10MM Gallon"
+22232,100-PUMP-2315,"PUMP, MBBR wet well pump, South",false,A,PUMP,,,,,,,7852,Obsolete Assets - Do not use
+22233,100-PUMP-2316,"PUMP, MBBR wet well pump #1 (north)",false,A,PUMP,,,,,,1674970,22222,"POND #6, 10MM Gallon"
+22234,100-MIXER-120,"MIXER, Belt Press Polymer Mixing Tank",false,A,MIXER,,,,,,,16764,DAF - WASTEWATER
+22235,100-DRAG CONVEYOR-192,"DRAG, Solids/Sludge",false,A,DRAG CONVEYOR,,,,,,1674970,16764,DAF - WASTEWATER
+22236,100-PUMP-2317,"PUMP, Belt Press Feed",false,A,PUMP,,,,,,1674970,16764,DAF - WASTEWATER
+22237,100-COMPRESSOR-148,"COMPRESSOR, North",false,A,COMPRESSOR,,CD-75,,,,1675952,14970,AIR
+22238,100-COMPRESSOR-150,"COMPRESSOR, South",false,A,COMPRESSOR,,CD-75,,,,1675952,14970,AIR
+22239,100-DRYER-62,"DRYER, Compressed Air",false,A,DRYER,,,,,,,14970,AIR
+22240,100-TANK-913,"TANK, Compressed Air Receiver",false,A,TANK,,,,,,,14970,AIR
+22241,100-PUMP-2318,"PUMP, DAF Discharge Water #1 (west)",false,A,PUMP,,,,,,1674970,16764,DAF - WASTEWATER
+22242,100-PUMP-2319,"PUMP, DAF Discharge Water #2 (east)",false,A,PUMP,,,,,,1674970,16764,DAF - WASTEWATER
+22243,100-AERATOR-78,AERATOR 4-3,false,A,AERATOR,,,,,,1638516,22220,"POND #4, 1st Stage Aeration"
+22244,100-AERATOR-79,AERATOR 4-4,false,A,AERATOR,,,,,,1080157,22220,"POND #4, 1st Stage Aeration"
+22245,100-PNEUMATIC BLOWER-75,"PNEUMATIC BLOWER, Diffusers Unit #1 (north)",false,A,PNEUMATIC BLOWER,,,,,,1674970,22220,"POND #4, 1st Stage Aeration"
+22246,100-PNEUMATIC BLOWER-76,"PNEUMATIC BLOWER, Diffusers Unit #2 (south)",false,A,PNEUMATIC BLOWER,,,,,,1674970,22220,"POND #4, 1st Stage Aeration"
+22247,100-ELEC-CABINET-147,"ELEC-CABINET, WW DAF Control",false,A,ELEC-CABINET,,,,,,662284,14972,MCC Area
+23079,100-PUMP-2493,"Pump, D-Bone Cooker Feed",false,A,PUMP,,,,,,1683508,14949,1800 Cook Line Raw
+23080,100-PUMP-2494,"Pump, South Tank Feed",false,A,PUMP,,,,,,1677912,14917,PP Raw
+23081,100-PUMP-2495,"PUMP, North Tank Feed",false,A,PUMP,,,,,,1677913,14917,PP Raw
+23082,100-SCREW CONVEYOR-3077,"Screw Conveyor, RAM (Debone)",false,A,SCREW CONVEYOR,,,,,,1672339,14949,1800 Cook Line Raw
+23083,100-SCREW CONVEYOR-3078,"SCREW CONVEYOR, South Ram",false,A,SCREW CONVEYOR,,,,,,1672339,14917,PP Raw
+23084,100-SCREW CONVEYOR-3079,"SCREW CONVEYOR, North RAM",false,A,SCREW CONVEYOR,,,,,,1677670,14917,PP Raw
+23085,100-AREA-101,D-BONE RAW,true,L,Area,,,,,,1610359,8194,POULTRY PROCESSING
+23086,100-PUMP-2496,"PUMP, DBONE RAW FEED",false,A,PUMP,,,,,,1596695,23085,D-BONE RAW
+23087,100-SCREW CONVEYOR-3080,"SCREW CONVEYOR, DBONE RAM SCREW",false,A,SCREW CONVEYOR,,,,,,1529956,23085,D-BONE RAW
+23088,100-PUMP-2497,"PUMP, DAY TANK TRANSFER",false,A,PUMP,,,,,,1679379,16279,TST & O4300
+23671,100-LUBE SYSTEM-158,"Cooker, O4300 Bearing Lube System",false,A,System,,,,,,1683428,7946,"COOKER, O4300"
+23676,100-COOLER-57,O4300 Cooker Bearing Oil Cooler,false,A,COOLER,,,,,,1344845,23671,"Cooker, O4300 Bearing Lube System"
+23677,100-FLOW INDICATOR-66,O4300 Cooker Bearing Oil (Discharge End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,1661921,23671,"Cooker, O4300 Bearing Lube System"
+23678,100-FLOW INDICATOR-67,del O4300 Cooker Bearing Oil (Feed End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,,7852,Obsolete Assets - Do not use
+23679,100-SYSTEM-163,N4300 Cooker Bearing #1 (Feed End) Lube System,false,A,System,,,,,,1671293,7388,"COOKER, N4300"
+23680,100-SYSTEM-164,N4300 Cooker Bearing #2 (Discharge End) Lube System,false,A,System,,,,,,1663493,7388,"COOKER, N4300"
+23681,100-COOLER-58,N4300 Cooker Bearing Oil Cooler #1 (Feed End),false,A,COOLER,,,,,,1287567,23679,N4300 Cooker Bearing #1 (Feed End) Lube System
+23682,100-FLOW INDICATOR-68,N4300 Cooker Bearing Oil Cooler #1 (Feed End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,1661928,23679,N4300 Cooker Bearing #1 (Feed End) Lube System
+23683,100-FLOW INDICATOR-69,N4300 Cooker Bearing Oil Cooler #2 (Discharge End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,,23680,N4300 Cooker Bearing #2 (Discharge End) Lube System
+23684,100-COOLER-59,N4300 Cooker Bearing Oil Cooler #2 (Discharge End),false,A,COOLER,,,,,,1385564,23680,N4300 Cooker Bearing #2 (Discharge End) Lube System
+23685,100-SYSTEM-165,Poultry Centrifuge Bearing Lube System,false,A,System,,,,,,1611944,7970,"CENTRIFUGE, Poultry"
+23686,100-SYSTEM-166,N4300 Centrifuge Bearing Lube System,false,A,System,,,,,,1676196,7983,"CENTRIFUGE, n4300"
+23687,100-COOLER-60,N4300 Centrifuge Bearing Oil Cooler,false,A,COOLER,,,,,,1489879,23686,N4300 Centrifuge Bearing Lube System
+23688,100-FLOW INDICATOR-70,N4300 Centrifuge Bearing Oil (Discharge End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,763764,23686,N4300 Centrifuge Bearing Lube System
+23689,100-FLOW INDICATOR-71,N4300 Centrifuge Bearing Oil (Feed End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,,23686,N4300 Centrifuge Bearing Lube System
+23692,100-LUBE SYSTEM-2623,"del SCREW PRESS, N4300 Press Bearing Console",false,A,System,,,,,,,7852,Obsolete Assets - Do not use
+23693,100-LUBE SYSTEM-2624,"SCREW PRESS, TST/o4300 #2 (Haarslev) Press Bearing Console",false,A,System,,,,,,1632716,8255,"SCREW PRESS, TST/o4300 #2 (Haarslev)"
+23694,100-PUMP-2623,del 200U Cooker Bearing Oil Pump (Feed End),false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,,7852,Obsolete Assets - Do not use
+23695,100-SYSTEM-169,del 200U Cooker Bearing (Feed End) Lube System,false,A,System,,,,,,,7852,Obsolete Assets - Do not use
+23696,100-COOLER-61,200U Cooker Bearing Oil Cooler (Feed End),false,A,COOLER,,,,,,,7852,Obsolete Assets - Do not use
+23697,100-FLOW INDICATOR-72,200U Cooker Bearing Oil Cooler (Feed End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,,7852,Obsolete Assets - Do not use
+23698,100-PUMP-2624,200U Cooker Bearing Oil Pump (Discharge End),false,A,PUMP,SCOTT INDUSTRY SYSTEMS,150592,,,,1611997,23699,200U Cooker Bearing (Discharge End) Lube System
+23699,SYSTEM-170,200U Cooker Bearing (Discharge End) Lube System,false,A,System,,,,,,1683427,7387,"COOKER, 200U"
+23700,100-FLOW INDICATOR-73,200U Cooker Bearing Oil Cooler (Discharge End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,1661919,23699,200U Cooker Bearing (Discharge End) Lube System
+23701,100-COOLER-62,200U Cooker Bearing Oil Cooler (Discharge End),false,A,COOLER,,,,,,1178987,23699,200U Cooker Bearing (Discharge End) Lube System
+23704,100-COOLER-63,Poultry Centrifuge Bearing Oil Cooler,false,A,COOLER,,,,,,1243211,23685,Poultry Centrifuge Bearing Lube System
+23705,100-FLOW INDICATOR-74,Poultry Centrifuge Bearing Oil (Discharge End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,992815,23685,Poultry Centrifuge Bearing Lube System
+23706,100-FLOW INDICATOR-75,Poultry Centrifuge Bearing Oil (Feed End) Hedland Unit,false,A,FLOW INDICATOR,,,,,,,23685,Poultry Centrifuge Bearing Lube System
+24416,100-O4300 JOHNSON JOINT,"Cooker, o4300 Johnson Joint",false,A,COOKER,,,,,,1608624,7946,"COOKER, O4300"
+24417,100-TST JOHNSON JOINT,Cooker. TST Johnson Joint,false,A,COOKER,,,,,,1551787,8252,"COOKER, TST"
+24418,100-200U JOHNSON JOINT,"Cooker, 200U Johnson Joint",false,A,COOKER,,,,,,1593923,7387,"COOKER, 200U"
+24419,100-N4300 JOHNSON JOINT,"Cooker, N4300 Johnson Joint",false,A,COOKER,,,,,,1593988,7388,"COOKER, N4300"
+24420,100-1800 JOHNSON JOINT,"Cooker, 1800 Johnson Joint",false,A,COOKER,,,,,,1648088,8144,"COOKER, 1800"
+24421,100-DRYER JOHNSON JOINT,"Dryer, Feather Johnson Joint",false,A,DRYER,,,,,,1650114,7535,"DRYER, Feathers (Haarslev)"
+24422,100-O4300 CONDENSATE LOOP,"Cooker, O4300 Condensate Loop",false,A,COOKER,,,,,,1645851,7946,"COOKER, O4300"
+24423,100-TST CONDENSATE LOOP,"Cooker, TST Condensate Loop",false,A,COOKER,,,,,,1620917,8252,"COOKER, TST"
+24424,100-200U CONDENSATE LOOP,"Cooker, 200U Condensate Loop",false,A,COOKER,,,,,,1670031,7387,"COOKER, 200U"
+24425,100-N4300 CONDENSATE LOOP,"Cooker, N4300 Condensate Loop",false,A,COOKER,,,,,,1645856,7388,"COOKER, N4300"
+24426,100-1800 CONDENSATE LOOP,"Cooker, 1800 Condensate Loop",false,A,COOKER,,,,,,1657781,8144,"COOKER, 1800"
+24427,100-DRYER CONDENSATE LOOP,"Dryer, Feather Condensate Loop",false,A,DRYER,,,,,,1655291,7535,"DRYER, Feathers (Haarslev)"
+25292,100-OIL ANALYSIS,Oil Analysis,true,L,Bin Folder,,,,,,1676196,7303,Jackson Rendering
+26050,100-HOLDEN AND LR BOILERS,Holden and Little Rock Boilers,true,L,Bin Folder,,,,,,,29240,3rd Party Monthly Boiler Safety Inspections
+26051,103-BOILER-125hp WD,125hp WD Boiler,false,A,BOILER,,,,,,,26050,Holden and Little Rock Boilers
+26053,103-BOILER-600hp CB,600hp CB Boiler,false,A,BOILER,,,,,,,26050,Holden and Little Rock Boilers
+26055,100-SUMP-958,"SUMP, DAF Floor (2x2)",false,A,SUMP,,,,,,1669977,14979,SUMPS
+26180,100-PUMP-3125,"Pump, Polymer Discharge",false,A,PUMP,,,,,,1662637,16764,DAF - WASTEWATER
+28300,100-CONTROL VALVE-129,PFT Top High Level Cutoff Control Valve,false,A,CONTROL VALVE,,,,,,1570227,9375,"TANK, Pressure"
+28301,100-CONTROL VALVE-130,PFT Middle Start Pump Control Valve,false,A,CONTROL VALVE,,,,,,,9375,"TANK, Pressure"
+28302,100-CONTROL VALVE-131,PFT Bottom Pump Alarm Control Valve,false,A,CONTROL VALVE,,,,,,,9375,"TANK, Pressure"
+28303,100-CONTROL VALVE-132,Boiler #1 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1332261,7378,BOILER #1
+28304,100-CONTROL VALVE-133,Boiler #1 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,,7378,BOILER #1
+28305,100-CONTROL VALVE-134,Boiler #2 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,,8308,BOILER #2
+28306,100-CONTROL VALVE-135,Boiler #2 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1379783,8308,BOILER #2
+28307,100-CONTROL VALVE-136,Boiler #3 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1540211,8309,BOILER #3
+28308,100-CONTROL VALVE-137,Boiler #4 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,,8310,BOILER #4
+28309,100-CONTROL VALVE-138,Boiler #5 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1126365,8311,BOILER #5
+28310,100-CONTROL VALVE-139,Boiler #6 Primary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1551785,8312,BOILER #6
+28311,100-CONTROL VALVE-140,Boiler #3 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,945760,8309,BOILER #3
+28312,100-CONTROL VALVE-141,Boiler #4 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,,8310,BOILER #4
+28313,100-CONTROL VALVE-142,Boiler #5 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,1511621,8311,BOILER #5
+28314,100-CONTROL VALVE-143,Boiler #6 Auxiliary Low Water Cutoff Control,false,A,CONTROL VALVE,,,,,,,8312,BOILER #6
+28906,100-CHILLER-1,CHILLER,false,A,CHILLER,,,,,,1664049,14970,AIR
+28915,100-SCREW CONVEYOR-4377,"SCREW CONVEYOR, Trash Finish Rotolift discharge",false,A,SCREW CONVEYOR,Jay Gee Manufacturing,12,,,,1471936,16755,PP Trash System
+28932,100-BEARING ASSEMBLY-1,n4300 Press Bearing Assembly,false,A,System,,,,,,1663493,7532,"SCREW PRESS, n4300 (Haarslev)"
+29157,100-SCREW CONVEYOR-4447,"SCREW CONVEYOR, Crax #2 200U",false,A,SCREW CONVEYOR,,,,,,1186581,14943,200U Pressing
+29240,100-3RD PARTY,3rd Party Monthly Boiler Safety Inspections,true,L,Bin Folder,,,,,,1659374,7303,Jackson Rendering
+29246,100-PUMP-3686,Old Evap Condenser Condensate Pump,false,A,PUMP,,,,,,1679808,18841,Old Evaporator Condenser
+29247,100-PUMP-3687,"PUMP, Coagulator Feed Progressive Cavity",false,A,PUMP,,,,,,1656765,14957,Fthr Blood
+29258,100-SCREW CONVEYOR-00901R,"SCREW CONVEYOR, Silo A Rotolift Feed Screw",false,A,SCREW CONVEYOR,,,,,,1649382,14966,SILOS
+29281,100-SCREW CONVEYOR-66,"SCREW CONVEYOR, TEMP Screw to A-B Discharge 2",false,A,SCREW CONVEYOR,,,,,,1315886,14956,Fthr Hydrolizing
+29282,100-FAN-653,TST Cooker Condenser Booster Fan,false,A,Fan,,,,,,1678875,18113,TST Cooker Tube Condenser
+29286,100-GENERATOR-4,"GENERATOR, Winco",false,A,GENERATOR,,,,,,1005334,16373,"Building, Maintenance Shop"
+29464,100-JACKSON QUALITY SYSTM,Jackson Quality System,true,L,Area,,,,,,1464328,7303,Jackson Rendering
+29756,100-SCREW CONVEYOR-4469,"SCREW CONVEYOR, n4300 Feed Ram",false,A,SCREW CONVEYOR,,,,,,1672339,14945,N4300 Raw
+29757,100-SCREW CONVEYOR-4470,"SCREW CONVEYOR, n4300 Raw Ram",false,A,SCREW CONVEYOR,,,,,,1682335,14945,N4300 Raw
+29895,100-TANK-1477,"TANK, Poultry Surge Hopper",false,A,TANK,,,,,,1616781,14917,PP Raw
+29996,100-SCREW CONVEYOR-4332,"SCREW CONVEYOR, 1800 Drainer Fines",false,A,SCREW CONVEYOR,,,,,,1516935,14950,1800 Cook Line Cooking
+31696,100-SCREW CONVEYOR-4483,"SCREW CONVEYOR, Drainer Fines",false,A,SCREW CONVEYOR,,,,,,1231440,14946,N4300 Cooking
+31753,100-SCREW CONVEYOR-4493,"SCREW CONVEYOR, Drainor Fines 04300",false,A,SCREW CONVEYOR,,,,,,1357154,14935,O4300 Cooker Equipment
+31754,100-SCREW CONVEYOR-4494,"SCREW CONVEYOR, Drainor Fines 200U",false,A,SCREW CONVEYOR,,,,,,1675337,14942,200U Cooking
+32326,100-PUMP-3903,"PUMP, 200U Cooling Water Supply",false,A,PUMP,,,,,,1676995,15472,"COOLING-TOWER, Poultry Plant"
+32327,100-PUMP-3904,"PUMP, TST Cooling Water Supply",false,A,PUMP,,,,,,1676995,15472,"COOLING-TOWER, Poultry Plant"
+32890,SCREW CONVEYOR-4571,"SCREW CONVEYOR, Feather Hopper Leveling",false,A,SCREW CONVEYOR,,,,,,1397999,14959,Fthr Grinding
+32915,100-PUMP-3925,"Pump, N4300 Grease Transfer",false,A,PUMP,,,,,,,14946,N4300 Cooking
+33048,100-SCREW CONVEYOR-4575,"SCREW CONVEYOR, Rotolift Crax Discharge",false,A,SCREW CONVEYOR,,,,,,1429481,14938,PP B-Side Grinding
+33611,100-CONDENSER-144,N4300 Cooker Air-Cooled Condenser (2-west),false,A,CONDENSER,,,,,,1669824,14960,VAPOR COLLAPSING
+33613,100-CONDENSER-145,N4300 Cooker Air-Cooled  Condenser (1-east),false,A,CONDENSER,,,,,,1677648,14960,VAPOR COLLAPSING
+33748,100-CONDENSER-147,N4300 CONDENSER 1,false,A,CONDENSER,,,,,,,7852,Obsolete Assets - Do not use
+33749,100-FAN-435,N4300 CONDENSER 1 Booster Fan,false,A,Fan,,,,,,1678875,33613,N4300 Cooker Air-Cooled  Condenser (1-east)
+33750,100-CONDENSER-146,1800 Condenser,false,A,CONDENSER,,,,,,,7852,Obsolete Assets - Do not use
+33751,100-FAN-687,200U Cooker Condenser Booster Fan,false,A,Fan,,,,,,1678875,18826,200u Cooker Tube Condenser
+33752,100-FAN-688,Feather Dryer Air-Cooled Condenser Fan (West),false,A,Fan,,,,,,1679793,18839,Feather Dryer Air-Cooled Condensesr
+33753,100-FAN-689,Feather Dryer Air-Cooled Condenser Fan (East),false,A,Fan,,,,,,1520261,18839,Feather Dryer Air-Cooled Condensesr
+33754,100-CONDENSER-148,New Evaporator Condenser,false,A,CONDENSER,,,,,,,15480,New Evaporator
+33835,100-PROCESS LINE-17-,Storm Water Basin,true,L,Area,,,,,,1676120,22207,WATER
+33837,100-SUMP-44,"SUMP, Storm Water Basin (4x4)",false,A,SUMP,,,,,,1620976,14979,SUMPS
+33838,100-SUMP-45,"SUMP, Production Grease (2x2)",false,A,SUMP,,,,,,1667471,14979,SUMPS
+33839,100-SUMP-46,"SUMP, Feather Venturi (2x2)",false,A,SUMP,,,,,,1635309,14979,SUMPS
+33954,SCREW CONVEYOR-4679,"SCREW CONVEYOR, Cooker Feed 200U",false,A,SCREW CONVEYOR,,,,,,1656110,14942,200U Cooking
+33959,SCREW CONVEYOR-4680,"SCREW CONVEYOR, Press A Feed",false,A,SCREW CONVEYOR,,,,,,1549035,14956,Fthr Hydrolizing
+33960,SCREW CONVEYOR-4681,"SCREW CONVEYOR, Dryer Incline Screw",false,A,SCREW CONVEYOR,,,,,,1515441,14958,Fthr Drying
+34154,100-SEPARATOR-332,"SEPARATOR, Shaker 1800",false,A,SEPARATOR,,,,,,1677480,14952,1800 Cook Line Grinding
+34155,SEPARATOR-333,"SEPARATOR, Shaker A-Side",false,A,SEPARATOR,,,,,,1665534,14937,PP A-Side Grinding
+34156,100-SEPARATOR-334,"SEPARATOR, Shaker B-Side",false,A,SEPARATOR,,,,,,1646706,14938,PP B-Side Grinding
+34157,100-SEPARATOR-335,"SEPARATOR, Shaker Trash",false,A,SEPARATOR,,,,,,,16755,PP Trash System
+34164,SCALE-90,"SCALE, Raw Materials",false,A,SCALE,,,,,,,14965,LOADOUT
+34957,100-ROTOLOCK-108,"ROTOLOCK, Rotary Valve",false,A,,,,,,,1654049,14917,PP Raw
+35386,100-PUMP-4157,"PUMP, Old Evap Condensate",false,A,,,,,,,1674397,15479,Old Evaporator

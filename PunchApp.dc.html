@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="_ds/steampunk-fabrication-design-system-7b778886-39ba-4c85-ac7e-378482ec9c37/colors_and_type.css">
+  <script src="_ds/steampunk-fabrication-design-system-7b778886-39ba-4c85-ac7e-378482ec9c37/_ds_bundle.js"></script>
+  <style>
+    body{margin:0;background:#0A0B0D} a{color:#A6CE39} a:hover{color:#C6E06F}
+    input:focus,textarea:focus{outline:2px solid #A6CE39;outline-offset:-1px}
+    button{-webkit-tap-highlight-color:transparent;font-family:inherit}
+    ::-webkit-scrollbar{display:none}
+    @keyframes punchToast{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  </style>
+</helmet>
+<div style="height:100%;display:flex;flex-direction:column;background:#0A0B0D;color:#EDF0F2;font-family:Barlow,system-ui,sans-serif;box-sizing:border-box;position:relative;overflow:hidden;padding-top:{{ padTop }}px">
+  <input type="file" accept="image/*" capture="environment" ref="{{ fileRef }}" onChange="{{ onFile }}" style="display:none">
+  <input type="file" accept=".csv,text/csv" ref="{{ csvRef }}" onChange="{{ onCsv }}" style="display:none">
+
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="Home" style="flex:1;min-height:0;overflow:auto;padding:8px 16px 16px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:16px">
+    <div style="display:flex;align-items:center;gap:12px;padding-bottom:12px;border-bottom:1px solid #323A43">
+      <img src="assets/steampunk-logo.jpg" alt="Steampunk Fabrication" style="width:38px;height:38px;border-radius:50%;flex-shrink:0">
+      <div style="flex:1;min-width:0">
+        <div style="font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#A6CE39;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Jackson Rendering · Maintenance</div>
+        <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Steampunk Punch</div>
+      </div>
+      <button onClick="{{ openCrew }}" style="display:flex;align-items:center;gap:6px;background:#1D2228;border:1px solid #323A43;border-radius:999px;padding:0 11px;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#AEB6BD;min-height:36px;cursor:pointer;max-width:118px;flex-shrink:0">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ meName }}</span>
+      </button>
+      <button onClick="{{ openShop }}" aria-label="Shop settings" style="background:#1D2228;border:1px solid #323A43;border-radius:4px;width:36px;height:36px;display:flex;align-items:center;justify-content:center;color:#AEB6BD;cursor:pointer;flex-shrink:0">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16"></path><path d="M4 6h16"></path><path d="M4 18h16"></path></svg>
+      </button>
+    </div>
+
+    <sc-if value="{{ showNag }}" hint-placeholder-val="{{ false }}">
+    <div style="display:flex;align-items:center;gap:12px;background:#1B2C49;border:1px solid #A6CE39;border-radius:4px;padding:12px 14px">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3"></path><path d="M12 9v4"></path><path d="M12 17h.01"></path></svg>
+      <div style="flex:1;min-width:0">
+        <div style="font:700 13px 'Saira',sans-serif;text-transform:uppercase;letter-spacing:.06em">{{ nagTitle }}</div>
+        <div style="font:500 12px Barlow,sans-serif;color:#C9CFD5;margin-top:2px">{{ nagSub }}</div>
+      </div>
+      <button onClick="{{ nagAction }}" style="background:transparent;border:1.5px solid #A6CE39;color:#A6CE39;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;padding:0 12px;min-height:36px;border-radius:4px;cursor:pointer;flex-shrink:0">{{ nagBtn }}</button>
+    </div>
+    </sc-if>
+
+    <button onClick="{{ snapNew }}" style-active="background:#131619" style="display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:#0A0B0D;border:2px solid #A6CE39;border-radius:6px;min-height:168px;color:#EDF0F2;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06)">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+      <span style="font:900 italic 30px/1 'Saira Condensed',sans-serif;text-transform:uppercase;letter-spacing:.01em">Snap a punch</span>
+      <span style="font:500 10.5px 'JetBrains Mono',monospace;letter-spacing:.14em;text-transform:uppercase;color:#7E8893">Photo first · pick asset after</span>
+    </button>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+      <button onClick="{{ goAssets }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 12px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;min-height:46px;border-radius:4px;cursor:pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>Find asset
+      </button>
+      <button onClick="{{ goAreas }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 12px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;min-height:46px;border-radius:4px;cursor:pointer">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>Area walkdown
+      </button>
+    </div>
+
+    <div style="display:flex;align-items:baseline;justify-content:space-between;margin-top:4px">
+      <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Today</div>
+      <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ todayLabel }}</div>
+    </div>
+    <sc-if value="{{ hasToday }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.45)">
+      <sc-for list="{{ todayRows }}" as="t" hint-placeholder-count="3">
+      <button onClick="{{ t.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:64px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+        <div style="width:32px;height:32px;border:2px solid {{ t.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 13px 'Saira Condensed',sans-serif;color:{{ t.priColor }};flex-shrink:0">P{{ t.pri }}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.assetName }}</div>
+          <div style="font:400 12.5px Barlow,sans-serif;color:#AEB6BD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.sub }}</div>
+        </div>
+        <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ t.dueFg }};background:{{ t.dueBg }};border-radius:2px;padding:4px 6px;flex-shrink:0">{{ t.dueLabel }}</div>
+      </button>
+      </sc-for>
+    </div>
+    </sc-if>
+    <sc-if value="{{ noToday }}" hint-placeholder-val="{{ false }}">
+    <div style="border:1px dashed #323A43;border-radius:6px;padding:20px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">Nothing due today. {{ openCountText }}</div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isCapture }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Capture" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="padding:8px 16px 0;display:flex;flex-direction:column;gap:10px">
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ capCancel }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">Cancel</button>
+        <div style="flex:1;text-align:center;font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#A6CE39">{{ capStepLabel }}</div>
+        <div style="width:70px;text-align:right;font:500 10.5px 'JetBrains Mono',monospace;color:#79828B">{{ capPhotoCount }}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:4px">
+        <div style="height:4px;background:{{ capBar.a }};border-radius:2px"></div>
+        <div style="height:4px;background:{{ capBar.b }};border-radius:2px"></div>
+        <div style="height:4px;background:{{ capBar.c }};border-radius:2px"></div>
+        <div style="height:4px;background:{{ capBar.d }};border-radius:2px"></div>
+      </div>
+    </div>
+
+    <sc-if value="{{ capIsPhoto }}" hint-placeholder-val="{{ true }}">
+    <div style="flex:1;min-height:0;overflow:auto;padding:14px 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:10px">
+      <div style="position:relative;background:#000;border-radius:4px;overflow:hidden;touch-action:none;border:1px solid #323A43">
+        <img src="{{ capPhoto.data }}" alt="Punch photo" style="width:100%;display:block;pointer-events:none">
+        <svg viewBox="{{ capViewBox }}" preserveAspectRatio="none" onPointerDown="{{ capDown }}" onPointerMove="{{ capMove }}" onPointerUp="{{ capUp }}" style="position:absolute;inset:0;width:100%;height:100%;cursor:{{ capCursor }}">
+          <sc-for list="{{ capMarks }}" as="m" hint-placeholder-count="0">
+            <sc-if value="{{ m.isC }}" hint-placeholder-val="{{ false }}"><circle cx="{{ m.x }}" cy="{{ m.y }}" r="{{ m.r }}" fill="none" stroke="#E8631A" stroke-width="{{ m.sw }}"></circle></sc-if>
+            <sc-if value="{{ m.isA }}" hint-placeholder-val="{{ false }}"><line x1="{{ m.x1 }}" y1="{{ m.y1 }}" x2="{{ m.x2 }}" y2="{{ m.y2 }}" stroke="#E8631A" stroke-width="{{ m.sw }}" stroke-linecap="round"></line><polygon points="{{ m.head }}" fill="#E8631A"></polygon></sc-if>
+          </sc-for>
+          <sc-if value="{{ capDragging }}" hint-placeholder-val="{{ false }}"><line x1="{{ capDrag.x1 }}" y1="{{ capDrag.y1 }}" x2="{{ capDrag.x2 }}" y2="{{ capDrag.y2 }}" stroke="#E8631A" stroke-width="{{ capDrag.sw }}" stroke-dasharray="{{ capDrag.dash }}"></line></sc-if>
+        </svg>
+        <sc-if value="{{ capHint }}" hint-placeholder-val="{{ false }}"><div style="position:absolute;left:10px;bottom:10px;background:rgba(10,11,13,.78);color:#E8631A;font:600 10px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;padding:6px 8px;border-radius:2px;pointer-events:none">{{ capHintText }}</div></sc-if>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+        <button onClick="{{ capModeCircle }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:{{ capToolBg.c }};border:1.5px solid {{ capToolBd.c }};color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E8631A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle></svg>Circle
+        </button>
+        <button onClick="{{ capModeArrow }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:{{ capToolBg.a }};border:1.5px solid {{ capToolBd.a }};color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#E8631A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"></path><path d="M7 17 17 7"></path></svg>Arrow
+        </button>
+        <button onClick="{{ capUndo }}" style="display:flex;align-items:center;justify-content:center;gap:8px;background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">Undo</button>
+      </div>
+      <div style="display:flex;gap:8px;overflow:auto;padding-bottom:2px">
+        <sc-for list="{{ capThumbs }}" as="p" hint-placeholder-count="1">
+          <button onClick="{{ p.select }}" style="width:64px;height:64px;flex-shrink:0;border-radius:4px;border:2px solid {{ p.bd }};padding:0;background:#000;overflow:hidden;cursor:pointer;position:relative"><img src="{{ p.data }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><sc-if value="{{ p.marked }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:3px;right:3px;width:8px;height:8px;border-radius:50%;background:#E8631A"></span></sc-if></button>
+        </sc-for>
+        <button onClick="{{ capMore }}" style="width:64px;height:64px;flex-shrink:0;border-radius:4px;border:1.5px dashed #434C57;background:transparent;color:#AEB6BD;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font:700 9px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;cursor:pointer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Photo
+        </button>
+      </div>
+    </div>
+    <div style="padding:10px 16px {{ padFoot }}px;border-top:1px solid #323A43;background:#131619;flex-shrink:0">
+      <button onClick="{{ capNext }}" style="width:100%;background:#A6CE39;border:none;border-radius:4px;min-height:54px;color:#0A0B0D;font:900 italic 22px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)">Next · Asset</button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ capIsAsset }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;min-height:0;display:flex;flex-direction:column">
+      <sc-if value="{{ capPickZone }}" hint-placeholder-val="{{ false }}">
+      <div style="flex:1;min-height:0;overflow:auto;padding:18px 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:10px">
+        <div style="font:900 italic 34px/1 'Saira Condensed',sans-serif;text-transform:uppercase;margin-bottom:4px">Where is it?</div>
+        <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+          <sc-for list="{{ capZones }}" as="z" hint-placeholder-count="7">
+          <button onClick="{{ z.pick }}" style-active="background:#1D2228" style="display:grid;grid-template-columns:34px 1fr auto 14px;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:60px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+            <div style="font:800 italic 20px 'Saira Condensed',sans-serif;color:#79828B">{{ z.num }}</div>
+            <div style="min-width:0"><div style="font:600 15px Barlow,sans-serif">{{ z.name }}</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px">{{ z.meta }}</div></div>
+            <div style="font:800 italic 18px 'Saira Condensed',sans-serif;color:{{ z.countColor }}">{{ z.open }}</div>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          </sc-for>
+        </div>
+      </div>
+      </sc-if>
+      <sc-if value="{{ capPickAsset }}" hint-placeholder-val="{{ true }}">
+      <div style="padding:14px 16px 8px;display:flex;flex-direction:column;gap:10px;flex-shrink:0">
+        <div style="display:flex;align-items:center;gap:10px">
+          <button onClick="{{ capZoneBack }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer;white-space:nowrap">‹ Areas</button>
+          <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A6CE39;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ capZoneName }}</div>
+        </div>
+        <input type="search" value="{{ capQ }}" onChange="{{ capSetQ }}" placeholder="Search name, tag or type…" style="background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 12px;min-height:46px;width:100%;box-sizing:border-box">
+      </div>
+      <div style="flex:1;min-height:0;overflow:auto;padding:0 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:10px">
+        <sc-if value="{{ capDupe }}" hint-placeholder-val="{{ false }}">
+        <div style="background:#1D2228;border:1px solid #E8A33D;border-radius:4px;padding:10px 12px;display:flex;flex-direction:column;gap:8px">
+          <div style="font:700 11px 'Saira',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#E8A33D">Open punch already on this asset</div>
+          <div style="font:500 13px Barlow,sans-serif;color:#EDF0F2">P{{ capDupeTask.pri }} · {{ capDupeTask.when }} · {{ capDupeTask.note }}</div>
+          <div style="display:flex;gap:8px">
+            <button onClick="{{ capAttachDupe }}" style="flex:1;background:#A6CE39;border:none;color:#0A0B0D;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:40px;border-radius:4px;cursor:pointer">Add photos to it</button>
+            <button onClick="{{ capNext }}" style="flex:1;background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:40px;border-radius:4px;cursor:pointer">New punch anyway</button>
+          </div>
+        </div>
+        </sc-if>
+        <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+          <sc-for list="{{ capAssets }}" as="a" hint-placeholder-count="6">
+          <button onClick="{{ a.pick }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;padding:10px 14px;border:none;border-bottom:1px solid #262C33;border-left:3px solid {{ a.bar }};min-height:56px;box-sizing:border-box;background:{{ a.bg }};color:{{ a.fg }};text-align:left;width:100%;cursor:pointer">
+            <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.name }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:{{ a.idFg }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.id }}{{ a.tag }}</div></div>
+            <sc-if value="{{ a.sel }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
+          </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ capMoreAssets }}" hint-placeholder-val="{{ false }}"><button onClick="{{ capShowMore }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:40px;border-radius:4px;cursor:pointer">Show more · {{ capAssetTotal }} in area</button></sc-if>
+      </div>
+      </sc-if>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;padding:10px 16px {{ padFoot }}px;border-top:1px solid #323A43;background:#131619;flex-shrink:0">
+        <button onClick="{{ capBack }}" style="background:transparent;border:1.5px solid #434C57;border-radius:4px;min-height:54px;color:#EDF0F2;font:700 13px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Back</button>
+        <button onClick="{{ capNext }}" disabled="{{ capNoAsset }}" style="background:{{ capNextBg }};border:none;border-radius:4px;min-height:54px;color:{{ capNextFg }};font:900 italic 22px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)">Next · Priority</button>
+      </div>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ capIsPri }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;min-height:0;overflow:auto;padding:18px 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:10px">
+      <div style="font:900 italic 34px/1 'Saira Condensed',sans-serif;text-transform:uppercase;margin-bottom:6px">How bad is it?</div>
+      <sc-for list="{{ capPris }}" as="p" hint-placeholder-count="4">
+      <button onClick="{{ p.pick }}" style="display:grid;grid-template-columns:56px 1fr;align-items:center;gap:14px;text-align:left;background:{{ p.bg }};border:2px solid {{ p.bd }};border-radius:4px;min-height:84px;padding:12px 14px;color:{{ p.fg }};cursor:pointer">
+        <div style="font:800 italic 40px/1 'Saira Condensed',sans-serif;color:{{ p.numColor }}">{{ p.n }}</div>
+        <div><div style="font:700 16px 'Saira',sans-serif;text-transform:uppercase;letter-spacing:.04em">{{ p.name }}</div><div style="font:400 13px Barlow,sans-serif;color:{{ p.hintFg }};margin-top:2px">{{ p.hint }}</div></div>
+      </button>
+      </sc-for>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;padding:10px 16px {{ padFoot }}px;border-top:1px solid #323A43;background:#131619;flex-shrink:0">
+      <button onClick="{{ capBack }}" style="background:transparent;border:1.5px solid #434C57;border-radius:4px;min-height:54px;color:#EDF0F2;font:700 13px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Back</button>
+      <button onClick="{{ capNext }}" disabled="{{ capNoPri }}" style="background:{{ capNextBg }};border:none;border-radius:4px;min-height:54px;color:{{ capNextFg }};font:900 italic 22px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)">Next · Follow up</button>
+    </div>
+    </sc-if>
+
+    <sc-if value="{{ capIsDetails }}" hint-placeholder-val="{{ false }}">
+    <div style="flex:1;min-height:0;overflow:auto;padding:14px 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:14px">
+      <div style="display:flex;align-items:center;gap:12px;background:#131619;border:1px solid #323A43;border-radius:4px;padding:8px 10px">
+        <img src="{{ capPhoto.data }}" alt="" style="width:52px;height:52px;border-radius:4px;object-fit:cover;flex-shrink:0;border:1px solid #434C57">
+        <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ capAssetName }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:#A6CE39;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ capAssetId }} · {{ capZoneShort }}</div></div>
+        <div style="width:32px;height:32px;border:2px solid {{ capPriColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 13px 'Saira Condensed',sans-serif;color:{{ capPriColor }};flex-shrink:0">P{{ capPriN }}</div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="font:700 10px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">What's wrong</div>
+        <textarea value="{{ capNote }}" onChange="{{ capSetNote }}" placeholder="Short and specific. What you saw, where." style="background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px/1.4 Barlow,sans-serif;padding:12px;min-height:84px;resize:none;width:100%;box-sizing:border-box"></textarea>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="font:700 10px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Follow up · it will nag you on this day</div>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:6px">
+          <sc-for list="{{ capDues }}" as="d" hint-placeholder-count="4">
+          <button onClick="{{ d.pick }}" style="min-height:44px;border:1.5px solid {{ d.bd }};background:{{ d.bg }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:{{ d.fg }};cursor:pointer">{{ d.label }}</button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ capCustomDate }}" hint-placeholder-val="{{ false }}"><input type="date" value="{{ capDateVal }}" onChange="{{ capSetDate }}" style="background:#131619;border:1.5px solid #A6CE39;border-radius:4px;color:#EDF0F2;font:500 16px Barlow,sans-serif;padding:0 12px;min-height:44px;width:100%;box-sizing:border-box;color-scheme:dark"></sc-if>
+      </div>
+      <button onClick="{{ capToggleMc }}" style="display:flex;align-items:center;gap:12px;background:#131619;border:1px solid #323A43;border-radius:4px;padding:10px 12px;min-height:56px;box-sizing:border-box;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+        <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Flag for MC work request</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">Goes in the next CSV export to Maintenance Connection</div></div>
+        <div style="width:46px;height:28px;border-radius:999px;background:{{ capMcBg }};position:relative;flex-shrink:0;transition:background .18s"><div style="position:absolute;top:3px;left:{{ capMcKnob }}px;width:22px;height:22px;border-radius:50%;background:#0A0B0D;transition:left .18s"></div></div>
+      </button>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 2fr;gap:10px;padding:10px 16px {{ padFoot }}px;border-top:1px solid #323A43;background:#131619;flex-shrink:0">
+      <button onClick="{{ capBack }}" style="background:transparent;border:1.5px solid #434C57;border-radius:4px;min-height:54px;color:#EDF0F2;font:700 13px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">Back</button>
+      <button onClick="{{ capSave }}" style="background:#A6CE39;border:none;border-radius:4px;min-height:54px;color:#0A0B0D;font:900 italic 22px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)">Save punch</button>
+    </div>
+    </sc-if>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isTasks }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Tasks" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="padding:8px 16px 10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid #323A43;flex-shrink:0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font:900 italic 26px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Punch list</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ tasksMeta }}</div>
+      </div>
+      <div style="display:flex;gap:6px;overflow:auto">
+        <sc-for list="{{ taskFilters }}" as="f" hint-placeholder-count="4">
+        <button onClick="{{ f.pick }}" style="flex-shrink:0;background:{{ f.bg }};color:{{ f.fg }};border:1px solid {{ f.bd }};border-radius:999px;padding:0 12px;min-height:34px;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">{{ f.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:0 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start">
+      <sc-for list="{{ taskGroups }}" as="g" hint-placeholder-count="2">
+        <div style="position:sticky;top:0;background:#0A0B0D;display:flex;align-items:baseline;gap:8px;padding:14px 0 8px;z-index:1">
+          <span style="font:800 italic 16px 'Saira Condensed',sans-serif;color:#79828B">{{ g.num }}</span><span style="font:700 12px 'Saira',sans-serif;letter-spacing:.18em;text-transform:uppercase;color:#A6CE39">{{ g.name }}</span><span style="margin-left:auto;font:500 10.5px 'JetBrains Mono',monospace;color:{{ g.metaColor }}">{{ g.meta }}</span>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#131619;border:1px solid {{ g.bd }};border-radius:6px;overflow:hidden">
+          <sc-for list="{{ g.rows }}" as="t" hint-placeholder-count="2">
+          <button onClick="{{ t.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:64px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+            <div style="width:32px;height:32px;border:2px solid {{ t.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 13px 'Saira Condensed',sans-serif;color:{{ t.priColor }};flex-shrink:0">P{{ t.pri }}</div>
+            <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.assetName }}</div><div style="font:400 12.5px Barlow,sans-serif;color:#AEB6BD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.sub }}</div></div>
+            <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ t.dueFg }};background:{{ t.dueBg }};border-radius:2px;padding:4px 6px;flex-shrink:0">{{ t.dueLabel }}</div>
+          </button>
+          </sc-for>
+        </div>
+      </sc-for>
+      <sc-if value="{{ tasksEmpty }}" hint-placeholder-val="{{ false }}"><div style="margin-top:16px;border:1px dashed #323A43;border-radius:6px;padding:24px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">{{ tasksEmptyText }}</div></sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isTask }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Task detail" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 16px 10px;flex-shrink:0">
+      <button onClick="{{ back }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">‹ Back</button>
+      <div style="flex:1;text-align:center;font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#79828B">{{ tk.id }}</div>
+      <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ tk.dueFg }};background:{{ tk.dueBg }};border-radius:2px;padding:6px 8px">{{ tk.dueLabel }}</div>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:0 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:14px">
+      <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:8px">
+        <sc-for list="{{ tkPhotos }}" as="p" hint-placeholder-count="2">
+        <button onClick="{{ p.view }}" style="aspect-ratio:4/3;border-radius:4px;border:1px solid {{ p.bd }};padding:0;background:#000;overflow:hidden;position:relative;cursor:pointer"><img src="{{ p.data }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><sc-if value="{{ p.isClose }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;left:6px;bottom:6px;font:700 9px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#0A0B0D;background:#4FA36B;padding:3px 6px;border-radius:2px">CLOSE-OUT</span></sc-if></button>
+        </sc-for>
+        <button onClick="{{ tkAddPhoto }}" style="aspect-ratio:4/3;border-radius:4px;border:1.5px dashed #434C57;background:transparent;color:#AEB6BD;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;cursor:pointer">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>Add photo
+        </button>
+      </div>
+      <div style="display:flex;align-items:flex-start;gap:12px">
+        <div style="width:44px;height:44px;border:2px solid {{ tk.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 18px 'Saira Condensed',sans-serif;color:{{ tk.priColor }};flex-shrink:0">P{{ tk.pri }}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font:600 17px/1.3 Barlow,sans-serif">{{ tkNote }}</div>
+          <button onClick="{{ tkOpenAsset }}" style="margin-top:6px;background:transparent;border:none;padding:0;text-align:left;cursor:pointer;color:#A6CE39;font:500 11px 'JetBrains Mono',monospace;letter-spacing:.04em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%">{{ tk.assetName }} · {{ tk.assetId }} ›</button>
+          <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;margin-top:4px;text-transform:uppercase">{{ tkMeta }}</div>
+        </div>
+      </div>
+      <sc-if value="{{ tkOpen }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="font:700 10px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Follow up · {{ tkDueText }}</div>
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+          <button onClick="{{ tkSnooze1 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">Snooze 1 day</button>
+          <button onClick="{{ tkSnooze3 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">3 days</button>
+          <button onClick="{{ tkSnooze7 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">1 week</button>
+        </div>
+      </div>
+      <button onClick="{{ tkToggleMc }}" style="display:flex;align-items:center;gap:12px;background:#131619;border:1px solid #323A43;border-radius:4px;padding:10px 12px;min-height:56px;box-sizing:border-box;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+        <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Flag for MC work request</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">{{ tkMcText }}</div></div>
+        <div style="width:46px;height:28px;border-radius:999px;background:{{ tkMcBg }};position:relative;flex-shrink:0;transition:background .18s"><div style="position:absolute;top:3px;left:{{ tkMcKnob }}px;width:22px;height:22px;border-radius:50%;background:#0A0B0D;transition:left .18s"></div></div>
+      </button>
+      <sc-if value="{{ tkCanClose }}" hint-placeholder-val="{{ true }}">
+      <button onClick="{{ tkClose }}" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;background:#A6CE39;border:none;border-radius:4px;min-height:54px;color:#0A0B0D;font:900 italic 22px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.2)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>Close with photo
+      </button>
+      </sc-if>
+      <sc-if value="{{ tkCantClose }}" hint-placeholder-val="{{ false }}"><div style="border:1px dashed #323A43;border-radius:4px;padding:12px;font:500 12.5px Barlow,sans-serif;color:#79828B;text-align:center">{{ tkCantText }}</div></sc-if>
+      </sc-if>
+      <sc-if value="{{ tkClosed }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:10px;background:rgba(79,163,107,.12);border:1px solid #4FA36B;border-radius:4px;padding:12px 14px;font:700 12px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#4FA36B">Closed {{ tkClosedText }}</div>
+      </sc-if>
+      <div style="display:flex;flex-direction:column;gap:6px">
+        <div style="font:700 10px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Log</div>
+        <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+          <sc-for list="{{ tkLog }}" as="l" hint-placeholder-count="2">
+          <div style="display:grid;grid-template-columns:86px 1fr;gap:10px;padding:9px 14px;border-bottom:1px solid #262C33"><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ l.when }}</div><div style="font:400 13px Barlow,sans-serif;color:#C9CFD5">{{ l.text }}</div></div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isReview }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Friday review" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="padding:8px 16px 0;display:flex;flex-direction:column;gap:10px;flex-shrink:0">
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ rvStop }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">Stop</button>
+        <div style="flex:1;text-align:center;font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.18em;text-transform:uppercase;color:#A6CE39">Review · {{ rvPos }}</div>
+        <div style="width:60px"></div>
+      </div>
+      <div style="height:4px;background:#2A313A;border-radius:2px;overflow:hidden"><div style="height:100%;width:{{ rvPct }}%;background:#A6CE39;transition:width .18s"></div></div>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:16px 16px 8px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:12px">
+      <div style="font:900 italic 30px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Still a problem?</div>
+      <button onClick="{{ rvViewPhoto }}" style="border-radius:4px;border:1px solid #323A43;padding:0;background:#000;overflow:hidden;aspect-ratio:4/3;cursor:pointer"><img src="{{ rvPhoto }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"></button>
+      <div style="display:flex;align-items:flex-start;gap:12px">
+        <div style="width:40px;height:40px;border:2px solid {{ rv.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 16px 'Saira Condensed',sans-serif;color:{{ rv.priColor }};flex-shrink:0">P{{ rv.pri }}</div>
+        <div style="flex:1;min-width:0"><div style="font:600 16px/1.3 Barlow,sans-serif">{{ rvNote }}</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#A6CE39;margin-top:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ rv.assetName }}</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px;text-transform:uppercase">{{ rvMeta }}</div></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px">
+        <button onClick="{{ rvSnooze1 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">Snooze 1 day</button>
+        <button onClick="{{ rvSnooze3 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">3 days</button>
+        <button onClick="{{ rvSnooze7 }}" style="min-height:44px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">1 week</button>
+      </div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:10px 16px {{ padFoot }}px;border-top:1px solid #323A43;background:#131619;flex-shrink:0">
+      <button onClick="{{ rvKeep }}" style="background:transparent;border:1.5px solid #A6CE39;border-radius:4px;min-height:54px;color:#A6CE39;font:900 italic 20px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer">Still open · Next</button>
+      <button onClick="{{ rvClose }}" disabled="{{ rvNoClose }}" style="background:{{ rvCloseBg }};border:none;border-radius:4px;min-height:54px;color:{{ rvCloseFg }};font:900 italic 20px 'Saira Condensed',sans-serif;text-transform:uppercase;cursor:pointer">Fixed · Photo</button>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isAssets }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Assets" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="padding:8px 16px 10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid #323A43;flex-shrink:0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font:900 italic 26px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Assets</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ asMeta }}</div>
+      </div>
+      <div style="position:relative">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#79828B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:12px;top:15px;pointer-events:none"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="search" value="{{ asQ }}" onChange="{{ asSetQ }}" placeholder="Search name, MC tag, type or make…" style="background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 44px 0 38px;min-height:46px;width:100%;box-sizing:border-box">
+        <sc-if value="{{ asHasQ }}" hint-placeholder-val="{{ false }}"><button onClick="{{ asClear }}" aria-label="Clear search" style="position:absolute;right:5px;top:5px;width:36px;height:36px;background:transparent;border:none;color:#AEB6BD;font:700 20px Barlow,sans-serif;cursor:pointer">×</button></sc-if>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:14px 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:12px">
+      <sc-if value="{{ asBrowse }}" hint-placeholder-val="{{ true }}">
+        <sc-if value="{{ asHasRecent }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Recent</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ asRecentMeta }}</div></div>
+        <div style="display:flex;gap:8px;overflow:auto;margin:0 -16px;padding:0 16px 2px">
+          <sc-for list="{{ asRecent }}" as="r" hint-placeholder-count="0">
+          <button onClick="{{ r.open }}" style-active="background:#1D2228" style="flex-shrink:0;max-width:210px;display:flex;flex-direction:column;align-items:flex-start;gap:3px;background:#131619;border:1px solid #323A43;border-radius:4px;padding:8px 12px;min-height:48px;color:#EDF0F2;text-align:left;cursor:pointer">
+            <span style="font:600 13px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%">{{ r.desc }}</span>
+            <span style="font:500 9.5px 'JetBrains Mono',monospace;letter-spacing:.06em;text-transform:uppercase;color:#79828B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%">{{ r.sub }}</span>
+          </button>
+          </sc-for>
+        </div>
+        </sc-if>
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Browse by type</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ asTypeMeta }}</div></div>
+        <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px">
+          <sc-for list="{{ asTypes }}" as="t" hint-placeholder-count="6">
+          <button onClick="{{ t.open }}" style-active="background:#1D2228" style="display:flex;flex-direction:column;justify-content:space-between;align-items:stretch;gap:8px;background:#131619;border:1px solid #323A43;border-radius:6px;padding:12px 12px 10px;min-height:76px;color:#EDF0F2;text-align:left;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.04)">
+            <div style="display:flex;align-items:baseline;justify-content:space-between;gap:8px"><span style="font:800 italic 17px/1.05 'Saira Condensed',sans-serif;text-transform:uppercase;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;padding-right:5px">{{ t.name }}</span><span style="font:800 italic 17px/1 'Saira Condensed',sans-serif;color:#79828B;flex-shrink:0">{{ t.count }}</span></div>
+            <div style="font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.1em;text-transform:uppercase;color:{{ t.openFg }}">{{ t.openText }}</div>
+          </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ asMoreTypes }}" hint-placeholder-val="{{ false }}"><button onClick="{{ asToggleTypes }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">{{ asTypesBtn }}</button></sc-if>
+        <button onClick="{{ goAreas }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;background:#131619;border:1px solid #323A43;border-radius:6px;padding:12px 14px;min-height:60px;color:#EDF0F2;text-align:left;cursor:pointer;margin-top:4px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>
+          <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif">Browse by plant area</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px">{{ asAreaMeta }}</div></div>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m9 18 6-6-6-6"></path></svg>
+        </button>
+      </sc-if>
+      <sc-if value="{{ asHasQ }}" hint-placeholder-val="{{ false }}">
+        <div style="display:flex;align-items:baseline;justify-content:space-between"><div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Results</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ asResultMeta }}</div></div>
+        <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+          <sc-for list="{{ asRows }}" as="a" hint-placeholder-count="6">
+          <button onClick="{{ a.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:10px;padding:10px 12px 10px 14px;border:none;border-bottom:1px solid #262C33;min-height:58px;box-sizing:border-box;background:transparent;color:{{ a.fg }};text-align:left;width:100%;cursor:pointer">
+            <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.desc }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:{{ a.idFg }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.sub }}</div></div>
+            <span style="flex-shrink:0;font:700 9.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{{ a.zFg }};border:1px solid {{ a.zBd }};border-radius:999px;padding:4px 8px">{{ a.zone }}</span>
+            <sc-if value="{{ a.hasOpen }}" hint-placeholder-val="{{ false }}"><span style="flex-shrink:0;min-width:22px;height:22px;padding:0 6px;border-radius:2px;background:#E8631A;color:#0A0B0D;font:800 12px 'Saira Condensed',sans-serif;display:flex;align-items:center;justify-content:center">{{ a.openCount }}</span></sc-if>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+          </sc-for>
+        </div>
+        <sc-if value="{{ asMore }}" hint-placeholder-val="{{ false }}"><button onClick="{{ asShowMore }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">Show more · {{ asTotal }} match</button></sc-if>
+        <sc-if value="{{ asEmpty }}" hint-placeholder-val="{{ false }}"><div style="border:1px dashed #323A43;border-radius:6px;padding:24px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">No asset matches. Try part of the name, the MC tag, or a type like “pump”.</div></sc-if>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isAType }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Asset type" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="padding:8px 16px 10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid #323A43;flex-shrink:0">
+      <div style="display:flex;align-items:center;gap:10px">
+        <button onClick="{{ back }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer;white-space:nowrap">‹ Assets</button>
+        <div style="flex:1;min-width:0;font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;padding-right:6px">{{ atName }}</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;flex-shrink:0">{{ atMeta }}</div>
+      </div>
+      <div style="position:relative">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#79828B" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="position:absolute;left:12px;top:15px;pointer-events:none"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+        <input type="search" value="{{ atQ }}" onChange="{{ atSetQ }}" placeholder="Filter {{ atNameLower }}…" style="background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 12px 0 38px;min-height:46px;width:100%;box-sizing:border-box">
+      </div>
+      <div style="display:flex;gap:6px;overflow:auto;margin:0 -16px;padding:0 16px">
+        <sc-for list="{{ atZones }}" as="z" hint-placeholder-count="4">
+        <button onClick="{{ z.pick }}" style="flex-shrink:0;background:{{ z.bg }};color:{{ z.fg }};border:1px solid {{ z.bd }};border-radius:999px;padding:0 12px;min-height:34px;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap">{{ z.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:12px 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:10px">
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ atRows }}" as="a" hint-placeholder-count="8">
+          <button onClick="{{ a.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:10px;padding:10px 12px 10px 14px;border:none;border-bottom:1px solid #262C33;min-height:58px;box-sizing:border-box;background:transparent;color:{{ a.fg }};text-align:left;width:100%;cursor:pointer">
+            <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.desc }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:{{ a.idFg }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.sub }}</div></div>
+            <span style="flex-shrink:0;font:700 9.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{{ a.zFg }};border:1px solid {{ a.zBd }};border-radius:999px;padding:4px 8px">{{ a.zone }}</span>
+            <sc-if value="{{ a.hasOpen }}" hint-placeholder-val="{{ false }}"><span style="flex-shrink:0;min-width:22px;height:22px;padding:0 6px;border-radius:2px;background:#E8631A;color:#0A0B0D;font:800 12px 'Saira Condensed',sans-serif;display:flex;align-items:center;justify-content:center">{{ a.openCount }}</span></sc-if>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+        </sc-for>
+      </div>
+      <sc-if value="{{ atMore }}" hint-placeholder-val="{{ false }}"><button onClick="{{ atShowMore }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">Show more · {{ atTotal }} total</button></sc-if>
+      <sc-if value="{{ atEmpty }}" hint-placeholder-val="{{ false }}"><div style="border:1px dashed #323A43;border-radius:6px;padding:24px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">Nothing here with that filter.</div></sc-if>
+      <sc-if value="{{ atHasJunk }}" hint-placeholder-val="{{ false }}"><button onClick="{{ atToggleJunk }}" style="background:transparent;border:1px dashed #434C57;color:#79828B;font:700 10.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:40px;border-radius:4px;cursor:pointer">{{ atJunkBtn }}</button></sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isAsset }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Asset detail" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 16px 10px;flex-shrink:0">
+      <button onClick="{{ back }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">‹ Back</button>
+      <div style="flex:1"></div>
+      <button onClick="{{ adSnap }}" style="display:flex;align-items:center;gap:8px;background:#A6CE39;border:none;color:#0A0B0D;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 14px;border-radius:4px;cursor:pointer">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#0A0B0D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>Snap here
+      </button>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:4px 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:14px">
+      <div style="background:#131619;border:1px solid #323A43;border-radius:6px;padding:16px;box-shadow:0 6px 18px rgba(0,0,0,.45), inset 0 1px 0 rgba(255,255,255,.06);position:relative;overflow:hidden">
+        <div style="position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.015) 0 1px,transparent 1px 3px);pointer-events:none"></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px"><div style="font:600 10px 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#A6CE39;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ ad.id }}</div><span style="flex-shrink:0;font:700 9.5px 'Saira',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#0A0B0D;background:#AEB6BD;border-radius:2px;padding:4px 8px">{{ ad.type }}</span></div>
+        <div style="font:900 italic 26px/1.02 'Saira Condensed',sans-serif;text-transform:uppercase;margin-top:10px">{{ ad.desc }}</div>
+        <sc-if value="{{ adHasFull }}" hint-placeholder-val="{{ false }}"><div style="font:400 12px Barlow,sans-serif;color:#79828B;margin-top:4px">MC name · {{ ad.name }}</div></sc-if>
+        <sc-if value="{{ adLoc }}" hint-placeholder-val="{{ false }}"><div style="margin-top:8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#E8A33D">MC LOCATION · groups the equipment listed below</div></sc-if>
+        <sc-if value="{{ adJunk }}" hint-placeholder-val="{{ false }}"><div style="margin-top:8px;font:700 10px 'JetBrains Mono',monospace;letter-spacing:.1em;color:#E8A33D">MC JUNK ROW · trash, deleted or duplicate record</div></sc-if>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;margin-top:14px;padding-top:12px;border-top:1px solid #323A43">
+          <div><div style="font:700 9.5px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Mfr</div><div style="font:500 13px 'JetBrains Mono',monospace;color:#EDF0F2;margin-top:2px;word-break:break-word">{{ ad.mfr }}</div></div>
+          <div><div style="font:700 9.5px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Model</div><div style="font:500 13px 'JetBrains Mono',monospace;color:#EDF0F2;margin-top:2px;word-break:break-word">{{ ad.model }}</div></div>
+          <div><div style="font:700 9.5px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Serial</div><div style="font:500 13px 'JetBrains Mono',monospace;color:#EDF0F2;margin-top:2px;word-break:break-word">{{ ad.serial }}</div></div>
+          <div><div style="font:700 9.5px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">MC class</div><div style="font:500 13px 'JetBrains Mono',monospace;color:#EDF0F2;margin-top:2px;word-break:break-word">{{ ad.cls }}</div></div>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:flex-start;gap:8px;margin-top:14px">
+          <button onClick="{{ adPickZone }}" style="display:inline-flex;align-items:center;gap:6px;background:rgba(166,206,57,.16);color:#A6CE39;border:1px solid rgba(166,206,57,.4);border-radius:999px;padding:0 10px;min-height:32px;font:700 10.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;white-space:nowrap">Zone · {{ ad.zone }} ›</button>
+          <button onClick="{{ adOpenParent }}" disabled="{{ adNoParent }}" style="display:inline-flex;align-items:center;gap:6px;background:#1D2228;color:{{ adParentFg }};border:1px solid #323A43;border-radius:999px;padding:0 10px;min-height:32px;font:700 10.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;max-width:100%;min-width:0"><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">Part of · {{ ad.parent }}</span><sc-if value="{{ adHasParent }}" hint-placeholder-val="{{ false }}"><span>›</span></sc-if></button>
+        </div>
+      </div>
+      <sc-if value="{{ adHasKids }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:baseline;justify-content:space-between"><div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Contains</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ adKidsMeta }}</div></div>
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ adKids }}" as="k" hint-placeholder-count="2">
+          <button onClick="{{ k.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:10px;padding:10px 12px 10px 14px;border:none;border-bottom:1px solid #262C33;min-height:58px;box-sizing:border-box;background:transparent;color:{{ k.fg }};text-align:left;width:100%;cursor:pointer">
+            <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ k.desc }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:{{ k.idFg }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ k.sub }}</div></div>
+            <span style="flex-shrink:0;font:700 9.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:{{ k.zFg }};border:1px solid {{ k.zBd }};border-radius:999px;padding:4px 8px">{{ k.zone }}</span>
+            <sc-if value="{{ k.hasOpen }}" hint-placeholder-val="{{ false }}"><span style="flex-shrink:0;min-width:22px;height:22px;padding:0 6px;border-radius:2px;background:#E8631A;color:#0A0B0D;font:800 12px 'Saira Condensed',sans-serif;display:flex;align-items:center;justify-content:center">{{ k.openCount }}</span></sc-if>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m9 18 6-6-6-6"></path></svg>
+          </button>
+        </sc-for>
+      </div>
+      </sc-if>
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Open punches</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ adCounts }}</div>
+      </div>
+      <sc-if value="{{ adHasOpen }}" hint-placeholder-val="{{ true }}">
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ adOpen }}" as="t" hint-placeholder-count="1">
+        <button onClick="{{ t.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:64px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+          <div style="width:32px;height:32px;border:2px solid {{ t.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 13px 'Saira Condensed',sans-serif;color:{{ t.priColor }};flex-shrink:0">P{{ t.pri }}</div>
+          <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.note }}</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px;text-transform:uppercase;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.meta }}</div></div>
+          <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ t.dueFg }};background:{{ t.dueBg }};border-radius:2px;padding:4px 6px;flex-shrink:0">{{ t.dueLabel }}</div>
+        </button>
+        </sc-for>
+      </div>
+      </sc-if>
+      <sc-if value="{{ adNoOpen }}" hint-placeholder-val="{{ false }}"><div style="border:1px dashed #323A43;border-radius:6px;padding:16px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">Nothing open on this asset.</div></sc-if>
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Photos</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ adLastSeen }}</div>
+      </div>
+      <sc-if value="{{ adHasPhotos }}" hint-placeholder-val="{{ true }}">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px">
+        <sc-for list="{{ adPhotos }}" as="p" hint-placeholder-count="3">
+        <button onClick="{{ p.view }}" style="aspect-ratio:1;border-radius:4px;border:1px solid #323A43;padding:0;background:#000;overflow:hidden;position:relative;cursor:pointer"><img src="{{ p.data }}" alt="" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:6px;bottom:6px;font:600 9px 'JetBrains Mono',monospace;color:{{ p.fg }};background:rgba(10,11,13,.7);padding:2px 5px;border-radius:2px">{{ p.when }}</span></button>
+        </sc-for>
+      </div>
+      </sc-if>
+      <sc-if value="{{ adNoPhotos }}" hint-placeholder-val="{{ false }}"><div style="border:1px dashed #323A43;border-radius:6px;padding:16px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">No photos yet. Snap here to start its history.</div></sc-if>
+      <sc-if value="{{ adHasHist }}" hint-placeholder-val="{{ false }}">
+      <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">History</div>
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ adHist }}" as="h" hint-placeholder-count="2">
+        <button onClick="{{ h.open }}" style="display:grid;grid-template-columns:64px 1fr;gap:10px;padding:10px 14px;border:none;border-bottom:1px solid #262C33;background:transparent;text-align:left;cursor:pointer;color:#C9CFD5"><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ h.when }}</div><div style="font:400 13px Barlow,sans-serif">{{ h.text }}</div></button>
+        </sc-for>
+      </div>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isAreas }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Areas" style="flex:1;min-height:0;overflow:auto;padding:8px 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:14px">
+    <div style="display:flex;align-items:baseline;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid #323A43">
+      <div style="font:900 italic 26px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Plant areas</div>
+      <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ arMeta }}</div>
+    </div>
+    <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden;box-shadow:0 6px 18px rgba(0,0,0,.45)">
+      <sc-for list="{{ arZones }}" as="z" hint-placeholder-count="7">
+      <button onClick="{{ z.open }}" style-active="background:#1D2228" style="display:grid;grid-template-columns:34px 1fr auto 14px;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:60px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+        <div style="font:800 italic 20px 'Saira Condensed',sans-serif;color:#79828B">{{ z.num }}</div>
+        <div style="min-width:0"><div style="font:600 15px Barlow,sans-serif">{{ z.name }}</div><div style="font:500 11px 'JetBrains Mono',monospace;color:{{ z.metaColor }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ z.meta }}</div></div>
+        <div style="font:800 italic 22px 'Saira Condensed',sans-serif;color:{{ z.countColor }}">{{ z.openCount }}</div>
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5C6670" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+      </button>
+      </sc-for>
+    </div>
+    <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B">Zones were seeded from MC asset names. Fix any miss from the asset page — the correction sticks across imports.</div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ isArea }}" hint-placeholder-val="{{ false }}">
+  <div data-screen-label="Area" style="flex:1;min-height:0;display:flex;flex-direction:column">
+    <div style="display:flex;align-items:center;gap:10px;padding:8px 16px 10px;flex-shrink:0">
+      <button onClick="{{ back }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">‹ Areas</button>
+      <div style="flex:1"></div>
+      <button onClick="{{ zoWalk }}" style="background:{{ zoWalkBg }};border:1.5px solid #A6CE39;color:{{ zoWalkFg }};font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 14px;border-radius:4px;cursor:pointer">{{ zoWalkLabel }}</button>
+    </div>
+    <div style="flex:1;min-height:0;overflow:auto;padding:4px 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start;gap:14px">
+      <div>
+        <div style="font:600 10px 'JetBrains Mono',monospace;letter-spacing:.2em;text-transform:uppercase;color:#A6CE39">Zone {{ zo.num }} · {{ zoMeta }}</div>
+        <div style="font:900 italic 30px/1 'Saira Condensed',sans-serif;text-transform:uppercase;margin-top:4px">{{ zo.name }}</div>
+      </div>
+      <sc-if value="{{ zoHasOpen }}" hint-placeholder-val="{{ true }}">
+      <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Open punches</div>
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ zoOpen }}" as="t" hint-placeholder-count="2">
+        <button onClick="{{ t.open }}" style-active="background:#1D2228" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;min-height:64px;box-sizing:border-box;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+          <div style="width:32px;height:32px;border:2px solid {{ t.priColor }};border-radius:4px;display:flex;align-items:center;justify-content:center;font:800 13px 'Saira Condensed',sans-serif;color:{{ t.priColor }};flex-shrink:0">P{{ t.pri }}</div>
+          <div style="flex:1;min-width:0"><div style="font:600 14.5px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.assetName }}</div><div style="font:400 12.5px Barlow,sans-serif;color:#AEB6BD;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ t.sub }}</div></div>
+          <div style="font:700 10px 'JetBrains Mono',monospace;letter-spacing:.06em;color:{{ t.dueFg }};background:{{ t.dueBg }};border-radius:2px;padding:4px 6px;flex-shrink:0">{{ t.dueLabel }}</div>
+        </button>
+        </sc-for>
+      </div>
+      </sc-if>
+      <div style="display:flex;align-items:baseline;justify-content:space-between">
+        <div style="font:700 12px 'Saira',sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#A6CE39">Assets in zone</div>
+        <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ zoAssetMeta }}</div>
+      </div>
+      <input type="search" value="{{ zoQ }}" onChange="{{ zoSetQ }}" placeholder="Filter this zone…" style="background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 12px;min-height:46px;width:100%;box-sizing:border-box">
+      <div style="display:flex;flex-direction:column;background:#131619;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <sc-for list="{{ zoAssets }}" as="a" hint-placeholder-count="6">
+        <div style="display:flex;align-items:center;gap:8px;padding:8px 8px 8px 14px;border-bottom:1px solid #262C33;min-height:58px;box-sizing:border-box">
+          <button onClick="{{ a.open }}" style="flex:1;min-width:0;background:transparent;border:none;padding:0;text-align:left;cursor:pointer;color:{{ a.fg }}"><div style="font:600 14px Barlow,sans-serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.name }}</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:{{ a.idFg }};margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ a.id }}{{ a.tag }}</div></button>
+          <button onClick="{{ a.snap }}" aria-label="Snap a punch on this asset" style="width:44px;height:44px;flex-shrink:0;background:transparent;border:1.5px solid #434C57;border-radius:4px;color:#A6CE39;display:flex;align-items:center;justify-content:center;cursor:pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg></button>
+        </div>
+        </sc-for>
+      </div>
+      <sc-if value="{{ zoMore }}" hint-placeholder-val="{{ false }}"><button onClick="{{ zoShowMore }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:44px;border-radius:4px;cursor:pointer">Show more · {{ zoTotal }} in zone</button></sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasSheet }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;inset:0;z-index:30;display:flex;flex-direction:column;justify-content:flex-end;background:rgba(10,11,13,.82)">
+    <button onClick="{{ closeSheet }}" aria-label="Close" style="flex:1;background:transparent;border:none;cursor:pointer"></button>
+    <div style="background:#131619;border-top:1px solid #323A43;border-radius:10px 10px 0 0;padding:10px 16px {{ padFoot }}px;max-height:82%;display:flex;flex-direction:column;gap:12px;box-shadow:0 -18px 48px rgba(0,0,0,.55)">
+      <div style="width:40px;height:4px;border-radius:999px;background:#434C57;margin:0 auto"></div>
+
+      <sc-if value="{{ sheetCrew }}" hint-placeholder-val="{{ false }}">
+      <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Who are you?</div>
+      <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B">{{ crewHint }}</div>
+      <div style="overflow:auto;display:flex;flex-direction:column;background:#0A0B0D;border:1px solid #323A43;border-radius:6px">
+        <sc-for list="{{ crewRows }}" as="c" hint-placeholder-count="2">
+        <div style="display:flex;align-items:center;gap:8px;padding:6px 8px 6px 14px;border-bottom:1px solid #262C33;min-height:52px;box-sizing:border-box;background:{{ c.bg }}">
+          <button onClick="{{ c.pick }}" style="flex:1;min-width:0;display:flex;align-items:center;gap:10px;background:transparent;border:none;padding:0;text-align:left;cursor:pointer;color:#EDF0F2;font:600 15px Barlow,sans-serif;min-height:40px"><span style="width:10px;height:10px;border-radius:50%;background:{{ c.dot }};flex-shrink:0"></span><span style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ c.name }}</span><sc-if value="{{ c.hasRole }}" hint-placeholder-val="{{ false }}"><span style="flex-shrink:0;font:700 9px 'JetBrains Mono',monospace;letter-spacing:.1em;color:{{ c.roleFg }};background:{{ c.roleBg }};padding:2px 6px;border-radius:2px">{{ c.roleLabel }}</span></sc-if></button>
+          <sc-if value="{{ crewCanEdit }}" hint-placeholder-val="{{ false }}">
+          <button onClick="{{ c.cycleRole }}" style="background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 10px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 10px;border-radius:4px;cursor:pointer;white-space:nowrap">{{ c.roleBtn }}</button>
+          <button onClick="{{ c.remove }}" aria-label="Remove" style="width:36px;height:36px;background:transparent;border:1.5px solid #434C57;color:#79828B;border-radius:4px;cursor:pointer;font:700 14px Barlow,sans-serif">×</button>
+          </sc-if>
+        </div>
+        </sc-for>
+        <sc-if value="{{ crewEmpty }}" hint-placeholder-val="{{ false }}"><div style="padding:16px;text-align:center;font:500 13px Barlow,sans-serif;color:#79828B">No crew yet. Add the first name below.</div></sc-if>
+      </div>
+      <div style="display:flex;gap:8px">
+        <input type="text" value="{{ newName }}" onChange="{{ setNewName }}" onKeyDown="{{ newNameKey }}" placeholder="Add a name" style="flex:1;background:#0A0B0D;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 12px;min-height:48px;box-sizing:border-box;min-width:0">
+        <sc-if value="{{ crewCanEdit }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toggleNewLead }}" style="background:{{ newLeadBg }};border:1.5px solid #434C57;color:{{ newLeadFg }};font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;padding:0 12px;border-radius:4px;cursor:pointer">Lead</button></sc-if>
+        <button onClick="{{ addCrew }}" style="background:#A6CE39;border:none;color:#0A0B0D;font:700 12px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;padding:0 16px;border-radius:4px;cursor:pointer">Add</button>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetShop }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="assets/steampunk-logo.jpg" alt="" style="width:34px;height:34px;border-radius:50%">
+        <div style="flex:1;min-width:0"><div style="font:900 italic 22px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Shop</div><div style="font:500 10.5px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px">{{ shopMeta }}</div></div>
+      </div>
+      <div style="display:flex;flex-direction:column;background:#0A0B0D;border:1px solid #323A43;border-radius:6px;overflow:hidden">
+        <div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-bottom:1px solid #262C33">
+          <span style="width:10px;height:10px;border-radius:50%;background:{{ syncDot }};flex-shrink:0"></span>
+          <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Shop server</div><div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B;margin-top:2px">{{ syncText }}</div></div>
+          <button onClick="{{ syncNow }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:40px;padding:0 12px;border-radius:4px;cursor:pointer">Sync now</button>
+        </div>
+        <sc-if value="{{ isAdmin }}" hint-placeholder-val="{{ true }}"><div style="padding:10px 14px;border-bottom:1px solid #262C33"><input type="url" value="{{ server }}" onChange="{{ setServer }}" placeholder="http://shop-server.local:8765  (crew phones sync here)" style="width:100%;background:#131619;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:500 13px 'JetBrains Mono',monospace;padding:0 12px;min-height:44px;box-sizing:border-box"></div></sc-if>
+        <sc-if value="{{ isLead }}" hint-placeholder-val="{{ true }}"><button onClick="{{ exportMc }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer;min-height:60px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" x2="12" y1="15" y2="3"></line></svg>
+          <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Export MC work requests</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">{{ exportText }}</div></div>
+          <span style="font:800 italic 22px 'Saira Condensed',sans-serif;color:{{ exportCountColor }}">{{ exportCount }}</span>
+        </button></sc-if>
+        <sc-if value="{{ isAdmin }}" hint-placeholder-val="{{ true }}"><button onClick="{{ importCsv }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer;min-height:60px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" x2="12" y1="3" y2="15"></line></svg>
+          <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Import MC asset extract</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">{{ importText }}</div></div>
+        </button></sc-if>
+        <button onClick="{{ reviewNowBtn }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;border-bottom:1px solid #262C33;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer;min-height:60px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path><path d="M13 6h8"></path><path d="M13 12h8"></path><path d="M13 18h8"></path></svg>
+          <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Walk every open punch now</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">{{ reviewText }}</div></div>
+        </button>
+        <sc-if value="{{ hasDemo }}" hint-placeholder-val="{{ false }}">
+        <button onClick="{{ clearDemo }}" style="display:flex;align-items:center;gap:12px;padding:12px 14px;border:none;background:transparent;color:#EDF0F2;text-align:left;width:100%;cursor:pointer;min-height:60px">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#E8631A" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><path d="M3 6h18"></path><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"></path><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+          <div style="flex:1;min-width:0"><div style="font:600 14px Barlow,sans-serif">Clear demo punches</div><div style="font:400 12px Barlow,sans-serif;color:#79828B">{{ demoText }}</div></div>
+        </button>
+        </sc-if>
+      </div>
+      <sc-if value="{{ notAdmin }}" hint-placeholder-val="{{ false }}"><div style="font:400 12px/1.5 Barlow,sans-serif;color:#79828B">Import, server address and crew roles are supervisor tools. Sign in as the supervisor (tap the name on Home) to change them.</div></sc-if>
+      </sc-if>
+
+      <sc-if value="{{ sheetZone }}" hint-placeholder-val="{{ false }}">
+      <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Move to zone</div>
+      <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">{{ zsAsset }}</div>
+      <div style="overflow:auto;display:flex;flex-direction:column;background:#0A0B0D;border:1px solid #323A43;border-radius:6px">
+        <sc-for list="{{ zsZones }}" as="z" hint-placeholder-count="8">
+        <button onClick="{{ z.pick }}" style="display:grid;grid-template-columns:34px 1fr auto;align-items:center;gap:12px;padding:10px 14px;border:none;border-bottom:1px solid #262C33;min-height:52px;box-sizing:border-box;background:{{ z.bg }};color:#EDF0F2;text-align:left;width:100%;cursor:pointer">
+          <span style="font:800 italic 18px 'Saira Condensed',sans-serif;color:#79828B">{{ z.num }}</span><span style="font:600 15px Barlow,sans-serif">{{ z.name }}</span>
+          <sc-if value="{{ z.sel }}" hint-placeholder-val="{{ false }}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#A6CE39" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"></path></svg></sc-if>
+        </button>
+        </sc-for>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetPhoto }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;align-items:center;justify-content:space-between"><div style="font:600 10.5px 'JetBrains Mono',monospace;letter-spacing:.14em;color:#79828B">{{ photoViewId }}</div><button onClick="{{ closeSheet }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">Close</button></div>
+      <div style="overflow:auto;border-radius:4px;border:1px solid #323A43;background:#000"><img src="{{ photoViewData }}" alt="Punch photo" style="width:100%;display:block"></div>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ showTabs }}" hint-placeholder-val="{{ true }}">
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);background:#131619;border-top:1px solid #323A43;padding:8px 0 {{ padBottom }}px;flex-shrink:0">
+    <button onClick="{{ tabHome }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.home }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home
+    </button>
+    <button onClick="{{ tabTasks }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.tasks }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;position:relative;background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path><path d="M13 6h8"></path><path d="M13 12h8"></path><path d="M13 18h8"></path></svg>Tasks
+      <sc-if value="{{ hasBadge }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:0;right:22px;background:#D2402F;color:#fff;font:700 10px 'JetBrains Mono',monospace;border-radius:999px;padding:1px 6px">{{ badge }}</span></sc-if>
+    </button>
+    <button onClick="{{ tabAssets }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.assets }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>Assets
+    </button>
+    <button onClick="{{ tabAreas }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.areas }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M14.106 5.553a2 2 0 0 0 1.788 0l3.659-1.83A1 1 0 0 1 21 4.619v12.764a1 1 0 0 1-.553.894l-4.553 2.277a2 2 0 0 1-1.788 0l-4.212-2.106a2 2 0 0 0-1.788 0l-3.659 1.83A1 1 0 0 1 3 19.381V6.618a1 1 0 0 1 .553-.894l4.553-2.277a2 2 0 0 1 1.788 0z"></path><path d="M15 5.764v15"></path><path d="M9 3.236v15"></path></svg>Areas
+    </button>
+  </div>
+  </sc-if>
+
+  <sc-if value="{{ hasToast }}" hint-placeholder-val="{{ false }}">
+  <div style="position:absolute;left:16px;right:16px;bottom:{{ toastBottom }}px;background:#A6CE39;color:#0A0B0D;font:700 13px 'Saira',sans-serif;letter-spacing:.04em;text-transform:uppercase;border-radius:4px;padding:12px 14px;text-align:center;z-index:40;box-shadow:0 6px 18px rgba(0,0,0,.55);animation:punchToast .18s cubic-bezier(.2,.7,.3,1)">{{ toast }}</div>
+  </sc-if>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;framed&quot;:{&quot;editor&quot;:null,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;demo&quot;:{&quot;editor&quot;:null,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { ready:false, screen:'home', tab:'home', assets:[], zoneOv:{}, walks:{}, tasks:[], crew:[], me:null, lastReview:null, server:'', lastSync:null, cap:null, sel:null, selTask:null, taskFilter:'open', aSearch:'', aZone:'all', aLimit:60, aType:null, atQ:'', atZone:'all', atLimit:60, atJunk:false, aAllTypes:false, recent:[], areaKey:null, sheet:null, photoView:null, newName:'', newLead:false, review:null, toast:null, fileFor:null, back:[] };
+  fileRef = React.createRef(); csvRef = React.createRef(); photoCache = {}; M = null;
+  LS = (k) => 'punch.v1.' + k;
+  load(k, d) { try { const v = localStorage.getItem(this.LS(k)); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }
+  save(k, v) { try { localStorage.setItem(this.LS(k), JSON.stringify(v)); } catch (e) {} }
+  persist(patch) { this.setState(patch); for (const k of Object.keys(patch)) if (['tasks','crew','me','zoneOv','walks','lastReview','server','lastSync','recent'].includes(k)) this.save(k, patch[k]); }
+  async componentDidMount() {
+    const R = window.__resources || {}; this.M = await import(R['./punch-data.js'] || './punch-data.js');
+    const s = {}; for (const k of ['tasks','crew','zoneOv','walks']) s[k] = this.load(k, Array.isArray(this.state[k]) ? [] : {});
+    s.me = this.load('me', null); s.lastReview = this.load('lastReview', null); s.server = this.load('server', ''); s.lastSync = this.load('lastSync', null);
+    let csv = this.load('assetsCSV', null);
+    if (!csv) { try { csv = await (await fetch(R['./data/mc_assets.csv'] || 'data/mc_assets.csv')).text(); } catch (e) { csv = ''; } }
+    s.assets = this.enrich(this.M.assetsFromCSV(csv));
+    await this.openDb(); await this.loadPhotos();
+    if (!this.load('seeded', false) && this.props.demo !== false) { s.tasks = await this.seedDemo(s.assets); this.save('tasks', s.tasks); this.save('seeded', true); }
+    const isBrennan = (c) => c.name.trim().toLowerCase() === 'brennan lang';
+    s.crew = s.crew.map(c => ({ ...c, role: isBrennan(c) ? 'admin' : (c.role || (c.lead ? 'lead' : 'crew')) }));
+    if (!s.crew.some(isBrennan)) s.crew = [{ id: 'C' + this.M.uid(), name: 'Brennan Lang', role: 'admin', lead: true }, ...s.crew];
+    this.save('crew', s.crew); s.recent = this.load('recent', []);
+    s.ready = true; if (!s.me) s.sheet = 'crew';
+    this.setState(s);
+  }
+  openDb() { return new Promise(res => { const r = indexedDB.open('punch', 1); r.onupgradeneeded = () => r.result.createObjectStore('photos', { keyPath: 'id' }); r.onsuccess = () => { this.db = r.result; res(); }; r.onerror = () => res(); }); }
+  loadPhotos() { return new Promise(res => { if (!this.db) return res(); const r = this.db.transaction('photos').objectStore('photos').getAll(); r.onsuccess = () => { for (const p of r.result) this.photoCache[p.id] = p.data; res(); }; r.onerror = () => res(); }); }
+  putPhoto(id, data, meta) { this.photoCache[id] = data; if (this.db) this.db.transaction('photos', 'readwrite').objectStore('photos').put({ id, data, ...meta }); }
+  fileToPhoto(file) { return new Promise(res => { const url = URL.createObjectURL(file); const img = new Image(); img.onload = () => { const k = Math.min(1, 1280 / Math.max(img.width, img.height)); const c = document.createElement('canvas'); c.width = Math.round(img.width * k); c.height = Math.round(img.height * k); c.getContext('2d').drawImage(img, 0, 0, c.width, c.height); URL.revokeObjectURL(url); res({ id: 'P' + this.M.uid(), data: c.toDataURL('image/jpeg', .72), w: c.width, h: c.height, marks: [] }); }; img.src = url; }); }
+  demoPhoto(label, hue) { const c = document.createElement('canvas'); c.width = 640; c.height = 480; const g = c.getContext('2d'); const lg = g.createLinearGradient(0, 0, 640, 480); lg.addColorStop(0, hue ? '#3B444F' : '#2A313A'); lg.addColorStop(1, '#131619'); g.fillStyle = lg; g.fillRect(0, 0, 640, 480); g.strokeStyle = 'rgba(255,255,255,.05)'; for (let y = 0; y < 480; y += 6) { g.beginPath(); g.moveTo(0, y); g.lineTo(640, y + 2); g.stroke(); } g.fillStyle = '#A6CE39'; g.font = '600 16px JetBrains Mono, monospace'; g.fillText(label, 16, 456); return c.toDataURL('image/jpeg', .7); }
+  async seedDemo(assets) {
+    const M = this.M, T = M.todayStr(), byId = (id) => assets.find(a => a.id === id) || {};
+    const mk = (id, name, pri, dueOff, note, mc, createdOff, extra = {}) => { const a = byId(id); const pid = 'P' + M.uid(); this.putPhoto(pid, this.demoPhoto('DEMO PHOTO · ' + id, pri % 2), { t: T }); const created = new Date(Date.now() + createdOff * 86400000).toISOString(); return { id: 'PN-' + M.uid(), assetPk: a.pk || id, assetId: id, assetName: a.name || name, zone: this.zoneOf(a.pk, a.zone0), note, pri, due: M.addDays(T, dueOff), mc: !!mc, photos: [pid], by: 'demo', created, status: 'open', log: [{ t: created, who: 'demo', what: 'Created' }], ...extra }; };
+    const closed = (t, off, who) => { const c = new Date(Date.now() + off * 86400000).toISOString(); const pid = 'P' + M.uid(); this.putPhoto(pid, this.demoPhoto('DEMO CLOSE-OUT', 1), { t: T }); return { ...t, status: 'closed', closed: c, closedBy: who, closePhoto: pid, log: [...t.log, { t: c, who, what: 'Closed with photo' }] }; };
+    return [
+      mk('100-PUMP-2159', 'PUMP, MBBR wet well pump #2 (south)', 0, -3, 'Packing gland leaking, pooling on pad', true, -6),
+      mk('100-SCREW CONVEYOR-4493', 'SCREW CONVEYOR, Drainor Fines 04300', 1, 0, 'Hanger bearing running hot, grease line broke', true, -2),
+      mk('100-BOILER-3', 'BOILER #3', 2, 0, 'Verify aux low-water cutoff float linkage after PM', false, -1),
+      mk('100-FAN-447', 'FAN, RTO Main', 1, 3, 'Belt guard bolt missing', true, -3),
+      mk('100-DRAINER-12', 'DRAINER, O4300', 2, 5, 'Inspection door gasket weeping', false, -1),
+      closed(mk('100-SCREW CONVEYOR-4493', 'SCREW CONVEYOR, Drainor Fines 04300', 2, -24, 'Replaced trough liner section', false, -25), -24, 'demo'),
+      closed(mk('100-SCREW CONVEYOR-4493', 'SCREW CONVEYOR, Drainor Fines 04300', 3, -38, 'Tightened drive chain', false, -38), -38, 'demo'),
+    ];
+  }
+  zoneOf(pk, z0) { return this.state.zoneOv[pk] || z0 || 'none'; }
+  assetByPk(pk) { return this.state.assets.find(a => a.pk === pk); }
+  crewName(id) { if (id === 'demo') return 'Demo'; const c = this.state.crew.find(c => c.id === id); return c ? c.name : '—'; }
+  enrich(rows) { const M = this.M; return rows.map(a => { const b = { ...a, zone0: M.seedZone(a), junk: M.isJunk(a), loc: !!a.isLocation, type: M.assetType(a) }; b.desc = M.assetDesc(b); return b; }); }
+  roleOf(id) { const c = this.state.crew.find(c => c.id === id); return c ? (c.role || (c.lead ? 'lead' : 'crew')) : 'crew'; }
+  meIsAdmin() { return !!this.state.me && this.roleOf(this.state.me) === 'admin'; }
+  meIsLead() { if (!this.state.me) return false; const r = this.roleOf(this.state.me); return r === 'lead' || r === 'admin'; }
+  toast(msg) { this.setState({ toast: msg }); clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: null }), 2200); }
+  go(screen, patch = {}) { if (screen === 'asset' && patch.sel) { const recent = [patch.sel, ...this.state.recent.filter(p => p !== patch.sel)].slice(0, 8); this.save('recent', recent); patch = { ...patch, recent }; } this.setState(s => ({ screen, back: [...s.back, s.screen].slice(-8), sheet: null, ...patch })); }
+  goBack() { this.setState(s => { const b = [...s.back]; const prev = b.pop() || s.tab; return { screen: prev, back: b, sheet: null }; }); }
+  tab(t) { this.setState({ screen: t, tab: t, back: [], sheet: null }); }
+  pickFile(fileFor) { this.setState({ fileFor }); const el = this.fileRef.current; if (el) { el.value = ''; el.click(); } }
+  async onFile(e) {
+    const file = e.target.files && e.target.files[0]; if (!file) return;
+    const ph = await this.fileToPhoto(file); const f = this.state.fileFor || { kind: 'new' };
+    if (f.kind === 'new') { const a = f.assetPk ? this.assetByPk(f.assetPk) : null; this.go('capture', { cap: { photos: [ph], pi: 0, assetPk: f.assetPk || null, step: 'photo', pri: null, dueDays: 3, dueDate: null, mc: false, note: '', zonePick: a ? this.zoneOf(a.pk, a.zone0) : null, q: '', mode: null, drag: null } }); }
+    else if (f.kind === 'more') { this.setState(s => ({ cap: { ...s.cap, photos: [...s.cap.photos, ph], pi: s.cap.photos.length } })); }
+    else if (f.kind === 'add') { this.putPhoto(ph.id, ph.data, { taskId: f.taskId }); this.updateTask(f.taskId, t => ({ photos: [...t.photos, ph.id], log: [...t.log, { t: new Date().toISOString(), who: this.state.me, what: 'Added photo' }] })); this.toast('Photo added'); }
+    else if (f.kind === 'close') { this.putPhoto(ph.id, ph.data, { taskId: f.taskId }); const now = new Date().toISOString(); this.updateTask(f.taskId, t => ({ status: 'closed', closed: now, closedBy: this.state.me, closePhoto: t.closePhoto || ph.id, photos: [...t.photos, ph.id], log: [...t.log, { t: now, who: this.state.me, what: 'Closed with photo' }] })); this.toast('Punch closed'); if (this.state.review) this.reviewNext(); }
+  }
+  updateTask(id, fn) { this.persist({ tasks: this.state.tasks.map(t => t.id === id ? { ...t, ...fn(t) } : t) }); }
+  snooze(id, days) { const M = this.M, T = M.todayStr(); this.updateTask(id, t => { const base = (t.due && t.due > T) ? t.due : T; return { due: M.addDays(base, days), log: [...t.log, { t: new Date().toISOString(), who: this.state.me, what: `Snoozed ${days}d` }] }; }); this.toast(`Snoozed ${days === 7 ? '1 week' : days + ' day' + (days > 1 ? 's' : '')}`); }
+  canClose(t) { return !!this.state.me && t.status === 'open' && (t.by === this.state.me || t.by === 'demo' || this.meIsLead()); }
+  reviewStart() { const ids = this.state.tasks.filter(t => t.status === 'open').sort((a, b) => a.created < b.created ? -1 : 1).map(t => t.id); if (!ids.length) return this.toast('Nothing open'); this.go('review', { review: { ids, i: 0 } }); }
+  reviewNext() { this.setState(s => { if (!s.review) return {}; const i = s.review.i + 1; if (i >= s.review.ids.length) { this.save('lastReview', this.M.todayStr()); setTimeout(() => this.toast('Review done · every punch touched'), 0); return { review: null, lastReview: this.M.todayStr(), screen: 'home', tab: 'home', back: [] }; } return { review: { ...s.review, i } }; }); }
+  renderVals() {
+    const S = this.state, M = this.M, T = M ? M.todayStr() : '';
+    const framed = this.props.framed !== false;
+    const v = { padTop: framed ? 58 : 12, padBottom: framed ? 30 : 12, toastBottom: framed ? 104 : 88, fileRef: this.fileRef, csvRef: this.csvRef, onFile: (e) => this.onFile(e), onCsv: (e) => this.onCsv(e) };
+    v.isHome = S.screen === 'home'; v.showTabs = !['capture', 'review'].includes(S.screen);
+    const on = '#A6CE39', off = '#79828B'; v.tabC = { home: S.tab === 'home' ? on : off, tasks: S.tab === 'tasks' ? on : off, assets: S.tab === 'assets' ? on : off, areas: S.tab === 'areas' ? on : off };
+    v.tabHome = () => this.tab('home'); v.tabTasks = () => this.tab('tasks'); v.tabAssets = () => this.tab('assets'); v.tabAreas = () => this.tab('areas');
+    v.goAssets = () => this.tab('assets'); v.goAreas = () => this.tab('areas');
+    v.openCrew = () => this.setState({ sheet: 'crew' }); v.openShop = () => this.setState({ sheet: 'shop' });
+    v.snapNew = () => this.pickFile({ kind: 'new' });
+    v.meName = S.me ? this.crewName(S.me).split(' ')[0] : 'Who am I?';
+    v.hasToast = !!S.toast; v.toast = S.toast;
+    if (!M) { v.hasToday = false; v.noToday = false; v.showNag = false; v.hasBadge = false; v.todayLabel = ''; return Object.assign(v, this.screenVals(v)); }
+    const open = S.tasks.filter(t => t.status === 'open');
+    const rowOf = (t) => { const d = M.fmtDue(t.due, T); const pc = M.PRI[t.pri].color; return { ...t, priColor: pc, dueLabel: d.label, dueFg: d.tone === 'muted' ? '#EDF0F2' : '#0A0B0D', dueBg: d.tone === 'late' ? '#D2402F' : d.tone === 'today' ? '#A6CE39' : d.tone === 'soon' ? (d.label === 'TMRW' ? '#C6E06F' : '#AEB6BD') : '#2A313A', sub: [t.note, this.crewName(t.by), t.mc ? (t.mcSent ? 'MC sent' : 'MC flag') : null].filter(Boolean).join(' · '), zoneName: M.zoneByKey(t.zone).name, open: () => this.go('task', { selTask: t.id }) }; };
+    this.rowOf = rowOf;
+    const late = open.filter(t => t.due && t.due < T), dueToday = open.filter(t => t.due === T);
+    const todayRows = [...late, ...dueToday].sort((a, b) => (a.due || '') < (b.due || '') ? -1 : a.pri - b.pri).map(rowOf);
+    v.todayRows = todayRows; v.hasToday = todayRows.length > 0; v.noToday = todayRows.length === 0;
+    v.openCountText = open.length ? `${open.length} open punch${open.length > 1 ? 'es' : ''} in the list.` : 'Punch list is clear.';
+    const d = new Date(); v.todayLabel = `${['SUN','MON','TUE','WED','THU','FRI','SAT'][d.getDay()]} ${T.slice(5).replace('-', '/')} · ${open.length} OPEN`;
+    const isFri = d.getDay() === 5, reviewDue = isFri && S.lastReview !== T && open.length > 0;
+    const stale = open.filter(t => { const last = t.log[t.log.length - 1]; return last && (Date.now() - new Date(last.t)) > 7 * 86400000; });
+    v.badge = late.length + dueToday.length; v.hasBadge = v.badge > 0;
+    if (reviewDue) { v.showNag = true; v.nagTitle = 'Friday review'; v.nagSub = `Touch every open punch: ${open.length} to walk${stale.length ? `, ${stale.length} untouched 7+ days` : ''}.`; v.nagBtn = 'Start'; v.nagAction = () => this.reviewStart(); }
+    else if (late.length || dueToday.length) { v.showNag = true; v.nagTitle = `${late.length ? late.length + ' overdue' : ''}${late.length && dueToday.length ? ' · ' : ''}${dueToday.length ? dueToday.length + ' due today' : ''}`; v.nagSub = late.length ? 'Snooze it or close it with a photo. It will keep asking.' : 'Weekly review is Friday. Nothing closes without a photo.'; v.nagBtn = 'Review'; v.nagAction = () => this.reviewStart(); }
+    else v.showNag = false;
+    return Object.assign(v, this.screenVals(v));
+  }
+  screenVals(v) {
+    const S = this.state, o = { isCapture: S.screen === 'capture', padFoot: this.props.framed !== false ? 42 : 20 };
+    if (o.isCapture && S.cap) Object.assign(o, this.capVals());
+    o.isTasks = S.screen === 'tasks'; o.isTask = S.screen === 'task'; o.isReview = S.screen === 'review';
+    o.back = () => this.goBack();
+    o.isAssets = S.screen === 'assets'; o.isAsset = S.screen === 'asset'; o.isAreas = S.screen === 'areas'; o.isArea = S.screen === 'area'; o.isAType = S.screen === 'atype';
+    if (this.M && o.isAType) Object.assign(o, this.atypeVals());
+    o.hasSheet = !!S.sheet; o.closeSheet = () => this.setState({ sheet: null }); if (S.sheet && this.M) Object.assign(o, this.sheetVals());
+    if (this.M) { if (o.isTasks) Object.assign(o, this.tasksVals()); if (o.isTask) Object.assign(o, this.taskVals()); if (o.isReview && S.review) Object.assign(o, this.reviewVals()); if (o.isAssets) Object.assign(o, this.assetsVals()); if (o.isAsset) Object.assign(o, this.assetVals()); if (o.isAreas) Object.assign(o, this.areasVals()); if (o.isArea) Object.assign(o, this.areaVals()); }
+    return o;
+  }
+  openCounts() { const m = {}; for (const t of this.state.tasks) if (t.status === 'open') m[t.assetPk] = (m[t.assetPk] || 0) + 1; return m; }
+  assetRow(a, openBy, opts = {}) { const M = this.M, z = M.zoneByKey(this.zoneOf(a.pk, a.zone0)); const op = openBy[a.pk] || 0; const type = M.titleCase(a.type), T = type.toUpperCase(); const mk = [a.mfr, a.model].filter(Boolean).join(' '); const flag = a.loc ? 'LOCATION' : a.junk ? 'MC JUNK' : null; const sub = [opts.hideType ? null : T, a.id, mk || null, flag].filter(Boolean).join(' · '); return { name: a.desc, desc: a.desc, type, sub, id: (opts.hideType ? '' : T + ' · ') + a.id, tag: flag ? ' · ' + flag : '', fg: a.junk ? '#5C6670' : '#EDF0F2', idFg: a.junk ? '#434C57' : '#79828B', zone: z.short, zFg: z.key === 'none' ? '#E8A33D' : '#AEB6BD', zBd: z.key === 'none' ? '#E8A33D' : '#323A43', open: () => this.go('asset', { sel: a.pk }), hasOpen: op > 0, openN: op, openCount: op, snap: () => this.pickFile({ kind: 'new', assetPk: a.pk }) }; }
+  typeStats() { const openBy = this.openCounts(), m = {}; for (const a of this.state.assets) { if (a.junk) continue; const t = m[a.type] || (m[a.type] = { key: a.type, count: 0, open: 0 }); t.count++; t.open += openBy[a.pk] || 0; } return Object.values(m).sort((x, y) => y.count - x.count || x.key.localeCompare(y.key)); }
+  searchAssets(q, pool) { const s = String(q || '').trim().toLowerCase(); if (!s) return pool; const words = s.split(/\s+/); return pool.filter(a => { const hay = `${a.name} ${a.desc} ${a.id} ${a.type} ${a.mfr} ${a.model} ${a.serial}`.toLowerCase(); return words.every(w => hay.includes(w)); }); }
+  sortAssets(list, openBy) { return list.slice().sort((a, b) => (a.junk - b.junk) || ((openBy[b.pk] || 0) - (openBy[a.pk] || 0)) || a.desc.localeCompare(b.desc, undefined, { numeric: true })); }
+  assetsVals() {
+    const S = this.state, M = this.M, o = {}, openBy = this.openCounts(), q = S.aSearch.trim();
+    const live = S.assets.filter(a => !a.junk);
+    o.asMeta = `${live.length} IN MC`; o.asQ = S.aSearch; o.asSetQ = (e) => this.setState({ aSearch: e.target.value, aLimit: 60 }); o.asHasQ = q.length > 0; o.asBrowse = !q; o.asClear = () => this.setState({ aSearch: '', aLimit: 60 });
+    const recent = S.recent.map(pk => this.assetByPk(pk)).filter(Boolean); o.asHasRecent = recent.length > 0; o.asRecentMeta = 'LAST LOOKED AT';
+    o.asRecent = recent.map(a => ({ desc: a.desc, sub: `${M.titleCase(a.type).toUpperCase()} · ${a.id}`, open: () => this.go('asset', { sel: a.pk }) }));
+    const types = this.typeStats(); o.asTypeMeta = `${types.length} TYPES`; o.asMoreTypes = types.length > 12; o.asToggleTypes = () => this.setState({ aAllTypes: !S.aAllTypes }); o.asTypesBtn = S.aAllTypes ? 'Fewer types' : `All ${types.length} types`;
+    o.asTypes = (S.aAllTypes ? types : types.slice(0, 12)).map(t => ({ name: M.titleCase(t.key), count: t.count, openText: t.open ? `${t.open} OPEN PUNCH${t.open > 1 ? 'ES' : ''}` : 'NO OPEN PUNCHES', openFg: t.open ? '#E8631A' : '#5C6670', open: () => this.go('atype', { aType: t.key, atQ: '', atZone: 'all', atLimit: 60, atJunk: false }) }));
+    o.asAreaMeta = `${M.ZONES.length} ZONES · WALK LOG · OPEN PUNCHES PER AREA`;
+    const list = this.sortAssets(this.searchAssets(q, S.assets), openBy);
+    o.asTotal = list.length; o.asResultMeta = `${list.length} MATCH${list.length === 1 ? '' : 'ES'}`; o.asMore = list.length > S.aLimit; o.asShowMore = () => this.setState({ aLimit: S.aLimit + 100 }); o.asEmpty = !!q && !list.length;
+    o.asRows = list.slice(0, S.aLimit).map(a => this.assetRow(a, openBy));
+    return o;
+  }
+  atypeVals() {
+    const S = this.state, M = this.M, o = {}, openBy = this.openCounts(), key = S.aType;
+    const all = S.assets.filter(a => a.type === key), live = all.filter(a => !a.junk), junk = all.filter(a => a.junk);
+    o.atName = M.titleCase(key); o.atNameLower = o.atName.toLowerCase() + 's'; o.atMeta = `${live.length} IN MC`;
+    o.atQ = S.atQ; o.atSetQ = (e) => this.setState({ atQ: e.target.value, atLimit: 60 });
+    const zc = {}; for (const a of live) { const z = this.zoneOf(a.pk, a.zone0); zc[z] = (zc[z] || 0) + 1; }
+    o.atZones = [{ key: 'all', label: `All · ${live.length}` }, ...[...M.ZONES, M.UNASSIGNED].filter(z => zc[z.key]).map(z => ({ key: z.key, label: `${z.short} · ${zc[z.key]}` }))].map(z => { const sel = S.atZone === z.key; return { label: z.label, bg: sel ? '#A6CE39' : '#1D2228', fg: sel ? '#0A0B0D' : '#AEB6BD', bd: sel ? '#A6CE39' : '#323A43', pick: () => this.setState({ atZone: z.key, atLimit: 60 }) }; });
+    const inZone = (a) => S.atZone === 'all' || this.zoneOf(a.pk, a.zone0) === S.atZone;
+    const list = this.sortAssets(this.searchAssets(S.atQ, (S.atJunk ? all : live).filter(inZone)), openBy);
+    o.atTotal = list.length; o.atMore = list.length > S.atLimit; o.atShowMore = () => this.setState({ atLimit: S.atLimit + 100 }); o.atEmpty = !list.length;
+    o.atRows = list.slice(0, S.atLimit).map(a => this.assetRow(a, openBy, { hideType: true }));
+    o.atHasJunk = junk.length > 0; o.atToggleJunk = () => this.setState({ atJunk: !S.atJunk }); o.atJunkBtn = S.atJunk ? `Hide ${junk.length} junk / location rows` : `Show ${junk.length} junk / location rows`;
+    return o;
+  }
+  assetVals() {
+    const S = this.state, M = this.M, o = {}, a = this.assetByPk(S.sel);
+    if (!a) { o.ad = { id: '', name: 'Asset not in this extract', desc: 'Asset not in this extract', type: '', mfr: '—', model: '—', serial: '—', parent: '—', zone: '—', cls: '' }; o.adOpen = []; o.adPhotos = []; o.adHist = []; o.adKids = []; o.adSnap = () => {}; o.adPickZone = () => {}; o.adOpenParent = () => {}; o.adNoParent = true; return o; }
+    const zk = this.zoneOf(a.pk, a.zone0), z = M.zoneByKey(zk), openBy = this.openCounts();
+    const parent = a.parentPk && a.parentPk !== a.pk ? this.assetByPk(a.parentPk) : null, kids = S.assets.filter(x => x.parentPk === a.pk && x.pk !== a.pk);
+    o.ad = { id: a.id, name: a.name, desc: a.desc, type: M.titleCase(a.type), mfr: a.mfr || '—', model: a.model || '—', serial: a.serial || '—', parent: a.parentName || 'no parent in MC', zone: z.short, cls: a.cls || (a.loc ? 'Location' : 'Asset') };
+    o.adHasFull = a.desc !== a.name; o.adLoc = a.loc; o.adJunk = a.junk && !a.loc;
+    o.adHasParent = !!parent; o.adNoParent = !parent; o.adParentFg = parent ? '#EDF0F2' : '#79828B'; o.adOpenParent = () => { if (parent) this.go('asset', { sel: parent.pk }); };
+    o.adHasKids = kids.length > 0; o.adKidsMeta = `${kids.filter(k => !k.junk).length} IN MC`; o.adKids = this.sortAssets(kids, openBy).slice(0, 60).map(k => this.assetRow(k, openBy));
+    o.adSnap = () => this.pickFile({ kind: 'new', assetPk: a.pk }); o.adPickZone = () => this.setState({ sheet: 'zone' });
+    const mine = S.tasks.filter(t => t.assetPk === a.pk), open = mine.filter(t => t.status === 'open'), closed = mine.filter(t => t.status === 'closed').sort((x, y) => x.closed < y.closed ? 1 : -1);
+    o.adCounts = `${open.length} OPEN · ${closed.length} CLOSED`; o.adHasOpen = open.length > 0; o.adNoOpen = !open.length;
+    o.adOpen = open.map(t => ({ ...this.rowOf(t), note: t.note || 'No note', meta: `${this.crewName(t.by)} · ${M.fmtMD(t.created)}${t.mc ? ' · MC FLAG' : ''}` }));
+    const photos = []; for (const t of mine.slice().sort((x, y) => x.created < y.created ? 1 : -1)) for (const id of t.photos) photos.push({ id, when: M.fmtMD(t.created), closeOut: id === t.closePhoto });
+    o.adPhotos = photos.map(p => ({ data: this.photoCache[p.id] || '', when: p.when, fg: p.closeOut ? '#4FA36B' : '#A6CE39', view: () => this.setState({ sheet: 'photo', photoView: p.id }) }));
+    o.adHasPhotos = photos.length > 0; o.adNoPhotos = !photos.length;
+    const lastT = mine.slice().sort((x, y) => x.created < y.created ? 1 : -1)[0]; o.adLastSeen = lastT ? `LAST SEEN ${M.fmtMD(lastT.created)} · ${this.crewName(lastT.by).toUpperCase()}` : 'NEVER SNAPPED';
+    o.adHist = closed.map(t => ({ when: M.fmtMD(t.closed), text: `Closed · ${t.note || 'No note'} · ${this.crewName(t.closedBy)}`, open: () => this.go('task', { selTask: t.id }) })); o.adHasHist = closed.length > 0;
+    return o;
+  }
+  zoneStats() { const S = this.state, M = this.M, T = M.todayStr(); return [...M.ZONES, M.UNASSIGNED].map(z => { const assets = S.assets.filter(a => !a.junk && this.zoneOf(a.pk, a.zone0) === z.key).length; const open = S.tasks.filter(t => t.status === 'open' && t.zone === z.key); const late = open.filter(t => t.due && t.due < T).length; const walk = S.walks[z.key]; const days = walk ? M.daysBetween(walk.slice(0, 10), T) : null; return { z, assets, open: open.length, late, walk, days }; }); }
+  areasVals() {
+    const S = this.state, M = this.M, o = {}, st = this.zoneStats();
+    o.arMeta = `${st.length - 1} ZONES · ${S.assets.filter(a => !a.junk).length} ASSETS`;
+    o.arZones = st.filter(s => s.z.key !== 'none' || s.assets > 0 || s.open > 0).map(s => { const walkTxt = s.walk ? (s.days === 0 ? 'WALKED TODAY' : `LAST WALK ${M.fmtMD(s.walk)} · ${s.days}D AGO`) : 'NEVER WALKED'; const meta = s.late ? `${walkTxt} · ${s.late} LATE` : s.open ? `${walkTxt} · ${s.open} OPEN` : `${walkTxt} · CLEAR`; return { num: s.z.num, name: s.z.name, meta, metaColor: s.late ? '#D2402F' : (s.days != null && s.days >= 10 ? '#E8A33D' : '#79828B'), openCount: s.open, countColor: s.late ? '#D2402F' : s.open ? '#E8631A' : '#434C57', open: () => this.go('area', { areaKey: s.z.key, zoQ: '', zoLimit: 60 }) }; });
+    return o;
+  }
+  areaVals() {
+    const S = this.state, M = this.M, o = {}, T = M.todayStr(), z = M.zoneByKey(S.areaKey), openBy = this.openCounts();
+    o.zo = { num: z.num, name: z.name }; const walk = S.walks[z.key]; const days = walk ? M.daysBetween(walk.slice(0, 10), T) : null;
+    o.zoMeta = walk ? (days === 0 ? 'WALKED TODAY' : `LAST WALK ${M.fmtMD(walk)} · ${days}D AGO`) : 'NEVER WALKED';
+    o.zoWalk = () => { this.persist({ walks: { ...S.walks, [z.key]: new Date().toISOString() } }); this.toast(`${z.short} walk logged`); }; o.zoWalkBg = days === 0 ? '#A6CE39' : 'transparent'; o.zoWalkFg = days === 0 ? '#0A0B0D' : '#A6CE39'; o.zoWalkLabel = days === 0 ? 'Walked' : 'Log walk';
+    const open = S.tasks.filter(t => t.status === 'open' && t.zone === z.key).sort((a, b) => (a.due || '9') < (b.due || '9') ? -1 : 1); o.zoOpen = open.map(this.rowOf); o.zoHasOpen = open.length > 0;
+    const q = (S.zoQ || '').trim().toLowerCase(); let list = S.assets.filter(a => this.zoneOf(a.pk, a.zone0) === z.key && (!q || (a.name + ' ' + a.id).toLowerCase().includes(q))).sort((a, b) => (a.junk - b.junk) || ((openBy[b.pk] || 0) - (openBy[a.pk] || 0)) || a.name.localeCompare(b.name));
+    const lim = S.zoLimit || 60; o.zoAssetMeta = `${list.filter(a => !a.junk).length} ASSETS`; o.zoQ = S.zoQ || ''; o.zoSetQ = (e) => this.setState({ zoQ: e.target.value, zoLimit: 60 }); o.zoTotal = list.length; o.zoMore = list.length > lim; o.zoShowMore = () => this.setState({ zoLimit: lim + 100 });
+    o.zoAssets = list.slice(0, lim).map(a => { const r = this.assetRow(a, openBy); return { name: r.name, id: r.id, tag: r.tag + (r.hasOpen ? ` · ${r.openN} OPEN` : ''), fg: r.fg, idFg: r.idFg, open: r.open, snap: r.snap }; });
+    return o;
+  }
+  tasksVals() {
+    const S = this.state, M = this.M, T = M.todayStr(), o = {}, f = S.taskFilter;
+    const all = S.tasks, open = all.filter(t => t.status === 'open');
+    let list = f === 'closed' ? all.filter(t => t.status === 'closed') : open.filter(t => f === 'mine' ? t.by === S.me : f === 'mc' ? t.mc : true);
+    const late = open.filter(t => t.due && t.due < T).length;
+    o.tasksMeta = `${open.length} OPEN${late ? ' · ' + late + ' LATE' : ''}`;
+    o.taskFilters = [['open', 'Open'], ['mine', 'Mine'], ['mc', 'MC flagged'], ['closed', 'Closed']].map(([k, label]) => { const sel = f === k; return { label, bg: sel ? '#A6CE39' : '#1D2228', fg: sel ? '#0A0B0D' : '#AEB6BD', bd: sel ? '#A6CE39' : '#323A43', pick: () => this.setState({ taskFilter: k }) }; });
+    const zones = [...M.ZONES, M.UNASSIGNED]; o.taskGroups = [];
+    for (const z of zones) { const rows = list.filter(t => t.zone === z.key).sort((a, b) => f === 'closed' ? (a.closed < b.closed ? 1 : -1) : ((a.due || '9') < (b.due || '9') ? -1 : (a.due === b.due ? a.pri - b.pri : 1))); if (!rows.length) continue; const l = rows.filter(t => t.status === 'open' && t.due && t.due < T).length; o.taskGroups.push({ num: z.num, name: z.name, rows: rows.map(this.rowOf), meta: f === 'closed' ? `${rows.length} CLOSED` : (l ? `${l} LATE` : `${rows.length} OPEN`), metaColor: l ? '#D2402F' : '#79828B', bd: l ? '#D2402F' : '#323A43' }); }
+    o.tasksEmpty = !list.length; o.tasksEmptyText = f === 'closed' ? 'Nothing closed yet.' : f === 'mine' ? (S.me ? 'No open punches by you.' : 'Pick who you are first (tap the name on Home).') : f === 'mc' ? 'No punches flagged for MC.' : 'Punch list is clear.';
+    return o;
+  }
+  taskVals() {
+    const S = this.state, M = this.M, T = M.todayStr(), o = {}, t = S.tasks.find(x => x.id === S.selTask);
+    if (!t) { o.tk = {}; o.tkPhotos = []; o.tkLog = []; return o; }
+    const r = this.rowOf(t); o.tk = r; o.tkNote = t.note || 'No note'; o.tkOpen = t.status === 'open'; o.tkClosed = t.status === 'closed';
+    o.tkPhotos = t.photos.map(id => ({ data: this.photoCache[id] || '', isClose: id === t.closePhoto, bd: id === t.closePhoto ? '#4FA36B' : '#323A43', view: () => this.setState({ sheet: 'photo', photoView: id }) }));
+    o.tkAddPhoto = () => this.pickFile({ kind: 'add', taskId: t.id }); o.tkOpenAsset = () => this.go('asset', { sel: t.assetPk });
+    o.tkMeta = `${this.crewName(t.by)} · ${M.fmtStamp(t.created)} · ${M.zoneByKey(t.zone).short}${t.mc ? (t.mcSent ? ' · MC SENT ' + M.fmtMD(t.mcSent) : ' · MC FLAG') : ''}`;
+    const d = M.fmtDue(t.due, T); o.tkDueText = d.late ? `${d.label.toLowerCase()} (${M.fmtMD(t.due)})` : `due ${d.label.toLowerCase()}${d.label !== 'TODAY' ? ' (' + M.fmtMD(t.due) + ')' : ''}`;
+    o.tkSnooze1 = () => this.snooze(t.id, 1); o.tkSnooze3 = () => this.snooze(t.id, 3); o.tkSnooze7 = () => this.snooze(t.id, 7);
+    o.tkToggleMc = () => { this.updateTask(t.id, x => ({ mc: !x.mc, log: [...x.log, { t: new Date().toISOString(), who: S.me, what: x.mc ? 'MC flag removed' : 'Flagged for MC' }] })); };
+    o.tkMcText = t.mcSent ? `Exported to MC ${M.fmtMD(t.mcSent)}` : (t.mc ? 'In the next CSV export' : 'Not going to Maintenance Connection'); o.tkMcBg = t.mc ? '#A6CE39' : '#3B444F'; o.tkMcKnob = t.mc ? 21 : 3;
+    o.tkCanClose = this.canClose(t); o.tkCantClose = t.status === 'open' && !o.tkCanClose; o.tkCantText = S.me ? `Only ${this.crewName(t.by)} or a lead can close this punch.` : 'Pick who you are (tap the name on Home) to close punches.';
+    o.tkClose = () => this.pickFile({ kind: 'close', taskId: t.id }); o.tkClosedText = `${M.fmtStamp(t.closed)} by ${this.crewName(t.closedBy)}`;
+    o.tkLog = t.log.slice().reverse().map(l => ({ when: M.fmtStamp(l.t), text: `${l.what} · ${this.crewName(l.who)}` }));
+    return o;
+  }
+  reviewVals() {
+    const S = this.state, M = this.M, rv = S.review, o = {}, t = S.tasks.find(x => x.id === rv.ids[rv.i]);
+    if (!t) { setTimeout(() => this.reviewNext(), 0); o.rv = {}; return o; }
+    o.rv = this.rowOf(t); o.rvPos = `${rv.i + 1} of ${rv.ids.length}`; o.rvPct = Math.round((rv.i) / rv.ids.length * 100);
+    o.rvPhoto = this.photoCache[t.photos[t.photos.length - 1]] || ''; o.rvNote = t.note || 'No note'; o.rvMeta = `${this.crewName(t.by)} · opened ${M.fmtMD(t.created)} · ${M.zoneByKey(t.zone).short}`;
+    o.rvViewPhoto = () => this.setState({ sheet: 'photo', photoView: t.photos[t.photos.length - 1] });
+    o.rvStop = () => this.setState({ review: null, screen: 'home', tab: 'home', back: [] });
+    o.rvKeep = () => { this.updateTask(t.id, x => ({ log: [...x.log, { t: new Date().toISOString(), who: S.me, what: 'Reviewed · still open' }] })); this.reviewNext(); };
+    const sn = (d) => () => { this.snooze(t.id, d); this.reviewNext(); }; o.rvSnooze1 = sn(1); o.rvSnooze3 = sn(3); o.rvSnooze7 = sn(7);
+    const can = this.canClose(t); o.rvNoClose = !can; o.rvCloseBg = can ? '#A6CE39' : '#2A313A'; o.rvCloseFg = can ? '#0A0B0D' : '#5C6670'; o.rvClose = () => this.pickFile({ kind: 'close', taskId: t.id });
+    return o;
+  }
+  setCap(patch) { this.setState(s => ({ cap: { ...s.cap, ...(typeof patch === 'function' ? patch(s.cap) : patch) } })); }
+  capPt(e) { const r = e.currentTarget.getBoundingClientRect(); const p = this.state.cap.photos[this.state.cap.pi]; return { x: Math.round((e.clientX - r.left) / r.width * p.w), y: Math.round((e.clientY - r.top) / r.height * p.h) }; }
+  capMarkPhoto(fn) { this.setCap(c => ({ photos: c.photos.map((p, i) => i === c.pi ? { ...p, marks: fn(p.marks, p) } : p) })); }
+  capDown(e) { const c = this.state.cap; if (!c.mode) return; const pt = this.capPt(e); if (c.mode === 'circle') this.capMarkPhoto((m, p) => [...m, { t: 'c', x: pt.x, y: pt.y, r: Math.round(p.w * .09) }]); else { e.currentTarget.setPointerCapture && e.currentTarget.setPointerCapture(e.pointerId); this.setCap({ drag: { x1: pt.x, y1: pt.y, x2: pt.x, y2: pt.y } }); } }
+  capMove(e) { if (!this.state.cap.drag) return; const pt = this.capPt(e); this.setCap(c => ({ drag: { ...c.drag, x2: pt.x, y2: pt.y } })); }
+  capUp(e) { const d = this.state.cap.drag; if (!d) return; const len = Math.hypot(d.x2 - d.x1, d.y2 - d.y1); if (len > 12) this.capMarkPhoto(m => [...m, { t: 'a', ...d }]); this.setCap({ drag: null }); }
+  arrowHead(x1, y1, x2, y2, w) { const ang = Math.atan2(y2 - y1, x2 - x1), L = w * .045, a = Math.PI / 7; const p = (t) => `${Math.round(x2 - L * Math.cos(ang + t))},${Math.round(y2 - L * Math.sin(ang + t))}`; return `${Math.round(x2)},${Math.round(y2)} ${p(a)} ${p(-a)}`; }
+  bake(p) { if (!p.marks.length) return Promise.resolve(p.data); return new Promise(res => { const img = new Image(); img.onload = () => { const c = document.createElement('canvas'); c.width = p.w; c.height = p.h; const g = c.getContext('2d'); g.drawImage(img, 0, 0); g.strokeStyle = '#E8631A'; g.fillStyle = '#E8631A'; g.lineWidth = Math.max(3, p.w * .008); g.lineCap = 'round'; for (const m of p.marks) { if (m.t === 'c') { g.beginPath(); g.arc(m.x, m.y, m.r, 0, Math.PI * 2); g.stroke(); } else { g.beginPath(); g.moveTo(m.x1, m.y1); g.lineTo(m.x2, m.y2); g.stroke(); const pts = this.arrowHead(m.x1, m.y1, m.x2, m.y2, p.w).split(' ').map(s => s.split(',').map(Number)); g.beginPath(); g.moveTo(pts[0][0], pts[0][1]); g.lineTo(pts[1][0], pts[1][1]); g.lineTo(pts[2][0], pts[2][1]); g.closePath(); g.fill(); } } res(c.toDataURL('image/jpeg', .72)); }; img.src = p.data; }); }
+  async capSave() {
+    const c = this.state.cap, M = this.M, a = this.assetByPk(c.assetPk) || {}; const T = M.todayStr(), now = new Date().toISOString();
+    const ids = []; for (const p of c.photos) { const data = await this.bake(p); this.putPhoto(p.id, data, { assetPk: c.assetPk, t: now }); ids.push(p.id); }
+    const due = c.dueDays === 'date' ? (c.dueDate || M.addDays(T, 3)) : M.addDays(T, c.dueDays);
+    const t = { id: 'PN-' + M.uid(), assetPk: c.assetPk, assetId: a.id || '', assetName: a.name || 'Unknown asset', zone: this.zoneOf(a.pk, a.zone0), note: c.note.trim(), pri: c.pri, due, mc: c.mc, photos: ids, by: this.state.me, created: now, status: 'open', log: [{ t: now, who: this.state.me, what: 'Created' }] };
+    this.persist({ tasks: [t, ...this.state.tasks] }); this.setState({ cap: null, screen: 'home', tab: 'home', back: [] }); this.toast(`Punch saved · P${t.pri} · ${M.fmtDue(due, T).label}`);
+  }
+  async capAttachDupe(task) { const c = this.state.cap; const ids = []; for (const p of c.photos) { const data = await this.bake(p); this.putPhoto(p.id, data, { taskId: task.id }); ids.push(p.id); } this.updateTask(task.id, t => ({ photos: [...t.photos, ...ids], log: [...t.log, { t: new Date().toISOString(), who: this.state.me, what: `Added ${ids.length} photo${ids.length > 1 ? 's' : ''}` }] })); this.setState({ cap: null }); this.go('task', { selTask: task.id }); this.toast('Photos added to open punch'); }
+  capVals() {
+    const S = this.state, c = S.cap, M = this.M, T = M.todayStr(), o = {};
+    const steps = ['photo', 'asset', 'pri', 'details'], si = steps.indexOf(c.step), names = ['Photo', 'Asset', 'Priority', 'Follow up'];
+    o.capStepLabel = `Step ${si + 1} of 4 · ${names[si]}`; o.capPhotoCount = `${c.photos.length} PHOTO${c.photos.length > 1 ? 'S' : ''}`;
+    const bar = (i) => i <= si ? '#A6CE39' : '#2A313A'; o.capBar = { a: bar(0), b: bar(1), c: bar(2), d: bar(3) };
+    o.capIsPhoto = c.step === 'photo'; o.capIsAsset = c.step === 'asset'; o.capIsPri = c.step === 'pri'; o.capIsDetails = c.step === 'details';
+    o.capCancel = () => { this.setState({ cap: null }); this.goBack(); };
+    o.capBack = () => this.setCap({ step: steps[Math.max(0, si - 1)] });
+    o.capNext = () => { if (c.step === 'asset' && !c.assetPk) return; if (c.step === 'pri' && c.pri == null) return; this.setCap({ step: steps[Math.min(3, si + 1)] }); };
+    const p = c.photos[c.pi]; o.capPhoto = p; o.capViewBox = `0 0 ${p.w} ${p.h}`; const sw = Math.max(3, Math.round(p.w * .008));
+    o.capMarks = p.marks.map(m => m.t === 'c' ? { isC: true, x: m.x, y: m.y, r: m.r, sw } : { isA: true, x1: m.x1, y1: m.y1, x2: m.x2, y2: m.y2, sw, head: this.arrowHead(m.x1, m.y1, m.x2, m.y2, p.w) });
+    o.capDragging = !!c.drag; o.capDrag = c.drag ? { ...c.drag, sw, dash: `${sw * 2} ${sw * 2}` } : {};
+    o.capCursor = c.mode ? 'crosshair' : 'default'; o.capHint = !!c.mode && !p.marks.length; o.capHintText = c.mode === 'circle' ? 'Tap the problem' : 'Drag toward the problem';
+    o.capDown = (e) => this.capDown(e); o.capMove = (e) => this.capMove(e); o.capUp = (e) => this.capUp(e);
+    o.capModeCircle = () => this.setCap({ mode: c.mode === 'circle' ? null : 'circle' }); o.capModeArrow = () => this.setCap({ mode: c.mode === 'arrow' ? null : 'arrow' });
+    o.capToolBg = { c: c.mode === 'circle' ? '#2A313A' : 'transparent', a: c.mode === 'arrow' ? '#2A313A' : 'transparent' }; o.capToolBd = { c: c.mode === 'circle' ? '#E8631A' : '#434C57', a: c.mode === 'arrow' ? '#E8631A' : '#434C57' };
+    o.capUndo = () => this.capMarkPhoto(m => m.slice(0, -1));
+    o.capThumbs = c.photos.map((ph, i) => ({ data: ph.data, bd: i === c.pi ? '#A6CE39' : '#323A43', marked: ph.marks.length > 0, select: () => this.setCap({ pi: i }) }));
+    o.capMore = () => this.pickFile({ kind: 'more' });
+    // asset step
+    const openBy = {}; for (const t of S.tasks) if (t.status === 'open') { openBy[t.assetPk] = (openBy[t.assetPk] || 0) + 1; }
+    o.capPickZone = !c.zonePick; o.capPickAsset = !!c.zonePick;
+    o.capZones = [...M.ZONES, M.UNASSIGNED].map(z => { const n = S.assets.filter(a => !a.junk && this.zoneOf(a.pk, a.zone0) === z.key).length; const op = S.tasks.filter(t => t.status === 'open' && t.zone === z.key).length; return { num: z.num, name: z.name, meta: `${n} ASSETS${S.walks[z.key] ? ' · LAST WALK ' + M.fmtMD(S.walks[z.key]) : ''}`, open: op, countColor: op ? '#E8631A' : '#434C57', pick: () => this.setCap({ zonePick: z.key, q: '', limit: 60 }) }; });
+    if (c.zonePick) {
+      const z = M.zoneByKey(c.zonePick); o.capZoneName = z.name; o.capZoneBack = () => this.setCap({ zonePick: null });
+      o.capQ = c.q; o.capSetQ = (e) => this.setCap({ q: e.target.value, limit: 60 });
+      const q = c.q.trim(); let list = q ? this.searchAssets(q, S.assets) : S.assets.filter(a => this.zoneOf(a.pk, a.zone0) === c.zonePick);
+      list = list.slice().sort((a, b) => (a.junk - b.junk) || ((b.pk === c.assetPk) - (a.pk === c.assetPk)) || ((openBy[b.pk] || 0) - (openBy[a.pk] || 0)) || a.name.localeCompare(b.name));
+      const lim = c.limit || 60; o.capAssetTotal = list.length; o.capMoreAssets = list.length > lim; o.capShowMore = () => this.setCap({ limit: lim + 100 });
+      o.capAssets = list.slice(0, lim).map(a => { const sel = a.pk === c.assetPk; return { name: a.desc, id: M.titleCase(a.type).toUpperCase() + ' · ' + a.id, tag: a.loc ? ' · LOCATION' : a.junk ? ' · MC JUNK' : (openBy[a.pk] ? ` · ${openBy[a.pk]} OPEN` : ''), sel, bar: sel ? '#A6CE39' : 'transparent', bg: sel ? '#1B2C49' : 'transparent', fg: a.junk ? '#5C6670' : '#EDF0F2', idFg: a.junk ? '#434C57' : (sel ? '#A6CE39' : '#79828B'), pick: () => this.setCap({ assetPk: a.pk }) }; });
+    }
+    const dupe = c.assetPk ? S.tasks.find(t => t.status === 'open' && t.assetPk === c.assetPk) : null;
+    o.capDupe = !!dupe && c.step === 'asset'; if (dupe) { o.capDupeTask = { pri: dupe.pri, when: M.fmtMD(dupe.created), note: dupe.note || 'No note' }; o.capAttachDupe = () => this.capAttachDupe(dupe); }
+    o.capNoAsset = !c.assetPk; o.capNoPri = c.pri == null; const nextOk = c.step === 'asset' ? !!c.assetPk : c.pri != null; o.capNextBg = nextOk ? '#A6CE39' : '#2A313A'; o.capNextFg = nextOk ? '#0A0B0D' : '#5C6670';
+    o.capPris = M.PRI.map(pr => { const sel = c.pri === pr.n; return { n: pr.n, name: pr.name, hint: pr.hint, bg: sel ? pr.color : '#131619', bd: sel ? pr.color : (pr.n === 0 ? '#D2402F' : '#434C57'), fg: sel ? (pr.n >= 2 ? '#0A0B0D' : '#EDF0F2') : '#EDF0F2', numColor: sel ? (pr.n >= 2 ? '#0A0B0D' : '#EDF0F2') : pr.color, hintFg: sel ? (pr.n >= 2 ? '#131619' : '#F1F3F5') : '#AEB6BD', pick: () => this.setCap({ pri: pr.n, step: 'details' }) }; });
+    // details
+    const a = this.assetByPk(c.assetPk) || {}; o.capAssetName = a.name || '—'; o.capAssetId = a.id || ''; o.capZoneShort = M.zoneByKey(this.zoneOf(a.pk, a.zone0)).short.toUpperCase();
+    o.capPriN = c.pri == null ? '?' : c.pri; o.capPriColor = c.pri == null ? '#434C57' : M.PRI[c.pri].color;
+    o.capNote = c.note; o.capSetNote = (e) => this.setCap({ note: e.target.value });
+    o.capDues = [[1, '1 day'], [3, '3 days'], [7, '1 week'], ['date', 'Date']].map(([k, label]) => { const sel = c.dueDays === k; return { label, bd: sel ? '#A6CE39' : '#434C57', bg: sel ? 'rgba(166,206,57,.16)' : 'transparent', fg: sel ? '#A6CE39' : '#AEB6BD', pick: () => this.setCap({ dueDays: k, dueDate: k === 'date' ? (c.dueDate || M.addDays(T, 3)) : c.dueDate }) }; });
+    o.capCustomDate = c.dueDays === 'date'; o.capDateVal = c.dueDate || M.addDays(T, 3); o.capSetDate = (e) => this.setCap({ dueDate: e.target.value });
+    o.capToggleMc = () => this.setCap({ mc: !c.mc }); o.capMcBg = c.mc ? '#A6CE39' : '#3B444F'; o.capMcKnob = c.mc ? 21 : 3;
+    o.capSave = () => this.capSave();
+    return o;
+  }
+  async onCsv(e) {
+    const file = e.target.files && e.target.files[0]; if (!file) return;
+    const text = await file.text(); const rows = this.M.assetsFromCSV(text);
+    if (!rows.length) return this.toast('Not an MC asset extract (need assetPk, assetId, assetName)');
+    this.save('assetsCSV', text); const assets = this.enrich(rows);
+    this.setState({ assets, sheet: null }); this.toast(`Imported ${assets.length} assets from MC`);
+  }
+  addCrew() { const name = this.state.newName.trim(); if (!name) return; if (this.state.crew.some(c => c.name.toLowerCase() === name.toLowerCase())) return this.toast(`${name} is already on the crew`); const lead = this.meIsAdmin() && this.state.newLead; const c = { id: 'C' + this.M.uid(), name, role: lead ? 'lead' : 'crew', lead }; const crew = [...this.state.crew, c]; this.persist({ crew, me: this.state.me || c.id }); this.setState({ newName: '', newLead: false }); this.toast(`${name} added${this.state.me ? '' : ' · that’s you'}`); }
+  exportMc() {
+    const M = this.M, list = this.state.tasks.filter(t => t.status === 'open' && t.mc && !t.mcSent); if (!list.length) return this.toast('Nothing flagged and unsent');
+    const csv = M.buildMcCsv(list, (id) => this.crewName(id), (z) => M.zoneByKey(z).name); const blob = new Blob([csv], { type: 'text/csv' }); const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `MC_work_requests_${M.todayStr()}.csv`; document.body.appendChild(a); a.click(); a.remove(); setTimeout(() => URL.revokeObjectURL(a.href), 4000);
+    const now = new Date().toISOString(); this.persist({ tasks: this.state.tasks.map(t => list.includes(t) ? { ...t, mcSent: now, log: [...t.log, { t: now, who: this.state.me, what: 'Exported to MC CSV' }] } : t) }); this.toast(`${list.length} request${list.length > 1 ? 's' : ''} exported`);
+  }
+  sheetVals() {
+    const S = this.state, M = this.M, o = {}, T = M.todayStr();
+    o.sheetCrew = S.sheet === 'crew'; o.sheetShop = S.sheet === 'shop'; o.sheetZone = S.sheet === 'zone'; o.sheetPhoto = S.sheet === 'photo';
+    if (o.sheetCrew) {
+      const admin = this.meIsAdmin(), ROLE = { admin: ['SUPERVISOR', '#A6CE39', '#0A0B0D'], lead: ['LEAD', '#2A313A', '#EDF0F2'], crew: [null, '', ''] }, NEXT = { crew: 'lead', lead: 'admin', admin: 'crew' }, NAME = { lead: 'Lead', admin: 'Superv.', crew: 'Crew' };
+      const admins = S.crew.filter(x => (x.role || (x.lead ? 'lead' : 'crew')) === 'admin').length;
+      o.crewCanEdit = admin; o.crewHint = admin ? 'Tap a name to sign in. As supervisor you can add people, change roles and remove names.' : 'Tap your name to sign in. Not listed? Add yourself below. Leads can close anyone’s punch; the supervisor manages the crew.';
+      o.crewRows = S.crew.map(c => { const me = c.id === S.me, role = c.role || (c.lead ? 'lead' : 'crew'), R = ROLE[role], next = NEXT[role]; return { name: c.name, hasRole: !!R[0], roleLabel: R[0] || '', roleBg: R[1], roleFg: R[2], bg: me ? '#1B2C49' : 'transparent', dot: me ? '#A6CE39' : '#434C57', roleBtn: '→ ' + NAME[next], pick: () => { this.persist({ me: c.id }); this.setState({ sheet: null }); this.toast(`You are ${c.name}`); }, cycleRole: () => { if (role === 'admin' && admins === 1) return this.toast('Name another supervisor first'); this.persist({ crew: S.crew.map(x => x.id === c.id ? { ...x, role: next, lead: next !== 'crew' } : x) }); }, remove: () => { if (role === 'admin' && admins === 1) return this.toast('Can’t remove the only supervisor'); this.persist({ crew: S.crew.filter(x => x.id !== c.id), me: S.me === c.id ? null : S.me }); } }; });
+      o.crewEmpty = !S.crew.length; o.newName = S.newName; o.setNewName = (e) => this.setState({ newName: e.target.value }); o.newNameKey = (e) => { if (e.key === 'Enter') this.addCrew(); }; o.addCrew = () => this.addCrew();
+      o.toggleNewLead = () => this.setState({ newLead: !S.newLead }); o.newLeadBg = S.newLead ? '#A6CE39' : 'transparent'; o.newLeadFg = S.newLead ? '#0A0B0D' : '#AEB6BD';
+    }
+    if (o.sheetShop) {
+      const open = S.tasks.filter(t => t.status === 'open'), flagged = open.filter(t => t.mc && !t.mcSent), demo = S.tasks.filter(t => t.by === 'demo');
+      o.shopMeta = `JACKSON RENDERING · ${S.assets.filter(a => !a.junk).length} ASSETS · ${open.length} OPEN`;
+      o.syncDot = S.lastSync ? '#4FA36B' : '#E8A33D'; o.syncText = S.lastSync ? `Last sync ${M.fmtStamp(S.lastSync)} · this phone only in prototype` : 'Not connected · punches live on this phone until the shop server is up';
+      o.syncNow = () => { if (!S.server.trim()) return this.toast('Enter the shop server address first'); const now = new Date().toISOString(); this.persist({ lastSync: now }); this.toast('Synced (prototype stub)'); };
+      o.server = S.server; o.setServer = (e) => this.persist({ server: e.target.value });
+      o.exportMc = () => this.exportMc(); o.exportCount = flagged.length; o.exportCountColor = flagged.length ? '#A6CE39' : '#434C57'; o.exportText = flagged.length ? `${flagged.length} flagged, not yet sent · CSV download` : 'Nothing flagged and unsent';
+      o.importCsv = () => { const el = this.csvRef.current; if (el) { el.value = ''; el.click(); } }; o.importText = this.load('assetsCSV', null) ? 'Imported extract in use · pick a newer mc_assets.csv' : 'Using the baked-in extract · pick a newer mc_assets.csv';
+      o.reviewNowBtn = () => this.reviewStart(); o.reviewText = S.lastReview ? `Last full review ${M.fmtMD(S.lastReview)}${S.lastReview === T ? ' (today)' : ''} · Fridays` : 'No full review yet · Fridays';
+      o.isAdmin = this.meIsAdmin(); o.isLead = this.meIsLead(); o.notAdmin = !o.isAdmin;
+      o.hasDemo = demo.length > 0 && o.isAdmin; o.demoText = `${demo.length} sample punches from setup`; o.clearDemo = () => { this.persist({ tasks: S.tasks.filter(t => t.by !== 'demo') }); this.setState({ sheet: null }); this.toast('Demo punches cleared'); };
+    }
+    if (o.sheetZone) {
+      const a = this.assetByPk(S.sel) || {}; const cur = this.zoneOf(a.pk, a.zone0); o.zsAsset = `${a.name || ''} · ${a.id || ''}`;
+      o.zsZones = [...M.ZONES, M.UNASSIGNED].map(z => ({ num: z.num, name: z.name, sel: z.key === cur, bg: z.key === cur ? '#1B2C49' : 'transparent', pick: () => { const zoneOv = { ...S.zoneOv, [a.pk]: z.key }; const tasks = S.tasks.map(t => t.assetPk === a.pk ? { ...t, zone: z.key } : t); this.persist({ zoneOv, tasks }); this.setState({ sheet: null }); this.toast(`Moved to ${z.short}`); } }));
+    }
+    if (o.sheetPhoto) { o.photoViewId = S.photoView || ''; o.photoViewData = this.photoCache[S.photoView] || ''; }
+    return o;
+  }
+}
+</script>
+</body>
+</html>
