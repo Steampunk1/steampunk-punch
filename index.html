@@ -52,7 +52,9 @@
 <script type="text/x-dc" data-dc-script data-props="{&quot;frame&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Preview&quot;},&quot;demo&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Data&quot;}}">
 class Component extends DCLogic {
   renderVals() {
-    const framed = this.props.frame ?? (typeof window !== 'undefined' ? window.innerWidth >= 640 : true);
+    // Phones always get the full-bleed app; the iOS bezel is a desktop preview only.
+    const narrow = typeof window !== 'undefined' && window.innerWidth < 640;
+    const framed = narrow ? false : (this.props.frame ?? true);
     return { framed, bare: !framed, demo: this.props.demo ?? true };
   }
 }
