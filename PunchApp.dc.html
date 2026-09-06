@@ -247,14 +247,14 @@
   <div data-screen-label="Tasks" style="flex:1;min-height:0;display:flex;flex-direction:column">
     <div style="padding:8px 16px 10px;display:flex;flex-direction:column;gap:10px;border-bottom:1px solid #323A43;flex-shrink:0">
       <div style="display:flex;align-items:baseline;justify-content:space-between">
-        <div style="font:900 italic 26px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Punch list</div>
+        <div style="font:900 italic 26px/1 'Saira Condensed',sans-serif;text-transform:uppercase">{{ tasksTitle }}</div>
         <div style="font:500 11px 'JetBrains Mono',monospace;color:#79828B">{{ tasksMeta }}</div>
       </div>
-      <div style="display:flex;gap:6px;overflow:auto">
-        <sc-for list="{{ taskFilters }}" as="f" hint-placeholder-count="4">
+      <sc-if value="{{ hasTaskFilters }}" hint-placeholder-val="{{ true }}"><div style="display:flex;gap:6px;overflow:auto">
+        <sc-for list="{{ taskFilters }}" as="f" hint-placeholder-count="3">
         <button onClick="{{ f.pick }}" style="flex-shrink:0;background:{{ f.bg }};color:{{ f.fg }};border:1px solid {{ f.bd }};border-radius:999px;padding:0 12px;min-height:34px;font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer">{{ f.label }}</button>
         </sc-for>
-      </div>
+      </div></sc-if>
     </div>
     <div style="flex:1;min-height:0;overflow:auto;padding:0 16px 24px;display:grid;grid-template-columns:minmax(0,1fr);grid-auto-rows:max-content;align-content:start">
       <sc-for list="{{ taskGroups }}" as="g" hint-placeholder-count="2">
@@ -690,13 +690,16 @@
   </sc-if>
 
   <sc-if value="{{ showTabs }}" hint-placeholder-val="{{ true }}">
-  <div style="display:grid;grid-template-columns:repeat(4,1fr);background:#131619;border-top:1px solid #323A43;padding:8px 0 {{ padBottom }}px;flex-shrink:0">
+  <div style="display:grid;grid-template-columns:repeat(5,1fr);background:#131619;border-top:1px solid #323A43;padding:8px 0 {{ padBottom }}px;flex-shrink:0">
     <button onClick="{{ tabHome }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.home }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>Home
     </button>
     <button onClick="{{ tabTasks }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.tasks }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;position:relative;background:none;border:none;cursor:pointer">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m3 17 2 2 4-4"></path><path d="m3 7 2 2 4-4"></path><path d="M13 6h8"></path><path d="M13 12h8"></path><path d="M13 18h8"></path></svg>Tasks
       <sc-if value="{{ hasBadge }}" hint-placeholder-val="{{ false }}"><span style="position:absolute;top:0;right:22px;background:#D2402F;color:#fff;font:700 10px 'JetBrains Mono',monospace;border-radius:999px;padding:1px 6px">{{ badge }}</span></sc-if>
+    </button>
+    <button onClick="{{ tabDone }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.done }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M21.801 10A10 10 0 1 1 17 3.335"></path><path d="m9 11 3 3L22 4"></path></svg>Done
     </button>
     <button onClick="{{ tabAssets }}" style="display:flex;flex-direction:column;align-items:center;gap:4px;color:{{ tabC.assets }};font:600 9.5px 'JetBrains Mono',monospace;letter-spacing:.12em;text-transform:uppercase;min-height:44px;justify-content:center;background:none;border:none;cursor:pointer">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m7.5 4.27 9 5.15"></path><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"></path><path d="m3.3 7 8.7 5 8.7-5"></path><path d="M12 22V12"></path></svg>Assets
@@ -785,8 +788,8 @@ class Component extends DCLogic {
     const framed = this.props.framed !== false;
     const v = { padTop: framed ? 58 : 12, padBottom: framed ? 30 : 12, toastBottom: framed ? 104 : 88, fileRef: this.fileRef, csvRef: this.csvRef, onFile: (e) => this.onFile(e), onCsv: (e) => this.onCsv(e) };
     v.isHome = S.screen === 'home'; v.showTabs = !['capture', 'review'].includes(S.screen);
-    const on = '#A6CE39', off = '#79828B'; v.tabC = { home: S.tab === 'home' ? on : off, tasks: S.tab === 'tasks' ? on : off, assets: S.tab === 'assets' ? on : off, areas: S.tab === 'areas' ? on : off };
-    v.tabHome = () => this.tab('home'); v.tabTasks = () => this.tab('tasks'); v.tabAssets = () => this.tab('assets'); v.tabAreas = () => this.tab('areas');
+    const on = '#A6CE39', off = '#79828B'; const onTasks = S.tab === 'tasks', doneView = onTasks && S.taskFilter === 'closed'; v.tabC = { home: S.tab === 'home' ? on : off, tasks: onTasks && !doneView ? on : off, done: doneView ? on : off, assets: S.tab === 'assets' ? on : off, areas: S.tab === 'areas' ? on : off };
+    v.tabHome = () => this.tab('home'); v.tabTasks = () => { if (S.taskFilter === 'closed') this.setState({ taskFilter: 'open' }); this.tab('tasks'); }; v.tabDone = () => { this.setState({ taskFilter: 'closed' }); this.tab('tasks'); }; v.tabAssets = () => this.tab('assets'); v.tabAreas = () => this.tab('areas');
     v.goAssets = () => this.tab('assets'); v.goAreas = () => this.tab('areas');
     v.openCrew = () => this.setState({ sheet: 'crew' }); v.openShop = () => this.setState({ sheet: 'shop' });
     v.snapNew = () => this.pickFile({ kind: 'new' });
@@ -896,11 +899,13 @@ class Component extends DCLogic {
     const all = S.tasks, open = all.filter(t => t.status === 'open');
     let list = f === 'closed' ? all.filter(t => t.status === 'closed') : open.filter(t => f === 'mine' ? t.by === S.me : f === 'mc' ? t.mc : true);
     const late = open.filter(t => t.due && t.due < T).length;
-    o.tasksMeta = `${open.length} OPEN${late ? ' · ' + late + ' LATE' : ''}`;
-    o.taskFilters = [['open', 'Open'], ['mine', 'Mine'], ['mc', 'MC flagged'], ['closed', 'Closed']].map(([k, label]) => { const sel = f === k; return { label, bg: sel ? '#A6CE39' : '#1D2228', fg: sel ? '#0A0B0D' : '#AEB6BD', bd: sel ? '#A6CE39' : '#323A43', pick: () => this.setState({ taskFilter: k }) }; });
+    const doneView = f === 'closed', closedN = all.filter(t => t.status === 'closed').length;
+    o.tasksTitle = doneView ? 'Completed' : 'Punch list'; o.hasTaskFilters = !doneView;
+    o.tasksMeta = doneView ? `${closedN} CLOSED · ${open.length} STILL OPEN` : `${open.length} OPEN${late ? ' · ' + late + ' LATE' : ''}`;
+    o.taskFilters = (doneView ? [] : [['open', 'Open'], ['mine', 'Mine'], ['mc', 'MC flagged']]).map(([k, label]) => { const sel = f === k; return { label, bg: sel ? '#A6CE39' : '#1D2228', fg: sel ? '#0A0B0D' : '#AEB6BD', bd: sel ? '#A6CE39' : '#323A43', pick: () => this.setState({ taskFilter: k }) }; });
     const zones = [...M.ZONES, M.UNASSIGNED]; o.taskGroups = [];
     for (const z of zones) { const rows = list.filter(t => t.zone === z.key).sort((a, b) => f === 'closed' ? (a.closed < b.closed ? 1 : -1) : ((a.due || '9') < (b.due || '9') ? -1 : (a.due === b.due ? a.pri - b.pri : 1))); if (!rows.length) continue; const l = rows.filter(t => t.status === 'open' && t.due && t.due < T).length; o.taskGroups.push({ num: z.num, name: z.name, rows: rows.map(this.rowOf), meta: f === 'closed' ? `${rows.length} CLOSED` : (l ? `${l} LATE` : `${rows.length} OPEN`), metaColor: l ? '#D2402F' : '#79828B', bd: l ? '#D2402F' : '#323A43' }); }
-    o.tasksEmpty = !list.length; o.tasksEmptyText = f === 'closed' ? 'Nothing closed yet.' : f === 'mine' ? (S.me ? 'No open punches by you.' : 'Pick who you are first (tap the name on Home).') : f === 'mc' ? 'No punches flagged for MC.' : 'Punch list is clear.';
+    o.tasksEmpty = !list.length; o.tasksEmptyText = f === 'closed' ? 'Nothing completed yet. Close a punch with a photo and it lands here.' : f === 'mine' ? (S.me ? 'No open punches by you.' : 'Pick who you are first (tap the name on Home).') : f === 'mc' ? 'No punches flagged for MC.' : 'Punch list is clear.';
     return o;
   }
   taskVals() {
