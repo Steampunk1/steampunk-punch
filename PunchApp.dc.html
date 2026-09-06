@@ -646,7 +646,7 @@
       <sc-if value="{{ sheetPass }}" hint-placeholder-val="{{ false }}">
       <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Supervisor passcode</div>
       <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B">{{ passName }} is the supervisor. Enter the passcode to unlock closing, deleting and crew changes on this phone.</div>
-      <input type="password" value="{{ pass }}" onChange="{{ setPass }}" onKeyDown="{{ passKey }}" placeholder="Passcode" autocomplete="off" autocapitalize="off" style="width:100%;background:#0A0B0D;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 18px 'JetBrains Mono',monospace;letter-spacing:.2em;padding:0 12px;min-height:52px;box-sizing:border-box">
+      <input type="password" inputmode="numeric" value="{{ pass }}" onChange="{{ setPass }}" onKeyDown="{{ passKey }}" placeholder="Passcode" autocomplete="off" autocapitalize="off" style="width:100%;background:#0A0B0D;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 18px 'JetBrains Mono',monospace;letter-spacing:.2em;padding:0 12px;min-height:52px;box-sizing:border-box">
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
         <button onClick="{{ cancelPass }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 12px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;border-radius:4px;cursor:pointer">Back</button>
         <button onClick="{{ submitPass }}" style="background:#A6CE39;border:none;color:#0A0B0D;font:900 italic 20px 'Saira Condensed',sans-serif;text-transform:uppercase;min-height:48px;border-radius:4px;cursor:pointer">Unlock</button>
