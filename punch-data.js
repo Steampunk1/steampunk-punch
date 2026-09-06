@@ -116,3 +116,9 @@ export function buildMcCsv(tasks, crewName, zoneName) {
   return lines.join('\r\n');
 }
 export const uid = () => Math.random().toString(36).slice(2, 8).toUpperCase();
+
+// Supervisor passcode gate. The app never stores the passcode itself, only this salted SHA-256 of it.
+// To change it, run:  printf 'punch-salt-v1%s' 'NEW-PASSCODE' | shasum -a 256   and paste the hex into ADMIN_HASH (both copies of this file).
+export const ADMIN_SALT = 'punch-salt-v1';
+export const ADMIN_HASH = '0527dfece64e64b6889055e28a260286e0ab7659ee738fecc4f254dac5053221';
+export async function checkPasscode(code) { const bytes = new TextEncoder().encode(ADMIN_SALT + String(code || '').trim()); const h = await crypto.subtle.digest('SHA-256', bytes); return Array.from(new Uint8Array(h), b => b.toString(16).padStart(2, '0')).join('') === ADMIN_HASH; }

@@ -331,6 +331,15 @@
           </sc-for>
         </div>
       </div>
+      <sc-if value="{{ tkIsAdmin }}" hint-placeholder-val="{{ false }}">
+      <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
+        <div style="font:700 10px 'Saira',sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#79828B">Supervisor</div>
+        <div style="display:grid;grid-template-columns:{{ tkAdminCols }};gap:6px">
+          <sc-if value="{{ tkClosed }}" hint-placeholder-val="{{ false }}"><button onClick="{{ tkReopen }}" style="min-height:48px;border:1.5px solid #434C57;background:transparent;border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#EDF0F2;cursor:pointer">Reopen punch</button></sc-if>
+          <button onClick="{{ tkDelete }}" style="min-height:48px;border:1.5px solid #D2402F;background:{{ tkDelBg }};border-radius:4px;font:700 11px 'Saira',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:{{ tkDelFg }};cursor:pointer">{{ tkDelText }}</button>
+        </div>
+      </div>
+      </sc-if>
     </div>
   </div>
   </sc-if>
@@ -614,6 +623,7 @@
       <sc-if value="{{ sheetCrew }}" hint-placeholder-val="{{ false }}">
       <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Who are you?</div>
       <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B">{{ crewHint }}</div>
+      <sc-if value="{{ crewSignedIn }}" hint-placeholder-val="{{ false }}"><button onClick="{{ signOut }}" style="align-self:flex-start;background:transparent;border:1.5px solid #434C57;color:#AEB6BD;font:700 10.5px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:36px;padding:0 12px;border-radius:4px;cursor:pointer">Sign out · {{ crewMeName }}</button></sc-if>
       <div style="overflow:auto;display:flex;flex-direction:column;background:#0A0B0D;border:1px solid #323A43;border-radius:6px">
         <sc-for list="{{ crewRows }}" as="c" hint-placeholder-count="2">
         <div style="display:flex;align-items:center;gap:8px;padding:6px 8px 6px 14px;border-bottom:1px solid #262C33;min-height:52px;box-sizing:border-box;background:{{ c.bg }}">
@@ -630,6 +640,16 @@
         <input type="text" value="{{ newName }}" onChange="{{ setNewName }}" onKeyDown="{{ newNameKey }}" placeholder="Add a name" style="flex:1;background:#0A0B0D;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 16px Barlow,sans-serif;padding:0 12px;min-height:48px;box-sizing:border-box;min-width:0">
         <sc-if value="{{ crewCanEdit }}" hint-placeholder-val="{{ false }}"><button onClick="{{ toggleNewLead }}" style="background:{{ newLeadBg }};border:1.5px solid #434C57;color:{{ newLeadFg }};font:700 11px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;padding:0 12px;border-radius:4px;cursor:pointer">Lead</button></sc-if>
         <button onClick="{{ addCrew }}" style="background:#A6CE39;border:none;color:#0A0B0D;font:700 12px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;padding:0 16px;border-radius:4px;cursor:pointer">Add</button>
+      </div>
+      </sc-if>
+
+      <sc-if value="{{ sheetPass }}" hint-placeholder-val="{{ false }}">
+      <div style="font:900 italic 24px/1 'Saira Condensed',sans-serif;text-transform:uppercase">Supervisor passcode</div>
+      <div style="font:400 12.5px/1.5 Barlow,sans-serif;color:#79828B">{{ passName }} is the supervisor. Enter the passcode to unlock closing, deleting and crew changes on this phone.</div>
+      <input type="password" value="{{ pass }}" onChange="{{ setPass }}" onKeyDown="{{ passKey }}" placeholder="Passcode" autocomplete="off" autocapitalize="off" style="width:100%;background:#0A0B0D;border:1.5px solid #323A43;border-radius:4px;color:#EDF0F2;font:400 18px 'JetBrains Mono',monospace;letter-spacing:.2em;padding:0 12px;min-height:52px;box-sizing:border-box">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+        <button onClick="{{ cancelPass }}" style="background:transparent;border:1.5px solid #434C57;color:#EDF0F2;font:700 12px 'Saira',sans-serif;letter-spacing:.08em;text-transform:uppercase;min-height:48px;border-radius:4px;cursor:pointer">Back</button>
+        <button onClick="{{ submitPass }}" style="background:#A6CE39;border:none;color:#0A0B0D;font:900 italic 20px 'Saira Condensed',sans-serif;text-transform:uppercase;min-height:48px;border-radius:4px;cursor:pointer">Unlock</button>
       </div>
       </sc-if>
 
@@ -717,16 +737,16 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script data-props="{&quot;framed&quot;:{&quot;editor&quot;:null,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;},&quot;demo&quot;:{&quot;editor&quot;:null,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
 class Component extends DCLogic {
-  state = { ready:false, screen:'home', tab:'home', assets:[], zoneOv:{}, walks:{}, tasks:[], crew:[], me:null, lastReview:null, server:'', lastSync:null, cap:null, sel:null, selTask:null, taskFilter:'open', aSearch:'', aZone:'all', aLimit:60, aType:null, atQ:'', atZone:'all', atLimit:60, atJunk:false, aAllTypes:false, recent:[], areaKey:null, sheet:null, photoView:null, newName:'', newLead:false, review:null, toast:null, fileFor:null, back:[] };
+  state = { ready:false, screen:'home', tab:'home', assets:[], zoneOv:{}, walks:{}, tasks:[], crew:[], me:null, lastReview:null, server:'', lastSync:null, cap:null, sel:null, selTask:null, taskFilter:'open', aSearch:'', aZone:'all', aLimit:60, aType:null, atQ:'', atZone:'all', atLimit:60, atJunk:false, aAllTypes:false, recent:[], areaKey:null, sheet:null, photoView:null, newName:'', newLead:false, review:null, toast:null, fileFor:null, back:[], pass:'', passFor:null, authAdmin:false, confirmDel:null };
   fileRef = React.createRef(); csvRef = React.createRef(); photoCache = {}; M = null;
   LS = (k) => 'punch.v1.' + k;
   load(k, d) { try { const v = localStorage.getItem(this.LS(k)); return v == null ? d : JSON.parse(v); } catch (e) { return d; } }
   save(k, v) { try { localStorage.setItem(this.LS(k), JSON.stringify(v)); } catch (e) {} }
-  persist(patch) { this.setState(patch); for (const k of Object.keys(patch)) if (['tasks','crew','me','zoneOv','walks','lastReview','server','lastSync','recent'].includes(k)) this.save(k, patch[k]); }
+  persist(patch) { this.setState(patch); for (const k of Object.keys(patch)) if (['tasks','crew','me','zoneOv','walks','lastReview','server','lastSync','recent','authAdmin'].includes(k)) this.save(k, patch[k]); }
   async componentDidMount() {
     const R = window.__resources || {}; this.M = await import(R['./punch-data.js'] || './punch-data.js');
     const s = {}; for (const k of ['tasks','crew','zoneOv','walks']) s[k] = this.load(k, Array.isArray(this.state[k]) ? [] : {});
-    s.me = this.load('me', null); s.lastReview = this.load('lastReview', null); s.server = this.load('server', ''); s.lastSync = this.load('lastSync', null);
+    s.me = this.load('me', null); s.authAdmin = this.load('authAdmin', false) === true; s.lastReview = this.load('lastReview', null); s.server = this.load('server', ''); s.lastSync = this.load('lastSync', null);
     let csv = this.load('assetsCSV', null);
     if (!csv) { try { csv = await (await fetch(R['./data/mc_assets.csv'] || 'data/mc_assets.csv')).text(); } catch (e) { csv = ''; } }
     s.assets = this.enrich(this.M.assetsFromCSV(csv));
@@ -736,6 +756,7 @@ class Component extends DCLogic {
     s.crew = s.crew.map(c => ({ ...c, role: isBrennan(c) ? 'admin' : (c.role || (c.lead ? 'lead' : 'crew')) }));
     if (!s.crew.some(isBrennan)) s.crew = [{ id: 'C' + this.M.uid(), name: 'Brennan Lang', role: 'admin', lead: true }, ...s.crew];
     this.save('crew', s.crew); s.recent = this.load('recent', []);
+    const meRole = (s.crew.find(c => c.id === s.me) || {}).role; if (s.me && meRole === 'admin' && !s.authAdmin) { s.me = null; this.save('me', null); }
     s.ready = true; if (!s.me) s.sheet = 'crew';
     this.setState(s);
   }
@@ -762,9 +783,12 @@ class Component extends DCLogic {
   assetByPk(pk) { return this.state.assets.find(a => a.pk === pk); }
   crewName(id) { if (id === 'demo') return 'Demo'; const c = this.state.crew.find(c => c.id === id); return c ? c.name : '—'; }
   enrich(rows) { const M = this.M; return rows.map(a => { const b = { ...a, zone0: M.seedZone(a), junk: M.isJunk(a), loc: !!a.isLocation, type: M.assetType(a) }; b.desc = M.assetDesc(b); return b; }); }
+  async submitPass() { const code = this.state.pass, id = this.state.passFor; if (!code) return; let ok = false; try { ok = await this.M.checkPasscode(code); } catch (e) { ok = false; } if (!ok) { this.setState({ pass: '' }); return this.toast('Wrong passcode'); } const c = this.state.crew.find(x => x.id === id); this.persist({ me: id, authAdmin: true }); this.setState({ sheet: null, pass: '', passFor: null }); this.toast(`Supervisor unlocked · ${c ? c.name : ''}`); }
+  signOut() { this.persist({ me: null, authAdmin: false }); this.setState({ sheet: 'crew' }); this.toast('Signed out'); }
+  deleteTask(id) { const t = this.state.tasks.find(x => x.id === id); if (!t) return; const pids = new Set([...(t.photos || []), t.closePhoto].filter(Boolean)); for (const pid of pids) { delete this.photoCache[pid]; try { if (this.db) this.db.transaction('photos', 'readwrite').objectStore('photos').delete(pid); } catch (e) {} } this.persist({ tasks: this.state.tasks.filter(x => x.id !== id) }); this.setState({ confirmDel: null, selTask: null }); this.tab('tasks'); this.toast('Punch deleted'); }
   roleOf(id) { const c = this.state.crew.find(c => c.id === id); return c ? (c.role || (c.lead ? 'lead' : 'crew')) : 'crew'; }
-  meIsAdmin() { return !!this.state.me && this.roleOf(this.state.me) === 'admin'; }
-  meIsLead() { if (!this.state.me) return false; const r = this.roleOf(this.state.me); return r === 'lead' || r === 'admin'; }
+  meIsAdmin() { return !!this.state.me && this.roleOf(this.state.me) === 'admin' && this.state.authAdmin === true; }
+  meIsLead() { if (!this.state.me) return false; const r = this.roleOf(this.state.me); return r === 'lead' || (r === 'admin' && this.state.authAdmin === true); }
   toast(msg) { this.setState({ toast: msg }); clearTimeout(this._tt); this._tt = setTimeout(() => this.setState({ toast: null }), 2200); }
   go(screen, patch = {}) { if (screen === 'asset' && patch.sel) { const recent = [patch.sel, ...this.state.recent.filter(p => p !== patch.sel)].slice(0, 8); this.save('recent', recent); patch = { ...patch, recent }; } this.setState(s => ({ screen, back: [...s.back, s.screen].slice(-8), sheet: null, ...patch })); }
   goBack() { this.setState(s => { const b = [...s.back]; const prev = b.pop() || s.tab; return { screen: prev, back: b, sheet: null }; }); }
@@ -921,6 +945,9 @@ class Component extends DCLogic {
     o.tkMcText = t.mcSent ? `Exported to MC ${M.fmtMD(t.mcSent)}` : (t.mc ? 'In the next CSV export' : 'Not going to Maintenance Connection'); o.tkMcBg = t.mc ? '#A6CE39' : '#3B444F'; o.tkMcKnob = t.mc ? 21 : 3;
     o.tkCanClose = this.canClose(t); o.tkCantClose = t.status === 'open' && !o.tkCanClose; o.tkCantText = S.me ? `Only ${this.crewName(t.by)} or a lead can close this punch.` : 'Pick who you are (tap the name on Home) to close punches.';
     o.tkClose = () => this.pickFile({ kind: 'close', taskId: t.id }); o.tkClosedText = `${M.fmtStamp(t.closed)} by ${this.crewName(t.closedBy)}`;
+    o.tkIsAdmin = this.meIsAdmin(); o.tkAdminCols = t.status === 'closed' ? '1fr 1fr' : '1fr'; const cd = S.confirmDel === t.id; o.tkDelText = cd ? 'Tap again to delete' : 'Delete punch'; o.tkDelBg = cd ? '#D2402F' : 'transparent'; o.tkDelFg = cd ? '#FFFFFF' : '#D2402F';
+    o.tkDelete = () => { if (!this.meIsAdmin()) return; if (S.confirmDel !== t.id) { this.setState({ confirmDel: t.id }); setTimeout(() => this.setState(s => s.confirmDel === t.id ? { confirmDel: null } : {}), 4000); return; } this.deleteTask(t.id); };
+    o.tkReopen = () => { if (!this.meIsAdmin()) return; const now = new Date().toISOString(); this.updateTask(t.id, x => ({ status: 'open', closed: null, closedBy: null, closePhoto: null, log: [...x.log, { t: now, who: S.me, what: 'Reopened by supervisor' }] })); this.toast('Punch reopened'); };
     o.tkLog = t.log.slice().reverse().map(l => ({ when: M.fmtStamp(l.t), text: `${l.what} · ${this.crewName(l.who)}` }));
     return o;
   }
@@ -1012,12 +1039,13 @@ class Component extends DCLogic {
   }
   sheetVals() {
     const S = this.state, M = this.M, o = {}, T = M.todayStr();
-    o.sheetCrew = S.sheet === 'crew'; o.sheetShop = S.sheet === 'shop'; o.sheetZone = S.sheet === 'zone'; o.sheetPhoto = S.sheet === 'photo';
+    o.sheetCrew = S.sheet === 'crew'; o.sheetShop = S.sheet === 'shop'; o.sheetZone = S.sheet === 'zone'; o.sheetPhoto = S.sheet === 'photo'; o.sheetPass = S.sheet === 'pass';
+    if (o.sheetPass) { const c = S.crew.find(x => x.id === S.passFor); o.passName = c ? c.name : 'The supervisor'; o.pass = S.pass; o.setPass = (e) => this.setState({ pass: e.target.value }); o.passKey = (e) => { if (e.key === 'Enter') this.submitPass(); }; o.submitPass = () => this.submitPass(); o.cancelPass = () => this.setState({ sheet: 'crew', pass: '', passFor: null }); }
     if (o.sheetCrew) {
       const admin = this.meIsAdmin(), ROLE = { admin: ['SUPERVISOR', '#A6CE39', '#0A0B0D'], lead: ['LEAD', '#2A313A', '#EDF0F2'], crew: [null, '', ''] }, NEXT = { crew: 'lead', lead: 'admin', admin: 'crew' }, NAME = { lead: 'Lead', admin: 'Superv.', crew: 'Crew' };
       const admins = S.crew.filter(x => (x.role || (x.lead ? 'lead' : 'crew')) === 'admin').length;
-      o.crewCanEdit = admin; o.crewHint = admin ? 'Tap a name to sign in. As supervisor you can add people, change roles and remove names.' : 'Tap your name to sign in. Not listed? Add yourself below. Leads can close anyone’s punch; the supervisor manages the crew.';
-      o.crewRows = S.crew.map(c => { const me = c.id === S.me, role = c.role || (c.lead ? 'lead' : 'crew'), R = ROLE[role], next = NEXT[role]; return { name: c.name, hasRole: !!R[0], roleLabel: R[0] || '', roleBg: R[1], roleFg: R[2], bg: me ? '#1B2C49' : 'transparent', dot: me ? '#A6CE39' : '#434C57', roleBtn: '→ ' + NAME[next], pick: () => { this.persist({ me: c.id }); this.setState({ sheet: null }); this.toast(`You are ${c.name}`); }, cycleRole: () => { if (role === 'admin' && admins === 1) return this.toast('Name another supervisor first'); this.persist({ crew: S.crew.map(x => x.id === c.id ? { ...x, role: next, lead: next !== 'crew' } : x) }); }, remove: () => { if (role === 'admin' && admins === 1) return this.toast('Can’t remove the only supervisor'); this.persist({ crew: S.crew.filter(x => x.id !== c.id), me: S.me === c.id ? null : S.me }); } }; });
+      o.crewCanEdit = admin; o.crewSignedIn = !!S.me; o.crewMeName = this.crewName(S.me); o.signOut = () => this.signOut(); o.crewHint = admin ? 'Supervisor unlocked on this phone. You can add people, change roles, remove names, and close or delete any punch.' : 'Tap your name to sign in. Not listed? Add yourself below. The supervisor unlocks with a passcode and can close or delete any punch.';
+      o.crewRows = S.crew.map(c => { const me = c.id === S.me, role = c.role || (c.lead ? 'lead' : 'crew'), R = ROLE[role], next = NEXT[role]; return { name: c.name, hasRole: !!R[0], roleLabel: R[0] || '', roleBg: R[1], roleFg: R[2], bg: me ? '#1B2C49' : 'transparent', dot: me ? '#A6CE39' : '#434C57', roleBtn: '→ ' + NAME[next], pick: () => { if (role === 'admin') { if (S.me === c.id && S.authAdmin) { this.setState({ sheet: null }); return; } this.setState({ sheet: 'pass', passFor: c.id, pass: '' }); return; } this.persist({ me: c.id, authAdmin: false }); this.setState({ sheet: null }); this.toast(`You are ${c.name}`); }, cycleRole: () => { if (role === 'admin' && admins === 1) return this.toast('Name another supervisor first'); this.persist({ crew: S.crew.map(x => x.id === c.id ? { ...x, role: next, lead: next !== 'crew' } : x) }); }, remove: () => { if (role === 'admin' && admins === 1) return this.toast('Can’t remove the only supervisor'); this.persist({ crew: S.crew.filter(x => x.id !== c.id), me: S.me === c.id ? null : S.me }); } }; });
       o.crewEmpty = !S.crew.length; o.newName = S.newName; o.setNewName = (e) => this.setState({ newName: e.target.value }); o.newNameKey = (e) => { if (e.key === 'Enter') this.addCrew(); }; o.addCrew = () => this.addCrew();
       o.toggleNewLead = () => this.setState({ newLead: !S.newLead }); o.newLeadBg = S.newLead ? '#A6CE39' : 'transparent'; o.newLeadFg = S.newLead ? '#0A0B0D' : '#AEB6BD';
     }
