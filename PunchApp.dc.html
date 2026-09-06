@@ -797,7 +797,7 @@ class Component extends DCLogic {
     v.hasToast = !!S.toast; v.toast = S.toast;
     if (!M) { v.hasToday = false; v.noToday = false; v.showNag = false; v.hasBadge = false; v.todayLabel = ''; return Object.assign(v, this.screenVals(v)); }
     const open = S.tasks.filter(t => t.status === 'open');
-    const rowOf = (t) => { const d = M.fmtDue(t.due, T); const pc = M.PRI[t.pri].color; return { ...t, priColor: pc, dueLabel: d.label, dueFg: d.tone === 'muted' ? '#EDF0F2' : '#0A0B0D', dueBg: d.tone === 'late' ? '#D2402F' : d.tone === 'today' ? '#A6CE39' : d.tone === 'soon' ? (d.label === 'TMRW' ? '#C6E06F' : '#AEB6BD') : '#2A313A', sub: [t.note, this.crewName(t.by), t.mc ? (t.mcSent ? 'MC sent' : 'MC flag') : null].filter(Boolean).join(' · '), zoneName: M.zoneByKey(t.zone).name, open: () => this.go('task', { selTask: t.id }) }; };
+    const rowOf = (t) => { const d = M.fmtDue(t.due, T); const pc = M.PRI[t.pri].color; const done = t.status === 'closed'; return { ...t, priColor: pc, dueLabel: done ? 'DONE ' + M.fmtMD(t.closed) : d.label, dueFg: done ? '#0A0B0D' : d.tone === 'muted' ? '#EDF0F2' : '#0A0B0D', dueBg: done ? '#4FA36B' : d.tone === 'late' ? '#D2402F' : d.tone === 'today' ? '#A6CE39' : d.tone === 'soon' ? (d.label === 'TMRW' ? '#C6E06F' : '#AEB6BD') : '#2A313A', sub: [t.note, this.crewName(t.by), t.mc ? (t.mcSent ? 'MC sent' : 'MC flag') : null].filter(Boolean).join(' · '), zoneName: M.zoneByKey(t.zone).name, open: () => this.go('task', { selTask: t.id }) }; };
     this.rowOf = rowOf;
     const late = open.filter(t => t.due && t.due < T), dueToday = open.filter(t => t.due === T);
     const todayRows = [...late, ...dueToday].sort((a, b) => (a.due || '') < (b.due || '') ? -1 : a.pri - b.pri).map(rowOf);
